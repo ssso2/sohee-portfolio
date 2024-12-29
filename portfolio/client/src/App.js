@@ -6,7 +6,7 @@ function App() {
         <>
             <Router>
                 <Routes>
-                    <Route path="/sohee-portfolio/" element={<Intro />} />
+                    <Route path="/sohee-portfolio" element={<Intro />} />
                     {/* <Route path="/#main" element={<Main />} /> */}
                 </Routes>
             </Router>
