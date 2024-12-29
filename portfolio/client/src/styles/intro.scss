@@ -1,0 +1,40 @@
+.flex {
+    display: flex;
+}
+.intro {
+    flex-direction: column;
+    align-items: center;
+}
+.intro-loading {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    background-color: #aff;
+    transform: rotate(-90deg);
+    .progress {
+        animation: fillGauge 1s ease-out forwards; /* 게이지를 2초 동안 채움 */
+    }
+    @keyframes fillGauge {
+        0% {
+            stroke-dashoffset: 125.6; /* 초기 상태 (0% 채움) */
+        }
+        100% {
+            stroke-dashoffset: 0; /* 최종 상태 (100% 채움) */
+        }
+    }
+    .loading {
+        justify-content: center;
+    }
+}
+.intro-txt {
+    font-size: 40px;
+    background-color: #aff;
+
+    justify-content: space-between;
+    flex-direction: row;
+    p {
+        // height: 100%;
+        font-weight: 600;
+        padding-right: 20px;
+    }
+}
