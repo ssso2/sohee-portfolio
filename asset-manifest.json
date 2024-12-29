@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/sohee-portfolio/static/css/main.27cb6af6.css",
+    "main.js": "/sohee-portfolio/static/js/main.867b75eb.js",
+    "static/js/453.419a5d54.chunk.js": "/sohee-portfolio/static/js/453.419a5d54.chunk.js",
+    "index.html": "/sohee-portfolio/index.html",
+    "main.27cb6af6.css.map": "/sohee-portfolio/static/css/main.27cb6af6.css.map",
+    "main.867b75eb.js.map": "/sohee-portfolio/static/js/main.867b75eb.js.map",
+    "453.419a5d54.chunk.js.map": "/sohee-portfolio/static/js/453.419a5d54.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.27cb6af6.css",
+    "static/js/main.867b75eb.js"
+  ]
+}
