@@ -1,40 +1,123 @@
-.flex {
-    display: flex;
-}
 .intro {
     flex-direction: column;
     align-items: center;
-}
-.intro-loading {
-    width: 88px;
-    height: 88px;
-    border-radius: 50%;
-    background-color: #aff;
-    transform: rotate(-90deg);
-    .progress {
-        animation: fillGauge 1s ease-out forwards; /* 게이지를 2초 동안 채움 */
+    .intro-loading {
+        width: 88px;
+        height: 88px;
+        border-radius: 50%;
+        background-color: #aff;
+        transform: rotate(-90deg);
+        .loading {
+            justify-content: center;
+        }
+        .progress {
+            animation: fillGauge 1s ease-out forwards; /* 게이지를 2초 동안 채움 */
+        }
+        @keyframes fillGauge {
+            0% {
+                stroke-dashoffset: 125.6; /* 초기 상태 (0% 채움) */
+            }
+            100% {
+                stroke-dashoffset: 0; /* 최종 상태 (100% 채움) */
+            }
+        }
     }
-    @keyframes fillGauge {
+    .intro-txt {
+        font-size: 40px;
+        background-color: #aff;
+        justify-content: space-between;
+        flex-direction: row;
+        overflow: hidden;
+        .uptxt {
+            // height: 100%;
+            font-weight: 600;
+            padding-right: 20px;
+            opacity: 0;
+            transform: translateY(20px); /* 초기 위치 */
+            animation: fade 1.8s ease-out forwards;
+            // slideDown 1s ease-out forwards 5s;
+        }
+        .uptxt:nth-child(1) {
+            animation-delay: 1s;
+        }
+        .uptxt:nth-child(2) {
+            animation-delay: 1.5s;
+        }
+        .uptxt:nth-child(3) {
+            animation-delay: 2s;
+        }
+        @keyframes fade {
+            0% {
+                opacity: 0.8;
+                // transform: translateY(20px);
+            }
+            50% {
+                opacity: 1;
+                transform: translateY(0); /* 위로 올라옴 */
+            }
+            70% {
+                opacity: 0.5;
+                transform: translateY(10px); /* 딜레이 효과 */
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+        // @keyframes slideDown {
+        //     0% {
+        //         // opacity: 1;
+        //         // transform: translateY(20px);
+        //     }
+        //     100% {
+        //         opacity: 0;
+        //         transform: translateY(40px);
+        //     }
+        // }
+    }
+}
+
+.Ybar {
+    display: flex;
+    .bar {
+        position: absolute;
+        width: 320px;
+        height: 100vh;
+        background-color: #000;
+        transform: translateY(-150%); /* 화면 위로 시작 */
+        animation: slideDown 0.4s ease-out forwards;
+        overflow: hidden;
+        &:nth-of-type(1) {
+            left: 0px;
+            animation-delay: 2.4s;
+        }
+        &:nth-of-type(2) {
+            left: 320px;
+            animation-delay: 2.6s;
+        }
+        &:nth-of-type(3) {
+            left: 640px;
+            animation-delay: 2.8s;
+        }
+        &:nth-of-type(4) {
+            left: 960px;
+            animation-delay: 3s;
+        }
+        &:nth-of-type(5) {
+            left: 1240px;
+            animation-delay: 3.2s;
+        }
+        &:nth-of-type(6) {
+            left: 1560px;
+            animation-delay: 3.4s;
+        }
+    }
+    @keyframes slideDown {
         0% {
-            stroke-dashoffset: 125.6; /* 초기 상태 (0% 채움) */
+            transform: translateY(-150%); /* 화면 위에서 시작 */
         }
         100% {
-            stroke-dashoffset: 0; /* 최종 상태 (100% 채움) */
+            transform: translateY(-50%); /* 화면을 채움 */
         }
-    }
-    .loading {
-        justify-content: center;
-    }
-}
-.intro-txt {
-    font-size: 40px;
-    background-color: #aff;
-
-    justify-content: space-between;
-    flex-direction: row;
-    p {
-        // height: 100%;
-        font-weight: 600;
-        padding-right: 20px;
     }
 }
