@@ -4,6 +4,7 @@ import mainstyles from "../styles/main.module.css";
 
 import Header from "../component/Header";
 import Scrollbar from "../component/Scrollbar";
+import Topbtn from "../component/Topbtn";
 
 export const Main = () => {
     return (
@@ -28,6 +29,13 @@ export const Main = () => {
                         <p>웹 개발의 매력에 빠져 배움을 즐기고,</p>
                         <p>소통과 협업에서 가치를 느끼는 개발자입니다.</p>
                     </div>
+                    <div className={mainstyles.imgwrap}>
+                        <img
+                            className={mainstyles.img}
+                            src="/sohee-portfolio/img/sub/study.png"
+                            alt="mainIMG"
+                        />
+                    </div>
                 </div>
                 <div className={mainstyles.scollicon}>
                     <img
@@ -36,6 +44,7 @@ export const Main = () => {
                         className={mainstyles.bottomicon}
                     />
                 </div>
+                <Topbtn />
             </div>
         </div>
     );

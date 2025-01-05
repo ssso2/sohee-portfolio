@@ -11,7 +11,11 @@ const Header = (): JSX.Element => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <img src="/sohee-portfolio/img/sub/profile.png" alt="Profile" />
+                <img
+                    className={styles.img}
+                    src="/sohee-portfolio/img/sub/profile.png"
+                    alt="Profile"
+                />
             </div>
             <ul className={styles.nav}>
                 {menus.map((item, index) => (

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/common.module.css";
 
-const Scrollbar8: React.FC = () => {
+const Scrollbar: React.FC = () => {
     const [gagefill, setgagefill] = useState(0);
 
     useEffect(() => {
-        const scrollEffect = () => {
+        const scrollE = () => {
             const scrollTop = window.scrollY;
             console.log("스크롤위치", scrollTop);
             const scrollHeight =
@@ -15,9 +15,9 @@ const Scrollbar8: React.FC = () => {
             console.log("스크롤퍼센트", scrollpercent);
             setgagefill(scrollpercent);
         };
-        window.addEventListener("scroll", scrollEffect);
+        window.addEventListener("scroll", scrollE);
         return () => {
-            window.removeEventListener("scroll", scrollEffect);
+            window.removeEventListener("scroll", scrollE);
         };
     }, []);
     return (
@@ -35,4 +35,4 @@ const Scrollbar8: React.FC = () => {
     );
 };
 
-export default Scrollbar8;
+export default Scrollbar;
