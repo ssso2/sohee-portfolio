@@ -1,6 +1,10 @@
 body {
     font-family: "Pretendard";
 }
+.link {
+    color: #fff;
+    text-decoration: none;
+}
 .flex {
     display: flex;
 }
@@ -49,7 +53,7 @@ body {
 }
 .scrollbar {
     position: fixed;
-    z-index: 2;
+    z-index: 999;
     width: 100px;
     height: 100vh;
     background-color: #000;

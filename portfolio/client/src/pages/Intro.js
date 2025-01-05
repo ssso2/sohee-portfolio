@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+
 import "../styles/common.scss";
 import "../styles/intro.scss";
+import commonstyles from "../styles/common.module.css";
+import introstyles from "../styles/common.module.css";
 import { Main } from "./Main";
 
 const Intro = () => {
