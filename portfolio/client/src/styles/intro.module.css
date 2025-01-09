@@ -3,7 +3,7 @@
     align-items: center;
 }
 
-.intro-loading {
+.introloading {
     width: 88px;
     height: 88px;
     border-radius: 50%;
@@ -26,7 +26,7 @@
     }
 }
 
-.intro-txt {
+.introtxt {
     font-size: 40px;
     background-color: #aff;
     justify-content: space-between;
@@ -34,6 +34,11 @@
     overflow: hidden;
 }
 .uptxt {
+    font-size: 40px;
+    background-color: #aff;
+    justify-content: space-between;
+    flex-direction: row;
+    overflow: hidden;
     /* // height: 100%; */
     font-weight: 600;
     padding-right: 20px;
@@ -42,13 +47,13 @@
     animation: fade 1.8s ease-out forwards;
     /* // slideDown 1s ease-out forwards 5s; */
 }
-.uptxt:nth-child(1) {
+.uptxt:nth-of-type(1) {
     animation-delay: 1s;
 }
-.uptxt:nth-child(2) {
+.uptxt:nth-of-type(2) {
     animation-delay: 1.5s;
 }
-.uptxt:nth-child(3) {
+.uptxt:nth-of-type(3) {
     animation-delay: 2s;
 }
 @keyframes fade {

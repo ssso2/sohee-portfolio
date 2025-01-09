@@ -1,0 +1,9 @@
+.title {
+    display: block;
+}
+.introWrap {
+    width: 1524px;
+    height: 246px;
+    border-radius: 16px;
+    background-color: #191918;
+}

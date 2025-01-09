@@ -5,6 +5,7 @@ import mainstyles from "../styles/main.module.css";
 import Header from "../component/Header";
 import Scrollbar from "../component/Scrollbar";
 import Topbtn from "../component/Topbtn";
+import About from "./About";
 
 export const Main = () => {
     return (
@@ -32,7 +33,7 @@ export const Main = () => {
                     <div className={mainstyles.imgwrap}>
                         <img
                             className={mainstyles.img}
-                            src="/sohee-portfolio/img/sub/study.png"
+                            src="/sohee-portfolio/img/sub/study61.png"
                             alt="mainIMG"
                         />
                     </div>
@@ -44,6 +45,7 @@ export const Main = () => {
                         className={mainstyles.bottomicon}
                     />
                 </div>
+                <About />
                 <Topbtn />
             </div>
         </div>

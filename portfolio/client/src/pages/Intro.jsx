@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
-
-import "../styles/common.scss";
-import "../styles/intro.scss";
+import classNames from "classnames";
 import commonstyles from "../styles/common.module.css";
-import introstyles from "../styles/common.module.css";
+import introstyles from "../styles/intro.module.css";
 import { Main } from "./Main";
 
 const Intro = () => {
@@ -17,12 +15,19 @@ const Intro = () => {
     return (
         <>
             {showIntro ? (
-                <div className="center">
-                    <div className="intro flex">
-                        <div className="intro-loading">
-                            {/* <span className="loading"></span> */}
+                <div className={commonstyles.center}>
+                    <div
+                        className={classNames(
+                            introstyles.intro,
+                            commonstyles.flex
+                        )}
+                    >
+                        {/* <div className="intro flex"> */}
+                        {/* <div className="intro-loading"> */}
+                        <div className={introstyles.introloading}>
                             <svg
                                 className="loading-spinner"
+                                // className={introstyles.loading - spinner}
                                 width="88"
                                 height="88"
                                 viewBox="0 0 50 50"
@@ -36,7 +41,7 @@ const Intro = () => {
                                     fill="none"
                                 ></circle>
                                 <circle
-                                    className="progress"
+                                    className={introstyles.progress}
                                     cx="25"
                                     cy="25"
                                     r="20"
@@ -49,19 +54,26 @@ const Intro = () => {
                                 ></circle>
                             </svg>
                         </div>
-                        <div className="intro-txt flex">
-                            <p className="uptxt">Sohee's</p>
-                            <p className="uptxt">Front-end Developer</p>
-                            <p className="uptxt">Portfolio</p>
+                        <div
+                            className={classNames(
+                                introstyles.introtxt,
+                                commonstyles.flex
+                            )}
+                        >
+                            <p className={introstyles.uptxt}>Sohee's</p>
+                            <p className={introstyles.uptxt}>
+                                Front-end Developer
+                            </p>
+                            <p className={introstyles.uptxt}>Portfolio</p>
                         </div>
                     </div>
-                    <div className="Ybar">
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
-                        <div className="bar"></div>
+                    <div className={introstyles.Ybar}>
+                        <div className={introstyles.bar}></div>
+                        <div className={introstyles.bar}></div>
+                        <div className={introstyles.bar}></div>
+                        <div className={introstyles.bar}></div>
+                        <div className={introstyles.bar}></div>
+                        <div className={introstyles.bar}></div>
                     </div>
                 </div>
             ) : (
