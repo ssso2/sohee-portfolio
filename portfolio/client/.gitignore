@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# package.json 제외
+package.json
+
+# package-lock.json 제외
+package-lock.json
