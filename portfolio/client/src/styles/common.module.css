@@ -6,15 +6,18 @@ body {
 .flex {
     display: flex;
 }
+.flexC {
+    flex-direction: column;
+}
 .colorW {
     color: #fff;
 }
 .center {
-    width: 1420px;
+    width: calc(1420px - 100px);
     height: calc(100vh - 100px);
     margin: 0 auto;
     padding: 0 2.5rem;
-    background-color: #faf;
+    background-color: rgb(77, 78, 77);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +35,11 @@ body {
     justify-content: space-between;
     color: #fff;
     align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    opacity: 1;
+    transition: transform 2s ease, opacity 0.3s ease;
     animation: slidedown 1s ease forwards;
 }
 @keyframes slidedown {
@@ -41,6 +49,13 @@ body {
     100% {
         transform: translateY(0px);
     }
+}
+.hidden {
+    transition: transform 2s ease, opacity 0.5s ease;
+    pointer-events: none;
+    transform: translateY(-100%);
+    opacity: 0;
+    /* display: none; */
 }
 .logo {
     align-items: center;
@@ -66,12 +81,41 @@ body {
 .link {
     color: #fff;
     text-decoration: none;
+    text-align: center;
+    background: transparent;
+    all: unset;
+    cursor: pointer;
+}
+.link {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ccc;
+    transition: width 0.3s ease-in-out;
+}
+
+.link:hover::after {
+    width: 100%;
 }
 
 /* 스크롤바 */
+.scrollwrap {
+    width: 100%;
+    height: 100%;
+}
 .scrollbar {
     position: fixed;
-    z-index: 999;
+    z-index: 998;
     width: 100px;
     height: 100vh;
     background-color: #000;

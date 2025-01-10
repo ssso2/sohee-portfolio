@@ -7,7 +7,7 @@ const Topbtn: React.FC = () => {
     const topE = () => {
         if (window.scrollY > 0) {
             setshowtop(true);
-            console.log("탑버튼스크롤확인용", window.scrollY);
+            // console.log("탑버튼스크롤확인용", window.scrollY);
         } else setshowtop(false);
     };
 
