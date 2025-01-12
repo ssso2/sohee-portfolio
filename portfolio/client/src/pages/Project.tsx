@@ -6,6 +6,7 @@ const Project: React.FC = () => {
     return (
         <>
             <div
+                id="project"
                 className={classNames(
                     commonstyles.center,
                     commonstyles.colorW,
