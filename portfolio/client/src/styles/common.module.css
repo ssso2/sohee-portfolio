@@ -1,0 +1,210 @@
+/* 공통 */
+body {
+    font-family: "Pretendard";
+    /* scroll-behavior: smooth; */
+}
+.flex {
+    display: flex;
+}
+.flexC {
+    flex-direction: column;
+}
+.colorW {
+    color: #fff;
+}
+.center {
+    width: calc(1420px - 100px);
+    height: calc(100vh - 100px);
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    background-color: rgb(77, 78, 77);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sample {
+    background-color: #bfa;
+}
+
+/* 헤더 */
+.header {
+    width: 100vw;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    opacity: 1;
+    transition: transform 2s ease, opacity 0.3s ease;
+    animation: slidedown 1s ease forwards;
+}
+@keyframes slidedown {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.hidden {
+    transition: transform 2s ease, opacity 0.5s ease;
+    pointer-events: none;
+    transform: translateY(-100%);
+    opacity: 0;
+    /* display: none; */
+}
+.logo {
+    align-items: center;
+}
+.img {
+    /* // margin: 16px 0 0 30px; */
+    margin-left: 30px;
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+.nav {
+    margin-right: 100px;
+    justify-content: end;
+    list-style: none;
+    display: flex;
+    /* // align-items: center; */
+    flex-direction: row;
+}
+.navli {
+    padding-left: 30px;
+}
+.link,
+.linkto {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 10px;
+}
+.link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ccc;
+    transition: width 0.3s ease-in-out;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+/* .linkto {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    background: transparent;
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 10px;
+} */
+/* .link.txt::after {
+    content: none !important;
+    display: none !important;
+}
+.link.txt:hover::after {
+    content: none !important;
+    width: 0 !important;
+} */
+.linkto:hover {
+    color: #faf;
+    /* font-size: large; */
+}
+.linkto:hover::after {
+    content: "설문지페이지로 이동";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    /* transform: translateX(-50%); */
+    text-wrap: nowrap;
+    font-size: 10px;
+    color: #000;
+    background-color: #ccc;
+    padding: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: color 0.8s ease-in-out;
+}
+/* .link.txt::after {
+    content: none;
+    display: none;
+} */
+
+/* 스크롤바 */
+.scrollwrap {
+    width: 100%;
+    height: 100%;
+}
+.scrollbar {
+    position: fixed;
+    z-index: 998;
+    width: 100px;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.2rem;
+    justify-content: center;
+}
+.barTxt {
+    width: 100%;
+    color: #fff;
+    /* position: "fixed"; */
+    transform: rotate(90deg);
+    /* width: 2px; */
+    /* height: 40%; */
+    /* background-color: #fff; */
+}
+.gaugeContainer {
+    position: "fixed";
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 40%;
+    background-color: #fff;
+    height: "8px";
+    z-index: 9;
+}
+.gaugeFill {
+    height: 100%;
+    background-color: rgb(229, 10, 10);
+    transition: width 0.2s ease-out;
+}
+
+/* 탑버튼 */
+.twrap {
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 999;
+    background-color: #ffa;
+    border-radius: 50%;
+}
+.top {
+    width: 20px;
+    top: 25%;
+    left: 25%;
+    position: absolute;
+}
