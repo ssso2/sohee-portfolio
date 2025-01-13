@@ -6,8 +6,8 @@
 }
 .exWrap {
     width: 100%;
-    height: calc(100vh - 100px);
-    padding: 50px 20px 0 20px;
+    height: calc(100vh - 80px);
+    padding: 166px 20px 0 20px;
     background-color: hsl(0, 0%, 80%);
     /* display: inline-block; */
     display: flex;
@@ -19,6 +19,14 @@
 .profile {
     width: 400px;
     background: #0a0;
+}
+.titlewrap {
+    width: 334px;
+    height: 48px;
+}
+.titlewrap img {
+    display: inline-block;
+    width: 48px;
 }
 .imgwrap {
     width: 400px;

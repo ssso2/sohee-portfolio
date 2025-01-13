@@ -1,3 +1,82 @@
+//폰트
+@mixin fontStyle($size, $lineheight, $weight, $spacing: 0) {
+    font-size: $size;
+    line-height: $lineheight;
+    font-weight: $weight;
+    letter-spacing: $spacing;
+}
+.header1 {
+    @include fontStyle(148px, auto, 500);
+}
+
+.header2 {
+    @include fontStyle(58px, 68px, 600);
+}
+
+.header3 {
+    @include fontStyle(32px, 28px, 400);
+}
+.title1 {
+    @include fontStyle(40px, 48px, 700, 0.28px);
+}
+.title2 {
+    @include fontStyle(28px, 34px, 600, 0.28px);
+}
+.subtitle1 {
+    @include fontStyle(24px, 32px, 600, 0.2px);
+}
+.subtitle2 {
+    @include fontStyle(20px, auto, 400, 0);
+}
+.body1 {
+    @include fontStyle(18px, 28px, 600, 0);
+}
+.body2 {
+    @include fontStyle(18px, 28px, 400, 0);
+}
+.caption {
+    @include fontStyle(16px, 24px, 600, 0);
+}
+.label {
+    @include fontStyle(14px, 18px, 400, 0);
+}
+
+//컬러
+.white {
+    color: #ffffff;
+}
+.gray1 {
+    color: #f5f5f5;
+}
+.gray2 {
+    color: #dbdbdb;
+}
+.gray3 {
+    color: #c2c2c2;
+}
+.gray4 {
+    color: #8f8f8f;
+}
+.dim {
+    color: #292929;
+}
+.black1 {
+    color: #121212;
+}
+.black2 {
+    color: #212120;
+}
+.red {
+    color: #ff0a0e;
+}
+
+//공통
+.flex {
+    display: flex;
+}
+.flexC {
+    flex-direction: column;
+}
 body {
     font-family: "Pretendard";
 }
@@ -5,70 +84,175 @@ body {
     color: #fff;
     text-decoration: none;
 }
-.flex {
-    display: flex;
-}
-.color-w {
+
+.colorW {
     color: #fff;
 }
+
 .center {
-    width: 1420px;
-    height: 100vh;
+    width: calc(1920px - 80px);
+    height: calc(100vh - 80px);
     margin: 0 auto;
     padding: 0 2.5rem;
-    background-color: #faf;
+    background-color: rgb(77, 78, 77);
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+//헤더
 .header {
     width: 100vw;
-    height: 100px;
+    height: 80px;
     background-color: #000;
     display: flex;
     justify-content: space-between;
     color: #fff;
     align-items: center;
-    .logo {
-        align-items: center;
-        img {
-            // margin: 16px 0 0 30px;
-            margin-left: 30px;
-            width: 50px;
-            height: auto;
-            border-radius: 50%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    opacity: 1;
+    transition: transform 2s ease, opacity 0.3s ease;
+    animation: slidedown 1s ease forwards;
+    @keyframes slidedown {
+        0% {
+            transform: translateY(-100px);
+        }
+        100% {
+            transform: translateY(0px);
         }
     }
+
+    .logo {
+        margin-left: 28px;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background-color: #d9d9d9;
+    }
+
     .nav {
         margin-right: 100px;
         justify-content: end;
         list-style: none;
         display: flex;
-        // align-items: center;
+        /* // align-items: center; */
         flex-direction: row;
-        .nav-li {
+        .navli {
             padding-left: 30px;
+        }
+        .link,
+        .linkto {
+            color: #fff;
+            text-decoration: none;
+            text-align: center;
+            background: transparent;
+            all: unset;
+            cursor: pointer;
+            position: relative;
+            text-decoration: none;
+            color: #fff;
+            padding-bottom: 10px;
+        }
+        .link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ccc;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .link:hover::after {
+            width: 100%;
+        }
+        .linkto:hover {
+            color: #faf;
+            /* font-size: large; */
+        }
+        .linkto:hover::after {
+            content: "설문지페이지로 이동";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            /* transform: translateX(-50%); */
+            text-wrap: nowrap;
+            font-size: 10px;
+            color: #000;
+            background-color: #ccc;
+            padding: 2px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: color 0.8s ease-in-out;
         }
     }
 }
-.scrollbar {
-    position: fixed;
-    z-index: 999;
-    width: 100px;
-    height: 100vh;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 3.2rem;
-    justify-content: center;
-    .bar-txt {
-        // width: 100%;
-        transform: rotate(90deg);
+.hidden {
+    transition: transform 2s ease, opacity 0.5s ease;
+    pointer-events: none;
+    transform: translateY(-100%);
+    opacity: 0;
+    /* display: none; */
+}
+
+//스크롤바
+.scrollwrap {
+    width: 100%;
+    height: 100%;
+    .scrollbar {
+        position: fixed;
+        z-index: 998;
+        width: 100px;
+        height: 100vh;
+        background-color: #000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 3.2rem;
+        justify-content: center;
     }
-    .bar {
+    .barTxt {
+        width: 100%;
+        color: #fff;
+        /* position: "fixed"; */
+        transform: rotate(90deg);
+        /* width: 2px; */
+        /* height: 40%; */
+        /* background-color: #fff; */
+    }
+    .gaugeContainer {
+        position: "fixed";
+        top: 0;
+        left: 0;
         width: 2px;
         height: 40%;
         background-color: #fff;
+        height: "8px";
+        z-index: 9;
+        .gaugeFill {
+            height: 100%;
+            background-color: rgb(229, 10, 10);
+            transition: width 0.2s ease-out;
+        }
     }
+}
+
+//탑버튼
+.twrap {
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    z-index: 999;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.top {
+    width: 20px;
+    top: 25%;
+    left: 25%;
+    position: absolute;
 }

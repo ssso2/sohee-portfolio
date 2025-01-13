@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "../styles/common.module.css";
+import "../styles/common.scss";
 
 const Topbtn: React.FC = () => {
     const [showtop, setshowtop] = useState(false);
@@ -27,9 +27,9 @@ const Topbtn: React.FC = () => {
     return (
         <>
             {showtop && (
-                <div className={styles.twrap} onClick={topclick}>
+                <div className="twrap" onClick={topclick}>
                     <img
-                        className={styles.top}
+                        className="top"
                         src="/sohee-portfolio/img/icon/icon-arrow.png"
                         alt="top"
                     />

@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
-import styles from "../styles/common.module.css";
+import "../styles/common.scss";
+import "../styles/intro.scss";
 import { useEffect, useState } from "react";
-import Scroll from "./Scroll";
-import classNames from "classnames";
 
-const Header = (): JSX.Element => {
+const Header_s = (): JSX.Element => {
     type menutype = {
         name: string;
         section: string | null;
@@ -55,25 +54,19 @@ const Header = (): JSX.Element => {
 
     return (
         <>
-            <header
-                className={`${styles.header} ${
-                    hideheader ? styles.hidden : ""
-                }`}
-            >
-                <div className={styles.logo}>
+            <header className={`header ${hideheader ? "hidden" : ""}`}>
+                <div className="logo">
                     <img
-                        className={styles.img}
+                        className="img"
                         src="/sohee-portfolio/img/icon/plogo.svg"
                         alt="Profile"
                     />
                 </div>
-                <ul className={styles.nav}>
+                <ul className="nav">
                     {menus.map((item, index) => (
-                        <li key={index} className={styles.navli}>
+                        <li key={index} className="navli">
                             <button
-                                className={classNames(styles.link, {
-                                    txt: item.link,
-                                })}
+                                className={"link txt" ? "link" : ""}
                                 onClick={() => {
                                     if (item.link) {
                                         window.open(item.link, "_blank");
@@ -91,12 +84,12 @@ const Header = (): JSX.Element => {
                             </Link> */}
                         </li>
                     ))}
-                    <li className={styles.navli}>
+                    <li className="navli">
                         <Link
                             to="https://docs.google.com/forms/d/e/1FAIpQLSd9dvY8ZfOx2NNNkXmVFnfYbB6apGYqQKQcDi6WwRlK1u27vQ/viewform?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={styles.linkto}
+                            className="linkto"
                             // title="설문지로 이동"
                         >
                             Feedback
@@ -108,4 +101,4 @@ const Header = (): JSX.Element => {
     );
 };
 
-export default Header;
+export default Header_s;

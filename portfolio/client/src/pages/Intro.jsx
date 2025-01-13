@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import classNames from "classnames";
 import commonstyles from "../styles/common.module.css";
 import introstyles from "../styles/intro.module.css";
+import "../styles/common.scss";
 import { Main } from "./Main";
 
 const Intro = () => {
