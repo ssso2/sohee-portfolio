@@ -1,0 +1,62 @@
+.projectpop {
+    display: none;
+    width: 1440px;
+    height: 400vh;
+    background-color: aqua;
+    padding: 48px 80px;
+    margin: 0 auto;
+    header {
+        background-color: rgb(240, 252, 252);
+        .subtitle1 {
+            margin-bottom: 32px;
+        }
+        .imgwrap {
+            width: 1276px;
+            height: 574px;
+            margin-bottom: 59px;
+            & img {
+                width: 1276px;
+                height: 574px;
+            }
+        }
+    }
+    .deswrap {
+        background-color: rgb(219, 176, 227);
+        gap: 32px;
+        justify-content: space-between;
+        aside {
+            width: 192px;
+            background-color: rgb(170, 244, 135);
+            & p:nth-of-type(1) {
+                color: #ad8957;
+            }
+        }
+        main {
+            // width: 1051px;
+            .section {
+                background-color: rgb(124, 148, 253);
+                margin-bottom: 48px;
+                position: relative;
+                .title {
+                    margin-bottom: 12px;
+                    &::before {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        width: 3px;
+                        height: 32px;
+                        background-color: #bf976d;
+                        left: 0;
+                        top: 0;
+                    }
+                    padding-left: 8px;
+                }
+
+                .des {
+                    padding-left: 24px;
+                }
+            }
+            background-color: rgb(237, 216, 57);
+        }
+    }
+}

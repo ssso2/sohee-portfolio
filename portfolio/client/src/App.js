@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Experience from "./pages/Experience";
 import Project from "./pages/Project";
 import Feedback from "./pages/Feedback";
+import Ppop from "./pages/Ppop";
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/sohee-portfolio" element={<Intro />} />
                     <Route path="/main" element={<Main />} />
-                    <Route path="/about" element={<About />} />
+                    <Route path="/pop" element={<Ppop />} />
                     <Route path="/experience" element={<Experience />} />
                     <Route path="/project" element={<Project />} />
                     <Route path="/feedback" element={<Feedback />} />
