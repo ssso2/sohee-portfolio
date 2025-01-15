@@ -15,45 +15,43 @@ const Intro_s: React.FC = () => {
         <>
             {showIntro ? (
                 <div className="center">
-                    <div>
-                        <div className="intro flex">
-                            <div className="intro-loading">
-                                <svg
-                                    className="loading"
-                                    width="88"
-                                    height="88"
-                                    viewBox="0 0 88 88"
-                                >
-                                    <circle
-                                        cx="25"
-                                        cy="25"
-                                        r="20"
-                                        stroke="#c2c2c2"
-                                        strokeWidth="5"
-                                        fill="none"
-                                        strokeDasharray="125.6"
-                                        strokeDashoffset="0"
-                                    ></circle>
-                                    <circle
-                                        className="progress red"
-                                        cx="25"
-                                        cy="25"
-                                        r="20"
-                                        stroke="#e74c3c"
-                                        strokeWidth="5"
-                                        fill="none"
-                                        strokeDasharray="125.6"
-                                        strokeDashoffset="125.6"
-                                    ></circle>
-                                </svg>
-                            </div>
-                            <div className="intro-txt flex">
-                                <p className="uptxt title2 black1">Sohee's</p>
-                                <p className="uptxt title2 black1">
-                                    Front-end Developer
-                                </p>
-                                <p className="uptxt title2 black1">Portfolio</p>
-                            </div>
+                    <div className="intro flex">
+                        <div className="intro-loading">
+                            <svg
+                                className="loading"
+                                width="88"
+                                height="88"
+                                viewBox="0 0 88 88"
+                            >
+                                <circle
+                                    cx="25"
+                                    cy="25"
+                                    r="20"
+                                    stroke="#dbdbdb"
+                                    strokeWidth="5"
+                                    fill="none"
+                                    strokeDasharray="125.6"
+                                    strokeDashoffset="0"
+                                ></circle>
+                                <circle
+                                    className="progress red"
+                                    cx="25"
+                                    cy="25"
+                                    r="20"
+                                    stroke="#ff0a0e"
+                                    strokeWidth="5"
+                                    fill="none"
+                                    strokeDasharray="125.6"
+                                    strokeDashoffset="125.6"
+                                ></circle>
+                            </svg>
+                        </div>
+                        <div className="intro-txt flex">
+                            <p className="uptxt title2 black1">Sohee's</p>
+                            <p className="uptxt title2 black1">
+                                Front-end Developer
+                            </p>
+                            <p className="uptxt title2 black1">Portfolio</p>
                         </div>
                     </div>
                     <div className="Ybar">

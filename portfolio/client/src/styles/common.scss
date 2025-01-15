@@ -14,7 +14,7 @@
 }
 
 .header3 {
-    @include fontStyle(32px, 28px, 400);
+    @include fontStyle(32px, 40px, 400);
 }
 .title1 {
     @include fontStyle(40px, 48px, 700, 0.28px);
@@ -79,6 +79,7 @@
 }
 body {
     font-family: "Pretendard";
+    box-sizing: border-box;
 }
 .link {
     color: #fff;
@@ -90,24 +91,23 @@ body {
 }
 
 .center {
-    width: calc(1920px - 80px);
-    height: calc(100vh - 80px);
+    width: calc(100% - 80px);
+    box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 2.5rem;
-    background-color: rgb(77, 78, 77);
+    padding: 0 2.7rem;
+    // background-color: rgb(77, 78, 77);
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
 }
 
 //헤더
 .header {
-    width: 100vw;
+    width: 100%;
     height: 80px;
-    background-color: #000;
+    // background-color: #000;
     display: flex;
     justify-content: space-between;
-    color: #fff;
     align-items: center;
     position: fixed;
     top: 0;
@@ -125,7 +125,7 @@ body {
     }
 
     .logo {
-        margin-left: 28px;
+        margin-left: 18px;
         width: 44px;
         height: 44px;
         border-radius: 50%;
@@ -133,14 +133,15 @@ body {
     }
 
     .nav {
-        margin-right: 100px;
-        justify-content: end;
+        margin-right: 44px;
+        justify-content: right;
         list-style: none;
         display: flex;
         /* // align-items: center; */
         flex-direction: row;
         .navli {
-            padding-left: 30px;
+            padding-left: 88px;
+            // padding-left: 44px;
         }
         .link,
         .linkto {
@@ -188,25 +189,28 @@ body {
             transition: color 0.8s ease-in-out;
         }
     }
-}
-.hidden {
-    transition: transform 2s ease, opacity 0.5s ease;
-    pointer-events: none;
-    transform: translateY(-100%);
-    opacity: 0;
-    /* display: none; */
+    &.hidden {
+        transition: transform 2s ease, opacity 0.5s ease;
+        pointer-events: none;
+        transform: translateY(-100%);
+        opacity: 0;
+        /* display: none; */
+    }
+    &.headerbgc {
+        background-color: #121212;
+    }
 }
 
 //스크롤바
 .scrollwrap {
     width: 100%;
-    height: 100%;
+    padding-top: 80px;
     .scrollbar {
         position: fixed;
         z-index: 998;
-        width: 100px;
-        height: 100vh;
-        background-color: #000;
+        width: 80px;
+        height: 100%;
+        // background-color: #121212;
         display: flex;
         align-items: center;
         flex-direction: column;

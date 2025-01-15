@@ -9,7 +9,7 @@ const Project_s: React.FC = () => {
     // const Ppop()=>{
     //     setpopup(true)
     // }
-    console.log(projectview, "projectview");
+    console.log("projectview배열", projectview);
     return (
         <>
             <div id="project" className="center colorW flexC">
@@ -31,28 +31,14 @@ const Project_s: React.FC = () => {
                                 </button>
                             </div>
                         ))}
-
-                        {/* <div className="imgwrap">
-                            <img
-                                src="/sohee-portfolio/img/sub/study61.png"
-                                alt="jomalone"
-                            />
-                            <span className="des">
-                                <p>조말론</p>
-                                <p>
-                                    API하여 더욱 직관적이고 효율적인 예약 환경을
-                                    제공했습니다
-                                </p>
-                            </span>
-                        </div> */}
                     </div>
+                    {popup && (
+                        <Ppop
+                            projectview={[popup]}
+                            onClose={() => setpopup(null)}
+                        />
+                    )}
                 </div>
-                {popup && (
-                    <Ppop
-                        projectview={projectview}
-                        onClose={() => setpopup(null)}
-                    />
-                )}
             </div>
         </>
     );

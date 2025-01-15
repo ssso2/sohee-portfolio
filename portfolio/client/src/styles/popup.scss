@@ -1,10 +1,26 @@
 .projectpop {
-    display: none;
     width: 1440px;
-    height: 400vh;
+    height: 100%;
     background-color: aqua;
     padding: 48px 80px;
     margin: 0 auto;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    width: 100%;
+    height: 100%;
+    // background: rgba(0, 0, 0, 0.5); // 반투명 배경
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    z-index: 9999;
+    .popclose {
+        width: 32px;
+        // position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 999;
+    }
     header {
         background-color: rgb(240, 252, 252);
         .subtitle1 {
@@ -20,9 +36,10 @@
             }
         }
     }
+
     .deswrap {
         background-color: rgb(219, 176, 227);
-        gap: 32px;
+        // gap: 32px;
         justify-content: space-between;
         aside {
             width: 192px;
@@ -37,7 +54,7 @@
                 background-color: rgb(124, 148, 253);
                 margin-bottom: 48px;
                 position: relative;
-                .title {
+                .ptitle {
                     margin-bottom: 12px;
                     &::before {
                         content: "";

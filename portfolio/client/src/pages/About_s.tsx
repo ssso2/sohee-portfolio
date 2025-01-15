@@ -2,44 +2,47 @@ import "../styles/common.scss";
 import "../styles/about.scss";
 
 const About_s: React.FC = () => {
+    interface aboutype {
+        title: string;
+        des: string;
+        img: string;
+        alt: string;
+    }
+    const aboutdata: aboutype[] = [
+        {
+            title: "1. 새로운 배움",
+            des: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Maiores vel, sapiente quaerat tempora debitis quidemlibero dolorum amet ut, quod assumenda obcaecati impedit minima odit? Nam asperiores ducimus enim veniam!",
+            img: "/sohee-portfolio/img/sub/study61.png",
+            alt: "teacher",
+        },
+        {
+            title: "2. 개발자",
+            des: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Maiores vel, sapiente quaerat tempora debitis quidemlibero dolorum amet ut, quod assumenda obcaecati impedit minima odit? Nam asperiores ducimus enim veniam!",
+            img: "/sohee-portfolio/img/sub/study61.png",
+            alt: "developer",
+        },
+    ];
     return (
-        <>
-            <div id="about" className="center colorW flexC aboutwrap">
-                <h1 className="title">🔍 About Me</h1>
-                <div className="introWrap">
-                    <div className="introTitle">01. 새로운 배움</div>
-                    <div className="des">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Maiores vel, sapiente quaerat tempora debitis quidem
-                        libero dolorum amet ut, quod assumenda obcaecati impedit
-                        minima odit? Nam asperiores ducimus enim veniam!
-                    </div>
-                    <div className="imgwrap">
-                        <img
-                            src="/sohee-portfolio/img/sub/study61.png"
-                            alt="teacher"
-                            className="img"
-                        />
-                    </div>
+        <div className="aboutwrapper">
+            <div id="about" className="white aboutwrap">
+                <div className="maintitle flex">
+                    <img
+                        src="/sohee-portfolio/img/icon/SpeechBalloon.svg"
+                        alt="aboutme"
+                    />
+                    <div className="title1 sectionH">About Me</div>
                 </div>
-                <div className="introWrap">
-                    <div className="introTitle">02. 개발자</div>
-                    <div className="des">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Maiores vel, sapiente quaerat tempora debitis quidem
-                        libero dolorum amet ut, quod assumenda obcaecati impedit
-                        minima odit? Nam asperiores ducimus enim veniam!
+                {aboutdata.map((data, index) => (
+                    <div className="introWrap" key={index}>
+                        <div className="title2 ss">{data.title}</div>
+                        <div className="body2">{data.des}</div>
+                        <div className="aboutimg">
+                            <img src={data.img} alt={data.alt} />
+                        </div>
                     </div>
-                    <div className="imgwrap">
-                        <img
-                            src="/sohee-portfolio/img/sub/study61.png"
-                            alt="teacher"
-                            className="img"
-                        />
-                    </div>
-                </div>
+                ))}
             </div>
-        </>
+        </div>
     );
 };
 

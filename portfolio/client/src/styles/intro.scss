@@ -1,41 +1,24 @@
 .intro {
     flex-direction: column;
+    height: 100vh;
     align-items: center;
-    background-color: #0a0;
+    justify-content: center;
+    // background-color: #0a0;
     .intro-loading {
         justify-content: center;
-        // display: flex;
-        // opacity: 1;
-        // width: 88px;
-        // height: 88px;
-        // color: #e74c3c;
-        // background-color: #0a0;
-        // border-radius: 50%;
         transform: rotate(-90deg);
         .loading {
             justify-content: center;
         }
-        // circle {
-        //     stroke: #c2c2c2;
-        //     stroke-width: 5;
-        //     fill: none;
-        //     &.progress {
-        //         stroke: #e74c3c;
-        //         stroke-dasharray: 125.6;
-        //         stroke-dashoffset: 0;
-        //         transition: stroke-dashoffset 0.6s ease;
-        //         animation: fillGauge 1s ease-out forwards; /* 게이지를 2초 동안 채움 */
-        //     }
-        // }
         .progress {
-            animation: fillGauge 1s ease-out forwards; /* 게이지를 2초 동안 채움 */
+            animation: fillGauge 0.8s ease-out forwards;
         }
         @keyframes fillGauge {
             0% {
-                stroke-dashoffset: 125.6; /* 초기 상태 (0% 채움) */
+                stroke-dashoffset: 125.6;
             }
             100% {
-                stroke-dashoffset: 0; /* 최종 상태 (100% 채움) */
+                stroke-dashoffset: 0;
             }
         }
     }
@@ -44,13 +27,10 @@
         flex-direction: row;
         overflow: hidden;
         .uptxt {
-            // height: 100%;
-            // font-weight: 600;
             padding-right: 20px;
             opacity: 0;
             transform: translateY(20px); /* 초기 위치 */
-            animation: fade 1.8s ease-out forwards;
-            // slideDown 1s ease-out forwards 5s;
+            animation: fade 1.2s ease-out forwards;
         }
         .uptxt:nth-child(1) {
             animation-delay: 1s;
@@ -98,7 +78,7 @@
         position: absolute;
         width: 320px;
         height: 100vh;
-        background-color: #000;
+        background-color: #121212;
         transform: translateY(-150%); /* 화면 위로 시작 */
         animation: slideDown 0.4s ease-out forwards;
         overflow: hidden;

@@ -28,7 +28,7 @@ const Header_s = (): JSX.Element => {
         }
     };
     const [hideheader, sethideheader] = useState(false);
-    const [gagefill, setgagefill] = useState(0);
+    const [headerbg, setheaderbg] = useState(false);
     let lastscrollY = 0;
 
     const scrollE = () => {
@@ -39,11 +39,12 @@ const Header_s = (): JSX.Element => {
         } else {
             sethideheader(false);
         }
+        if (scrollTop > 80) {
+            setheaderbg(true);
+        } else {
+            setheaderbg(false);
+        }
         lastscrollY = scrollTop;
-        const scrollHeight =
-            document.documentElement.scrollHeight - window.innerHeight;
-        const scrollpercent = (scrollTop / scrollHeight) * 100;
-        setgagefill(scrollpercent);
     };
     useEffect(() => {
         window.addEventListener("scroll", scrollE);
@@ -54,7 +55,11 @@ const Header_s = (): JSX.Element => {
 
     return (
         <>
-            <header className={`header ${hideheader ? "hidden" : ""}`}>
+            <header
+                className={`header white ${hideheader ? "hidden" : ""} ${
+                    headerbg ? "headerbgc" : ""
+                }`}
+            >
                 <div className="logo">
                     <img
                         className="img"

@@ -29,7 +29,7 @@ const Header = (): JSX.Element => {
         }
     };
     const [hideheader, sethideheader] = useState(false);
-    const [gagefill, setgagefill] = useState(0);
+    // const [gagefill, setgagefill] = useState(0);
     let lastscrollY = 0;
 
     const scrollE = () => {
@@ -41,10 +41,10 @@ const Header = (): JSX.Element => {
             sethideheader(false);
         }
         lastscrollY = scrollTop;
-        const scrollHeight =
-            document.documentElement.scrollHeight - window.innerHeight;
-        const scrollpercent = (scrollTop / scrollHeight) * 100;
-        setgagefill(scrollpercent);
+        // const scrollHeight =
+        //     document.documentElement.scrollHeight - window.innerHeight;
+        // const scrollpercent = (scrollTop / scrollHeight) * 100;
+        // setgagefill(scrollpercent);
     };
     useEffect(() => {
         window.addEventListener("scroll", scrollE);

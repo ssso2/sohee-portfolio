@@ -4,84 +4,99 @@
 //     text-align: left;
 //     align-items: start;
 // }
-.exWrap {
-    width: 100%;
-    height: calc(100vh - 80px);
-    padding: 166px 20px 0 20px;
-    background-color: hsl(0, 0%, 80%);
-    /* display: inline-block; */
+.exwrapper {
+    width: 95%;
+    height: 100vh;
+    // width: 1240px;
+    // margin: 0 auto 0 120px;
+    // margin-left: 120px;
+    margin: 0 auto;
     display: flex;
-    /* gap: 90px; */
-    /* justify-content: space-around; */
-    /* align-items: center; */
-    /* margin-bottom: 20px; */
-    .profile {
-        width: 400px;
-        background: #0a0;
-        .titlewrap {
-            width: 334px;
-            height: 48px;
-            &img {
-                display: inline-block;
-                width: 48px;
+    flex-direction: column;
+    background-color: rgb(129, 196, 255);
+    justify-content: center;
+    .exwrap {
+        // width: 100%;
+        // height: 100%;
+        // height: calc(100vh - 80px);
+        margin: 0 4rem;
+        // padding: 166px 20px 0 20px;
+        background-color: hsl(0, 0%, 80%);
+        /* display: inline-block; */
+        display: flex;
+        gap: 10px;
+        /* gap: 90px; */
+        /* justify-content: space-around; */
+        /* align-items: center; */
+        /* margin-bottom: 20px; */
+        .profile {
+            width: 400px;
+            background: #0a0;
+            .titlewrap {
+                width: 334px;
+                height: 48px;
+                &img {
+                    display: inline-block;
+                    width: 48px;
+                }
             }
-        }
 
-        .imgwrap {
-            // width: 248px;
-            // height: 248px;
-            & img {
-                width: 248px;
-                height: 248px;
+            .imgwrap {
+                // width: 248px;
+                // height: 248px;
+                & img {
+                    width: 248px;
+                    height: 248px;
+                }
+            }
+            .me {
+                width: 334px;
             }
         }
-        .me {
-            width: 334px;
-        }
-    }
-    .deswrap {
-        width: 700px;
-        background-color: #121212;
-        border-top-left-radius: 16px;
-        border-top-right-radius: 16px;
-        padding: 10px;
-        margin: 0 100px;
-        .des {
+        .deswrap {
+            width: 700px;
+            background-color: #121212;
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
             padding: 10px;
-            background-color: #e49494;
-            display: flex;
-            gap: 10px;
-            .info {
-                padding-right: 20px;
-                border-right: 2px solid #fff;
+            margin: 0 100px;
+            .des {
+                padding: 10px;
+                background-color: #e49494;
+                display: flex;
+                gap: 10px;
+                .info {
+                    padding-right: 20px;
+                    border-right: 2px solid #fff;
+                }
+                .info p {
+                    color: #0a0;
+                }
+                .info p::after {
+                    content: "졸업";
+                    display: inline-block;
+                    margin-top: 0;
+                    color: #000;
+                    font-size: 16px;
+                    background-color: #ccc;
+                }
+                .detail p:nth-of-type(1) {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #000;
+                }
             }
-            .info p {
-                color: #0a0;
-            }
-            .info p::after {
-                content: "졸업";
+            .iconwrap {
+                width: 40px;
+                height: 40px;
                 display: inline-block;
-                margin-top: 0;
-                color: #000;
-                font-size: 16px;
-                background-color: #ccc;
+                background-color: #dff060;
+                border-radius: 6px;
+                text-align: center;
+                padding: 10px;
             }
-            .detail p:nth-of-type(1) {
-                padding-bottom: 10px;
-                border-bottom: 1px solid #000;
+            .iconwrap img {
+                width: 40px;
             }
-        }
-        .iconwrap {
-            width: 40px;
-            height: 40px;
-            display: inline-block;
-            background-color: #dff060;
-            border-radius: 6px;
-            text-align: center;
-            padding: 10px;
-        }
-        .iconwrap img {
-            width: 40px;
         }
     }
 }

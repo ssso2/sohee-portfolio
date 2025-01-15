@@ -1,6 +1,6 @@
 import "../styles/common.scss";
 import "../styles/popup.scss";
-import { viewtype } from "./Projectdata";
+import { viewtype, projectinfo, deslist } from "./Projectdata";
 
 interface datatype {
     projectview: viewtype[];
@@ -8,7 +8,10 @@ interface datatype {
 }
 
 const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
-    console.log(projectview, "projectview");
+    if (!projectview || projectview.length === 0) {
+        return <div>데이터가 없습니다.</div>;
+    }
+    console.log("projectview", projectview);
     const datalist = [
         {
             title: "개요",
@@ -23,6 +26,9 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
     ];
     return (
         <div className="projectpop">
+            <div className="popclose" onClick={onClose}>
+                <img src="/sohee-portfolio/img/icon/logo192.png" alt="close" />
+            </div>
             {projectview.map(project => (
                 <header key={project.id}>
                     <div className="subtitle1 black1">{project.title}</div>
@@ -31,18 +37,17 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                     </div>
                 </header>
             ))}
-
             <div className="deswrap flex">
                 <aside>
-                    <p className="subtitle1">신라호텔 서울</p>
-                    <p className="label1 gray4">Font-End Developer</p>
+                    <p className="subtitle1">{projectinfo[0].title}</p>
+                    <p className="label1 gray4">{projectinfo[0].people}</p>
                     <p className="label1 gray4">기간 : 24.12 ~ 24.01</p>
                     <p className="label1 gray4">인원 : 5명</p>
                 </aside>
                 <main>
-                    {datalist.map((data, index) => (
+                    {deslist.map((data, index) => (
                         <div className="section" key={index}>
-                            <div className="title gray5 subtitle1">
+                            <div className="ptitle gray5 subtitle1">
                                 {data.title}
                             </div>
                             <div className="des caption1">{data.content}</div>
