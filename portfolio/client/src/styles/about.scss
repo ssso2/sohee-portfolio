@@ -1,27 +1,17 @@
+// main.scss
+@use "./common.scss";
+
 .aboutwrapper {
-    width: 95%;
-    height: 100vh;
-    // width: 1240px;
-    // margin: 0 auto 0 120px;
-    // margin-left: 120px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    background-color: #caa;
+    @include common.wrapperstyle;
     justify-content: center;
-    // align-items: center;
     .aboutwrap {
         margin: 0 4rem;
         .maintitle {
             margin-bottom: 68px;
             width: 100%;
-            // padding-left: 80px;
-            // justify-self: unset;
             &img {
                 width: 48px;
             }
-            // & .sectionH {
-            // }
         }
         .introWrap {
             width: 95%;
@@ -33,9 +23,6 @@
             align-items: center;
             margin-bottom: 40px;
             padding: 24px 40px;
-            // .des {
-            //     width: 500px;
-            // }
             .title2 {
                 flex: 2;
             }
@@ -50,6 +37,7 @@
                     // display: inline-block;
                     width: 198px;
                     height: 198px;
+                    object-fit: cover;
                 }
             }
         }

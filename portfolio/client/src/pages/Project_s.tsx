@@ -12,16 +12,20 @@ const Project_s: React.FC = () => {
     console.log("projectview배열", projectview);
     return (
         <>
-            <div id="project" className="center colorW flexC">
+            <div id="project" className="projectwrapper white flexC">
                 <div className="projectwrap">
-                    <h1 className="title"> PROJECT</h1>
+                    <h1 className="title header1"> PROJECT</h1>
                     <div className="line">
                         {projectview.map(project => (
                             <div className="imgwrap" key={project.id}>
                                 <img src={project.img} alt="silla" />
                                 <span className="des">
-                                    <p>{project.title}</p>
-                                    <p>{project.description}</p>
+                                    <p className="white subtitle1">
+                                        {project.title}
+                                    </p>
+                                    <p className="caption1">
+                                        {project.description}
+                                    </p>
                                 </span>
                                 <button
                                     className="black1 detaillink"

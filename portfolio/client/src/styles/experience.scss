@@ -1,101 +1,118 @@
-// .title {
-//     display: block;
-//     margin-bottom: 50px;
-//     text-align: left;
-//     align-items: start;
-// }
+@use "./common.scss";
+
 .exwrapper {
-    width: 95%;
-    height: 100vh;
-    // width: 1240px;
-    // margin: 0 auto 0 120px;
-    // margin-left: 120px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(129, 196, 255);
-    justify-content: center;
+    @include common.wrapperstyle;
+    height: 100%;
     .exwrap {
-        // width: 100%;
-        // height: 100%;
-        // height: calc(100vh - 80px);
-        margin: 0 4rem;
-        // padding: 166px 20px 0 20px;
-        background-color: hsl(0, 0%, 80%);
-        /* display: inline-block; */
+        margin: 0 8rem 0 4rem;
         display: flex;
-        gap: 10px;
-        /* gap: 90px; */
-        /* justify-content: space-around; */
-        /* align-items: center; */
-        /* margin-bottom: 20px; */
+        justify-content: space-between;
         .profile {
-            width: 400px;
-            background: #0a0;
+            width: 334px;
+            justify-content: center;
             .titlewrap {
                 width: 334px;
                 height: 48px;
-                &img {
+                margin-bottom: 107px;
+                & img {
                     display: inline-block;
                     width: 48px;
+                    vertical-align: middle;
+                    margin-right: 16px;
+                }
+                & .title1 {
+                    display: inline-block;
+                    vertical-align: middle;
                 }
             }
-
             .imgwrap {
-                // width: 248px;
-                // height: 248px;
+                width: 248px;
+                height: 248px;
+                margin: 0 auto;
                 & img {
                     width: 248px;
                     height: 248px;
                 }
             }
             .me {
+                margin-top: 50px;
                 width: 334px;
             }
         }
         .deswrap {
-            width: 700px;
-            background-color: #121212;
+            width: 60%;
+            background-color: #212120;
             border-top-left-radius: 16px;
             border-top-right-radius: 16px;
-            padding: 10px;
-            margin: 0 100px;
+            padding: 10px 10px 34px 10px;
+
+            // margin: 0 100px;
             .des {
-                padding: 10px;
-                background-color: #e49494;
+                // width: 100%;
+                padding: 24px 34px 0 24px;
                 display: flex;
-                gap: 10px;
+                gap: 20px;
                 .info {
                     padding-right: 20px;
-                    border-right: 2px solid #fff;
+                    border-right: 1.5px solid #fff;
+                    vertical-align: middle;
+                    flex: 1;
+                    & .subtitle1::before {
+                        width: 42px;
+                        content: "졸업";
+                        display: inline-block;
+                        margin-right: 5px;
+                        color: #000;
+                        font-size: 16px;
+                        border-radius: 4px;
+                        text-align: center;
+                        background-color: #f5f5f5;
+                        vertical-align: middle;
+                        &:nth-of-type(2) {
+                            content: "이직";
+                        }
+                    }
+                    & .change::before {
+                        content: "이직";
+                    }
+                    & .retire::before {
+                        content: "퇴사";
+                    }
+                    .project::before {
+                        content: "수료";
+                    }
                 }
-                .info p {
-                    color: #0a0;
+                .detail {
+                    flex: 2;
+                    & p:nth-of-type(1) {
+                        width: 100%;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid #373636;
+                    }
                 }
-                .info p::after {
-                    content: "졸업";
+            }
+            .subtitle1 {
+                margin: 68px 0 24px 0;
+            }
+            .stack {
+                width: 100%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                .iconwrap {
+                    width: 48px;
+                    height: 48px;
                     display: inline-block;
-                    margin-top: 0;
-                    color: #000;
-                    font-size: 16px;
-                    background-color: #ccc;
+                    background-color: #121212;
+                    border-radius: 8px;
+                    text-align: center;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    & img {
+                        width: 28px;
+                        height: 28px;
+                    }
                 }
-                .detail p:nth-of-type(1) {
-                    padding-bottom: 10px;
-                    border-bottom: 1px solid #000;
-                }
-            }
-            .iconwrap {
-                width: 40px;
-                height: 40px;
-                display: inline-block;
-                background-color: #dff060;
-                border-radius: 6px;
-                text-align: center;
-                padding: 10px;
-            }
-            .iconwrap img {
-                width: 40px;
             }
         }
     }

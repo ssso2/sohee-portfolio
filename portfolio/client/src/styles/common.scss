@@ -1,3 +1,10 @@
+//영역
+@mixin wrapperstyle {
+    width: 95%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
 //폰트
 @mixin fontStyle($size, $lineheight, $weight, $spacing: 0) {
     font-size: $size;
@@ -75,6 +82,7 @@
     display: flex;
 }
 .flexC {
+    display: flex;
     flex-direction: column;
 }
 body {

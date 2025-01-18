@@ -23,7 +23,7 @@ const About_s: React.FC = () => {
         },
     ];
     return (
-        <div className="aboutwrapper">
+        <div className="aboutwrapper flexC">
             <div id="about" className="white aboutwrap">
                 <div className="maintitle flex">
                     <img
@@ -34,7 +34,7 @@ const About_s: React.FC = () => {
                 </div>
                 {aboutdata.map((data, index) => (
                     <div className="introWrap" key={index}>
-                        <div className="title2 ss">{data.title}</div>
+                        <div className="title2">{data.title}</div>
                         <div className="body2">{data.des}</div>
                         <div className="aboutimg">
                             <img src={data.img} alt={data.alt} />

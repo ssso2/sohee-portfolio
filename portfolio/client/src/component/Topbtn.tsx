@@ -30,7 +30,7 @@ const Topbtn: React.FC = () => {
                 <div className="twrap" onClick={topclick}>
                     <img
                         className="top"
-                        src="/sohee-portfolio/img/icon/icon-arrow.png"
+                        src="/sohee-portfolio/img/icon/top.svg"
                         alt="top"
                     />
                 </div>
