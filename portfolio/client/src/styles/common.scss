@@ -13,11 +13,11 @@
     letter-spacing: $spacing;
 }
 .header1 {
-    @include fontStyle(148px, auto, 500);
+    @include fontStyle(56px, 68px, 500);
 }
 
 .header2 {
-    @include fontStyle(58px, 68px, 600);
+    @include fontStyle(40px, 50px, 600);
 }
 
 .header3 {

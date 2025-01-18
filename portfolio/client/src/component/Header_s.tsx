@@ -91,7 +91,8 @@ const Header_s = (): JSX.Element => {
                     ))}
                     <li className="navli">
                         <Link
-                            to="https://docs.google.com/forms/d/e/1FAIpQLSd9dvY8ZfOx2NNNkXmVFnfYbB6apGYqQKQcDi6WwRlK1u27vQ/viewform?usp=sharing"
+                            to="#"
+                            // "https://docs.google.com/forms/d/e/1FAIpQLSd9dvY8ZfOx2NNNkXmVFnfYbB6apGYqQKQcDi6WwRlK1u27vQ/viewform?usp=sharing"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="linkto"

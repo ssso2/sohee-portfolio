@@ -14,7 +14,7 @@ const Project_s: React.FC = () => {
         <>
             <div id="project" className="projectwrapper white flexC">
                 <div className="projectwrap">
-                    <h1 className="title header1"> PROJECT</h1>
+                    <h1 className="title"> PROJECT</h1>
                     <div className="line">
                         {projectview.map(project => (
                             <div className="imgwrap" key={project.id}>

@@ -50,16 +50,64 @@ export const projectinfo: infotype[] = [
 
 export interface destype {
     title: string;
-    content: string;
+    content: null | string | string[] | { [key: string]: string[] }[];
+    // | Record<string, string[]>[];
 }
 export const deslist: destype[] = [
     {
         title: "개요",
-        content:
-            " 앱을 지원되는 기기에서 테스트하여 충돌 및 안정성문제를 식별한 후 다시 제출하세요. 문제 해결을 돕기위해 충돌 로그(crash logs)가 첨부되어 있습니다. 충돌문제 해결을 위한 단계 충돌 보고서(crash report)를 완전히 심볼화(symbolicate) 하세요. 방법은 Adding Identifiable Symbol Names to a Crash Report 문서 참고하세요",
+        content: "리뉴얼을 통해 더 직관적이고 편리한 예약 환경을 만들었습니다.",
     },
     {
         title: "배포링크",
-        content: "https://www.google.com/",
+        content: ["https://www.", "https://www.", "https://www."],
+    },
+    {
+        title: "주요기능",
+        content: [
+            "스페셜오퍼필터검색",
+            "객실예약 및 취소",
+            "문의게시판",
+            "관리자페이지",
+        ],
+    },
+    {
+        title: "기술스택",
+        content: ["html scss javascript", "scss"],
+    },
+    {
+        title: "작업기여도",
+        content: [
+            {
+                스페셜오퍼필터검색: ["문제점", "해결"],
+            },
+            {
+                아이디비밀번호찾기: ["문제점", "해결"],
+            },
+            {
+                문의게시판: ["문제점", "해결"],
+            },
+            {
+                관리자페이지: ["문제점", "해결"],
+            },
+        ],
+    },
+    {
+        title: "트러블슈팅",
+        content: [
+            {
+                스페셜오퍼: ["문제점", "해결"],
+            },
+            {
+                타이밍: ["문제점", "해결"],
+            },
+            {
+                디자인통일성: ["문제점", "해결"],
+            },
+        ],
+    },
+    {
+        title: "스크린샷",
+        content: null,
     },
 ];
