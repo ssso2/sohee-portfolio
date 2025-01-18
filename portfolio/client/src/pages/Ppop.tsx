@@ -38,13 +38,13 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
     return (
         <>
             <div className="projectpopwrap">
-                <div className="popclose" onClick={onClose}>
-                    <img
-                        src="/sohee-portfolio/img/icon/close.svg"
-                        alt="close"
-                    />
-                </div>
                 <div className="projectpop">
+                    <div className="popclose" onClick={onClose}>
+                        <img
+                            src="/sohee-portfolio/img/icon/close.svg"
+                            alt="close"
+                        />
+                    </div>
                     <div className="inner">
                         {projectview.map(project => (
                             <header key={project.id}>
