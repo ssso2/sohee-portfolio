@@ -12,7 +12,7 @@ const Experience_s: React.FC = () => {
                             src="/sohee-portfolio/img/icon/Page.svg"
                             alt="experience"
                         />
-                        <h1 className="title1">Experinece</h1>
+                        <h1 className="header2">Experinece</h1>
                     </div>
                     <div className="imgwrap">
                         <img

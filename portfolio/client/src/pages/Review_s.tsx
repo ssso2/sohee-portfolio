@@ -79,7 +79,7 @@ const Review_s: React.FC = () => {
                         src="/sohee-portfolio/img/icon/pencil.svg"
                         alt="aboutme"
                     />
-                    <div className="title1">Feedback</div>
+                    <div className="header2">Feedback</div>
                 </div>
 
                 <Swiper

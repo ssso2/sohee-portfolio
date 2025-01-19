@@ -1,16 +1,12 @@
 // import styles from "../styles/common.module.scss";
 import { useState } from "react";
 import { deslist, destype } from "./Projectdata";
-import classNames from "classnames";
 interface rendertype {
     content: destype["content"];
 }
 
 const Poprender: React.FC<rendertype> = ({ content }) => {
     const [select, setselect] = useState<string | null>(null);
-    // const desshow =()=>{
-    //     setaccordion(true)
-    // }
     // 화면캡쳐
     if (content === null) {
         return (
@@ -48,7 +44,7 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
     }
     // 개요
     if (typeof content === "string") {
-        return <p>{content}</p>;
+        return <p className="caption1">{content}</p>;
     }
 
     // 배열-배포링크, 작업기여도
@@ -65,7 +61,7 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
             return (
                 <div>
                     {content.map((c, idx) => (
-                        <div key={idx}>
+                        <div key={idx} className="list">
                             {Object.entries(c).map(([key, value], i) => (
                                 <div key={i}>
                                     <div className="flex">
@@ -75,7 +71,7 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
                                             className="fingericon"
                                         ></img>
                                         <p
-                                            className="body1 accordion"
+                                            className="caption1 accordion"
                                             onClick={() =>
                                                 setselect(
                                                     select === key ? null : key
@@ -89,11 +85,11 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
                                         {select === key &&
                                             value.map(
                                                 (item: string, num: number) => (
-                                                    <div key={num}>
-                                                        <p className="caption1">
+                                                    <ul key={num}>
+                                                        <li className="caption1">
                                                             {item}
-                                                        </p>
-                                                    </div>
+                                                        </li>
+                                                    </ul>
                                                 )
                                             )}
                                     </div>

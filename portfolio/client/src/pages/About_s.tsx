@@ -30,7 +30,7 @@ const About_s: React.FC = () => {
                         src="/sohee-portfolio/img/icon/SpeechBalloon.svg"
                         alt="aboutme"
                     />
-                    <div className="title1 sectionH">About me</div>
+                    <div className="header2">About me</div>
                 </div>
                 {aboutdata.map((data, index) => (
                     <div className="introWrap" key={index}>

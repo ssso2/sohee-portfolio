@@ -17,11 +17,11 @@
 }
 
 .header2 {
-    @include fontStyle(40px, 50px, 600);
+    @include fontStyle(32px, 38px, 600);
 }
 
 .header3 {
-    @include fontStyle(32px, 40px, 400);
+    @include fontStyle(32px, 38px, 400);
 }
 .title1 {
     @include fontStyle(40px, 48px, 700, 0.28px);

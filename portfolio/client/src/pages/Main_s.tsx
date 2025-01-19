@@ -18,22 +18,24 @@ const Main_s: React.FC = () => {
             {/* <div className="center mainpg"> */}
             <div className="maincontainer flex">
                 <div className="mainTxt">
-                    <p>
-                        <img
+                    <p className="subtitle1 white">
+                        {/* <img
                             src="/sohee-portfolio/img/icon/page.svg"
                             alt="mainIMG"
-                        />
+                        /> */}
+                        PortFolio
                     </p>
                     <p className="header2 gray2">안녕하세요.</p>
                     <p className="header2 gray2">
                         프론트엔드 개발자 김소희입니다.
                     </p>
-                    <p className="header3 gray3">
-                        웹 개발의 매력에 빠져 배움을 즐기고,
+                    <p className="subtitle2 gray3">
+                        웹 개발의 매력에 빠져 배움을 즐기고, 소통과 협업에서
+                        가치를 느끼는 개발자입니다.
                     </p>
-                    <p className="header3 gray3">
+                    {/* <p className="subtitle2 gray3">
                         소통과 협업에서 가치를 느끼는 개발자입니다.
-                    </p>
+                    </p> */}
                 </div>
                 {/* <div className="shadowbox" /> */}
                 <div className="imgwrap">

@@ -31,7 +31,7 @@ const Scrollbar_s: React.FC = () => {
                         style={{ height: `${gagefill}%` }}
                     ></div>
                 </div>
-                <span className="percentage">{Math.round(gagefill)}%</span>
+                {/* <span className="percentage">{Math.round(gagefill)}%</span> */}
                 <div className="barTxt">End</div>
             </div>
         </div>

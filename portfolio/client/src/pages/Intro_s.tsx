@@ -38,7 +38,7 @@ const Intro_s: React.FC = () => {
                                     cx="25"
                                     cy="25"
                                     r="20"
-                                    stroke="#ff0a0e"
+                                    stroke="#0054ff"
                                     strokeWidth="5"
                                     fill="none"
                                     strokeDasharray="125.6"
