@@ -1,8 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/common.scss";
 import "../styles/popup.scss";
 import { viewtype, projectinfo, deslist } from "./Projectdata";
 import Poprender from "./Poprender";
+import Imgpop from "./Imgpop";
 
 interface datatype {
     projectview: viewtype[];
@@ -27,7 +28,7 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
 
     return (
         <>
-            <div className="projectpopwrap">
+            <div className="projectpopwrap gray5">
                 <div className="projectpop">
                     <div className="popclose" onClick={onClose}>
                         <img
