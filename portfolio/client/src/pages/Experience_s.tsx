@@ -42,12 +42,12 @@ const Experience_s: React.FC = () => {
                                 >
                                     {data.name}
                                 </p>
-                                <p className="caption1">{data.date}</p>
+                                <p className="caption1 date">{data.date}</p>
                             </div>
                             <div className="detail">
                                 <p className="body1">{data.info}</p>
                                 <p className="caption1">{data.des1}</p>
-                                <p className="caption1">{data.des2}</p>
+                                {/* <p className="caption1">{data.des2}</p> */}
                             </div>
                         </div>
                     ))}

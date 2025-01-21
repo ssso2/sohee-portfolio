@@ -7,13 +7,50 @@ interface rendertype {
 }
 
 const Poprender: React.FC<rendertype> = ({ content }) => {
-    const [select, setselect] = useState<string | null>(null);
-    const [popshow, setpopshow] = useState(false);
-    const imgclick = () => {
-        setpopshow(true); // 팝업 열기
+    const images = [
+        {
+            id: 1,
+            src: "/sohee-portfolio/img/sub/hotel.49.25.png",
+            alt: "프로젝트 작업화면",
+            comment: "메인화면",
+        },
+        {
+            id: 2,
+            src: "/sohee-portfolio/img/sub/hotel.77.png",
+            alt: "프로젝트 작업화면",
+            comment: "객실상세페이지",
+        },
+        {
+            id: 3,
+            src: "/sohee-portfolio/img/sub/hotel.50.19.png",
+            alt: "프로젝트 작업화면",
+            comment: "스페셜오퍼페이지",
+        },
+        {
+            id: 4,
+            src: "/sohee-portfolio/img/sub/hotel.54.04.png",
+            alt: "프로젝트 작업화면",
+            comment: "예약페이지",
+        },
+        {
+            id: 5,
+            src: "/sohee-portfolio/img/sub/hotel.54.57.png",
+            alt: "프로젝트 작업화면",
+            comment: "문의하기게시판",
+        },
+        {
+            id: 6,
+            src: "/sohee-portfolio/img/sub/hotel.57.27.png",
+            alt: "프로젝트 작업화면",
+            comment: "관리자",
+        },
+    ];
+    const [current, setcurrent] = useState<string | null>(null);
+    const imgclick = (src: string) => {
+        setcurrent(src); // 클릭된 이미지 src 저장
     };
-    const imgclose = () => {
-        setpopshow(false); // 팝업 닫기
+    const closePopup = () => {
+        setcurrent(null); // 팝업 닫기
     };
     // 화면캡쳐
     if (content === null) {
@@ -23,53 +60,18 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
                     이미지를 클릭하면 작업화면을 크게 볼 수 있습니다.
                 </p>
                 <div className="flex">
-                    <div className="siteimg">
-                        <img
-                            src="/sohee-portfolio/img/sub/hotel.49.25.png"
-                            alt="프로젝트 작업화면"
-                            onClick={imgclick}
-                        />
-                        <p className="imgdes gray4">메인화면</p>
-                    </div>
-                    <div className="siteimg">
-                        <img
-                            src="/sohee-portfolio/img/sub/hotel.55.47.png"
-                            alt="프로젝트 작업화면"
-                        />
-                        <p className="imgdes gray4">객실상세페이지</p>
-                    </div>
-                    <div className="siteimg">
-                        <img
-                            src="/sohee-portfolio/img/sub/hotel.50.19.png"
-                            alt="프로젝트 작업화면"
-                        />
-                        <p className="imgdes gray4">스페셜오퍼페이지</p>
-                    </div>
+                    {images.map(img => (
+                        <div className="siteimg" key={img.id}>
+                            <img
+                                src={img.src}
+                                alt={img.alt}
+                                onClick={() => imgclick(img.src)}
+                            />
+                            <p className="imgdes gray4">{img.comment}</p>
+                        </div>
+                    ))}
                 </div>
-                <div className="flex">
-                    <div className="siteimg">
-                        <img
-                            src="/sohee-portfolio/img/sub/hotel.54.04.png"
-                            alt="site"
-                        />
-                        <p className="imgdes gray4">예약페이지</p>
-                    </div>
-                    <div className="siteimg">
-                        <img
-                            src="/sohee-portfolio/img/sub/hotel.54.57.png"
-                            alt="site"
-                        />
-                        <p className="imgdes gray4">문의하기게시판</p>
-                    </div>
-                    <div className="siteimg">
-                        <img
-                            src="/sohee-portfolio/img/sub/hotel.57.27.png"
-                            alt="site"
-                        />
-                        <p className="imgdes gray4">관리자</p>
-                    </div>
-                </div>
-                <Imgpop popshow={popshow} imgclose={imgclose} />
+                <Imgpop current={current} imgclose={closePopup} />
             </div>
         );
     }

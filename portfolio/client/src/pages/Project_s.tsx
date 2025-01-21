@@ -31,7 +31,11 @@ const Project_s: React.FC = () => {
                                     className="black1 detaillink"
                                     onClick={() => setpopup(project)}
                                 >
-                                    자세히보기
+                                    상세보기
+                                    {/* <img
+                                        src="/sohee-portfolio/img/icon/Vector.svg"
+                                        alt="프로젝트자세히보기"
+                                    /> */}
                                 </button>
                             </div>
                         ))}
