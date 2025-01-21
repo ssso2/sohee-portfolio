@@ -5,16 +5,26 @@ import "../styles/contact.scss";
 
 const Contact: React.FC = () => {
     const [popup, setpopup] = useState<boolean>(false);
-    const popClick = () => {
-        setpopup(!popup);
+    const [popclose, setpopclose] = useState<boolean>(false);
+    const clickbtn = () => {
+        if (popup) {
+            setpopclose(true);
+            setTimeout(() => {
+                setpopup(false);
+                setpopclose(false);
+            }, 500);
+        } else {
+            setpopup(true);
+        }
     };
+
     return (
-        <div className="contactwrapper" onClick={popClick}>
+        <div className="contactwrapper" onClick={clickbtn}>
             <div className="contactwrap">
                 <div className="round"> </div>
                 <div className="contact black1">Contact</div>
             </div>
-            {popup && <Conpop onclose={() => setpopup(false)} />}
+            {popup && <Conpop popclose={popclose} onclose={clickbtn} />}
         </div>
     );
 };

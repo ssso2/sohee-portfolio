@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../styles/common.scss";
 import "../styles/project.scss";
 import { viewtype, projectview } from "./Projectdata";
-import Ppop from "./Ppop";
+import Ppop from "./Ppop_new";
 
 const Project_s: React.FC = () => {
     const [popup, setpopup] = useState<viewtype | null>(null);

@@ -53,6 +53,22 @@
             opacity: 1;
         }
     }
+    &.closing {
+        animation: out 0.5s ease-out forwards;
+        // transform: translateX(100%);
+        // opacity: 0;
+        // animation: out 0.5s ease-out forwards;
+        @keyframes out {
+            0% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+        }
+    }
     .conpopwrap {
         // background-color: rgba(0, 0, 0);
         padding: 120px 0;

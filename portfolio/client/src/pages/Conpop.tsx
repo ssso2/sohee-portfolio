@@ -1,9 +1,10 @@
 import { V } from "react-router/dist/development/fog-of-war-DLtn2OLr";
 import "../styles/common.scss";
 interface closeprops {
+    popclose: boolean;
     onclose: () => void;
 }
-const Conpop: React.FC<closeprops> = ({ onclose }) => {
+const Conpop: React.FC<closeprops> = ({ popclose, onclose }) => {
     interface contype {
         conicon: string;
         method: string;
@@ -44,7 +45,10 @@ const Conpop: React.FC<closeprops> = ({ onclose }) => {
             });
     };
     return (
-        <div className="conpopwrapper" onClick={e => e.stopPropagation()}>
+        <div
+            className={`conpopwrapper ${popclose ? "closing" : ""}`}
+            onClick={e => e.stopPropagation()}
+        >
             <div className="conpopwrap">
                 <div className="popclose" onClick={onclose}>
                     {" "}

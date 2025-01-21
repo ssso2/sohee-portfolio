@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "../styles/common.scss";
 import "../styles/popup.scss";
-import { viewtype, projectinfo, deslist } from "./Projectdata";
-import Poprender from "./Poprender";
+import { viewtype, projectlist, contenttype } from "./Projectdata_s";
+import Poprender from "./Poprender_new";
 import Imgpop from "./Imgpop";
 
 interface datatype {
@@ -11,9 +11,19 @@ interface datatype {
 }
 
 const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
+    const [selectarray, setselectarray] = useState<contenttype[] | null>(null);
     useEffect(() => {
         if (projectview && projectview.length > 0) {
             document.body.style.overflow = "hidden";
+        }
+        const finddata = projectlist.find(project =>
+            project.some(item => item.id === projectview[0].id)
+        );
+        console.log("finddata", finddata);
+        if (finddata) {
+            setselectarray(finddata);
+        } else {
+            setselectarray(null);
         }
         return () => {
             document.body.style.overflow = "";
@@ -24,12 +34,15 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
         // 스타일필요
         return <div>데이터가 없습니다.</div>;
     }
-    console.log("projectview", projectview);
+    console.log("projectviewid", projectview);
 
     return (
         <>
             <div className="projectpopwrap gray5">
-                <div className="projectpop">
+                <div
+                    className="
+                projectpop"
+                >
                     <div className="popclose" onClick={onClose}>
                         <img
                             src="/sohee-portfolio/img/icon/close.svg"
@@ -78,32 +91,20 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                                     {projectinfo[0].num}
                                 </p>
                             </aside> */}
-                            {/* {projectinfo.map((project, i) => (
-                                <aside key={i}>
-                                    <p className="subtitle1">{project.title}</p>
-                                    <p className="label1 gray4">
-                                        {project.people}
-                                    </p>
-                                    <p className="label1 gray4">
-                                        {project.date}
-                                    </p>
-                                    <p className="label1 gray4">
-                                        {" "}
-                                        {project.num}
-                                    </p>
-                                </aside>
-                            ))} */}
                             <main>
-                                {deslist.map((data, index) => (
-                                    <div className="section" key={index}>
-                                        <div className="ptitle gray5 subtitle1">
-                                            {data.title}
+                                {selectarray &&
+                                    selectarray.map((data, index) => (
+                                        <div className="section" key={index}>
+                                            <div className="ptitle gray5 subtitle1">
+                                                {data.title}
+                                            </div>
+                                            <div className="pdes ">
+                                                <Poprender
+                                                    content={data.content}
+                                                />
+                                            </div>
                                         </div>
-                                        <div className="pdes ">
-                                            <Poprender content={data.content} />
-                                        </div>
-                                    </div>
-                                ))}
+                                    ))}
                             </main>
                         </div>
                     </div>
