@@ -29,7 +29,7 @@ const Header = (): JSX.Element => {
         }
     };
     const [hideheader, sethideheader] = useState(false);
-    const [gagefill, setgagefill] = useState(0);
+    // const [gagefill, setgagefill] = useState(0);
     let lastscrollY = 0;
 
     const scrollE = () => {
@@ -41,10 +41,10 @@ const Header = (): JSX.Element => {
             sethideheader(false);
         }
         lastscrollY = scrollTop;
-        const scrollHeight =
-            document.documentElement.scrollHeight - window.innerHeight;
-        const scrollpercent = (scrollTop / scrollHeight) * 100;
-        setgagefill(scrollpercent);
+        // const scrollHeight =
+        //     document.documentElement.scrollHeight - window.innerHeight;
+        // const scrollpercent = (scrollTop / scrollHeight) * 100;
+        // setgagefill(scrollpercent);
     };
     useEffect(() => {
         window.addEventListener("scroll", scrollE);
@@ -63,7 +63,7 @@ const Header = (): JSX.Element => {
                 <div className={styles.logo}>
                     <img
                         className={styles.img}
-                        src="/sohee-portfolio/img/sub/profile.png"
+                        src="/sohee-portfolio/img/icon/plogo.svg"
                         alt="Profile"
                     />
                 </div>

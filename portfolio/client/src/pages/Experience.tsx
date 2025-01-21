@@ -16,9 +16,15 @@ const Experience: React.FC = () => {
             >
                 <div className={exstyles.exWrap}>
                     <div className={exstyles.profile}>
-                        <h1 className={classNames(exstyles.title)}>
-                            📄 Experinece
-                        </h1>
+                        <div className={exstyles.titlewrap}>
+                            <img
+                                src="/sohee-portfolio/img/icon/Page.svg"
+                                alt="experience"
+                            />
+                            <h1 className={classNames(exstyles.title)}>
+                                Experinece
+                            </h1>
+                        </div>
                         <div className={exstyles.imgwrap}>
                             <img
                                 src="/sohee-portfolio/img/sub/study61.png"

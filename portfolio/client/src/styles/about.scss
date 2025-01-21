@@ -1,0 +1,79 @@
+@use "./common.scss";
+
+.aboutwrapper {
+    @include common.wrapperstyle;
+    justify-content: center;
+    margin-top: 200px; // 고민
+    .aboutwrap {
+        margin: 0 4rem;
+        .maintitle {
+            margin-bottom: 48px;
+            width: 100%;
+            & img {
+                display: inline-block;
+                width: 48px;
+                vertical-align: middle;
+                margin-right: 16px;
+            }
+            & .header2 {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 48px;
+            }
+        }
+        .introWrap {
+            width: 95%;
+            height: 246px;
+            border-radius: 8px;
+            background-color: #212120;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-bottom: 120px; // 고민
+            padding: 24px 40px;
+            // animation: zoomin 1s ease both;
+            // @keyframes zoomin {
+            //     0% {
+            //         transform: scale(0.8) translateY(100px);
+            //         opacity: 0;
+            //     }
+            //     50% {
+            //         transform: scale(1) translateY(50px);
+            //         opacity: 0.5;
+            //     }
+            //     100% {
+            //         transform: scale(1) translateY(0px);
+            //         opacity: 1;
+            //     }
+            // }
+            .title2 {
+                flex: 2;
+            }
+            .body2 {
+                flex: 8;
+            }
+            .aboutimg {
+                width: 198px;
+                height: 198px;
+
+                img {
+                    // display: inline-block;
+                    width: 198px;
+                    height: 198px;
+                    object-fit: cover;
+                }
+            }
+        }
+        .hidden {
+            opacity: 0;
+            transform: scale(0.5) translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        /* 애니메이션 실행 상태 */
+        .visible {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+}
