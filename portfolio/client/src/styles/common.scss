@@ -268,10 +268,10 @@ body {
     z-index: 99;
     background-color: #fff;
     border-radius: 50%;
-}
-.top {
-    width: 20px;
-    top: 25%;
-    left: 25%;
-    position: absolute;
+    .top {
+        width: 20px;
+        top: 25%;
+        left: 25%;
+        position: absolute;
+    }
 }

@@ -12,7 +12,7 @@ const About_s: React.FC = () => {
     const aboutdata: aboutype[] = [
         {
             title: "1. 새로운 배움",
-            des: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Maiores vel, sapiente quaerat tempora debitis quidemlibero dolorum amet ut, quod assumenda obcaecati impedit minima odit? Nam asperiores ducimus enim veniam!",
+            des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Maiores vel, sapiente quaerat tempora debitis quidemlibero dolorum amet ut, quod assumenda obcaecati impedit minima odit? Nam asperiores ducimus enim veniam!",
             img: "/sohee-portfolio/img/sub/study61.png",
             alt: "teacher",
         },
@@ -32,7 +32,7 @@ const About_s: React.FC = () => {
 
         const observerCallback: IntersectionObserverCallback = entries => {
             entries.forEach(entry => {
-                console.log("디버깅", entry.target, entry.isIntersecting);
+                // console.log("디버깅", entry.target, entry.isIntersecting);
                 const target = entry.target as HTMLElement;
                 if (entry.isIntersecting) {
                     target.classList.add("visible");
@@ -50,7 +50,7 @@ const About_s: React.FC = () => {
         // useEffect 내부에서 직접 요소 선택
         const elements: NodeListOf<HTMLElement> =
             document.querySelectorAll(".zoomin");
-        console.log("줌인선택?", elements);
+        // console.log("줌인선택?", elements);
 
         elements.forEach(el => observer.observe(el));
 
@@ -62,8 +62,8 @@ const About_s: React.FC = () => {
     }, []); // 빈 의존성 배열 유지
 
     return (
-        <div className="aboutwrapper flexC">
-            <div id="about" className="white aboutwrap">
+        <div id="about" className="aboutwrapper flexC">
+            <div className="white aboutwrap">
                 <div className="maintitle flex">
                     <img
                         src="/sohee-portfolio/img/icon/SpeechBalloon.svg"

@@ -3,6 +3,9 @@ export interface viewtype {
     title: string;
     description: string;
     img: string;
+    people: string;
+    date: string;
+    num: string;
 }
 export const projectview: viewtype[] = [
     {
@@ -11,6 +14,9 @@ export const projectview: viewtype[] = [
         description:
             "시맨틱 마크업, 사이트 이동 간소화, 예약 시스템 최적화, 반응형 디자인을 도입한 서울신라호텔 리뉴얼 프로젝트를 진행했습니다.",
         img: "/sohee-portfolio/img/sub/study61.png",
+        people: "Font-End Developer",
+        date: "기간 : 24.12 ~ 25.01",
+        num: "인원 : 5명",
     },
     {
         id: 2,
@@ -18,6 +24,27 @@ export const projectview: viewtype[] = [
         description:
             "저의 경험과 프로젝트를 담아 React로 구현한 반응형 포트폴리오 사이트입니다.",
         img: "/sohee-portfolio/img/sub/study61.png",
+        people: "Font-End Developer",
+        date: "기간 : 25.01 ~ 25.01",
+        num: "인원 : 1명",
+    },
+    {
+        id: 3,
+        title: "조말론",
+        description: "리뉴얼 프로젝트를 진행했습니다.",
+        img: "/sohee-portfolio/img/sub/study61.png",
+        people: "Font-End Developer",
+        date: "기간 : 25.01 ~ 25.01",
+        num: "인원 : 4명",
+    },
+    {
+        id: 4,
+        title: "다이어리",
+        description: "다이어리 서비스입니다.",
+        img: "/sohee-portfolio/img/sub/study61.png",
+        people: "Font-End Developer",
+        date: "기간 : 25.01 ~ 25.01",
+        num: "인원 : 1명",
     },
 ];
 
@@ -29,7 +56,7 @@ export interface infotype {
 }
 export const projectinfo: infotype[] = [
     {
-        title: "신라호텔 서울",
+        title: "서울 신라호텔",
         people: "Font-End Developer",
         date: "기간 : 24.12 ~ 25.01",
         num: "인원 : 5명",

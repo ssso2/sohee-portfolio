@@ -3,6 +3,7 @@
 .reviewwrapper {
     @include common.wrapperstyle;
     position: relative;
+    margin-top: 200px; // 고민
     .reviewWrap {
         color: #333;
         // background-color: #aaf;

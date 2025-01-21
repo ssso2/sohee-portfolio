@@ -8,6 +8,7 @@ import About from "./About_s";
 import Experience from "./Experience_s";
 import Project from "./Project_s";
 import Review from "./Review_s";
+import Contact from "../component/Contact";
 
 const Main_s: React.FC = () => {
     return (
@@ -15,6 +16,7 @@ const Main_s: React.FC = () => {
             <Header />
             {/* <div className="scrollwrap"> */}
             <Scrollbar />
+            <Contact />
             {/* <div className="center mainpg"> */}
             <div className="maincontainer flex">
                 <div className="mainTxt">

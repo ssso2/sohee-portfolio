@@ -45,13 +45,13 @@ const Experience_s: React.FC = () => {
                                 <p className="caption1 date">{data.date}</p>
                             </div>
                             <div className="detail">
-                                <p className="body1">{data.info}</p>
-                                <p className="caption1">{data.des1}</p>
+                                <p className="body1 name">{data.info}</p>
+                                <p className="caption1 content">{data.des1}</p>
                                 {/* <p className="caption1">{data.des2}</p> */}
                             </div>
                         </div>
                     ))}
-                    <div className="subtitle1">Tech Stack</div>
+                    <div className="subtitle1 stacktitle">Tech Stack</div>
                     <div className="stack flex">
                         {icons.map((icon, index) => (
                             <div className="iconwrap" key={index}>

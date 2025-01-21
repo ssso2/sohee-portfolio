@@ -3,6 +3,7 @@
 .aboutwrapper {
     @include common.wrapperstyle;
     justify-content: center;
+    margin-top: 200px; // 고민
     .aboutwrap {
         margin: 0 4rem;
         .maintitle {
@@ -28,7 +29,7 @@
             display: flex;
             gap: 30px;
             align-items: center;
-            margin-bottom: 40px;
+            margin-bottom: 120px; // 고민
             padding: 24px 40px;
             // animation: zoomin 1s ease both;
             // @keyframes zoomin {

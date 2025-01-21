@@ -1,0 +1,121 @@
+.contactwrapper {
+    .contactwrap {
+        box-sizing: border-box;
+        padding-top: 10px;
+        position: fixed;
+        width: 58px;
+        height: 168px;
+        transform: rotateY("-90deg");
+        background-color: #fff;
+        z-index: 99;
+        top: calc(50% - 84px);
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        .round {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ff0a0e;
+        }
+        .contact {
+            font-size: 24px;
+            font-weight: 600;
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+.conpopwrapper {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    animation: slide 0.5s ease-out forwards;
+    @keyframes slide {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .conpopwrap {
+        // background-color: rgba(0, 0, 0);
+        padding: 120px 0;
+        width: 70%;
+        // max-width: 1200px; // 최대 너비 설정
+        height: 50%;
+        margin: auto;
+        position: relative;
+        z-index: 1000;
+        .popclose {
+            position: absolute;
+            top: 73px;
+            right: 0;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            z-index: 10001;
+        }
+    }
+    .conitems {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 48px 40px;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Edge */
+        }
+        .contitle {
+            width: 672px;
+        }
+        .conitemwrap {
+            display: flex;
+            justify-content: end;
+            gap: 3rem;
+            .conitem {
+                // width: 213px;
+                display: flex;
+                flex-direction: column;
+                // justify-content: end;
+                .conmethod {
+                    display: flex;
+                    align-items: center;
+                    .conicon {
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 8px;
+                    }
+                    .mname {
+                        margin: 0;
+                    }
+                }
+                .conname {
+                    display: flex;
+                    align-items: center;
+                    .copy {
+                        margin-left: 10px;
+                        width: 18;
+                        height: 20px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

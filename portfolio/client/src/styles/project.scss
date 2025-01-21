@@ -3,10 +3,11 @@
 .projectwrapper {
     @include common.wrapperstyle;
     justify-content: center;
-    margin-right: 0;
+    margin-top: 300px; // 고민
+    height: auto;
     .projectwrap {
         // background-color: #cca;
-        margin: 0 0 0 4rem;
+        margin: 0 4rem 0 4rem;
         // padding: 0 0 0 80px;
         // align-items: end;
         // width: calc(100% - 80px);
@@ -27,7 +28,8 @@
             display: flex;
             gap: 32px;
             flex-direction: row;
-            justify-content: right;
+            justify-content: center;
+            flex-wrap: wrap;
             // position: relative;
             padding-right: 0;
             padding-bottom: 30px;
@@ -35,64 +37,76 @@
             /* margin-top: -80px; */
             margin-right: 0;
             // position: absolute;
-        }
-        .line::after {
-            text-align: end;
-            content: "";
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 1272px;
-            border-bottom: 2px solid #fff;
-        }
-        .imgwrap {
-            width: 620px;
-            height: 500px;
-            position: relative;
-            // overflow: hidden;
-            /* margin-left: 50px; */
-            & img {
+            &::after {
+                text-align: end;
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 100%;
+                border-bottom: 2px solid #fff;
+            }
+            .imgwrap {
                 width: 620px;
                 height: 500px;
-                // object-fit: cover;
-            }
-        }
-        .imgwrap:nth-of-type(2) {
-            // margin-left: 50px;
-            margin-right: 0;
-        }
-        .des {
-            width: 500px;
-            // background-color: #fff;
-            position: absolute;
-            left: 10px;
-            bottom: 20px;
-            // & p {
-            //     color: #fad;
-            // }
-        }
-        .detaillink {
-            all: unset;
-            display: inline-block;
-            position: absolute;
-            right: 10px;
-            bottom: 20px;
-            width: 15%;
-            padding: 5px 0;
-            color: #000;
-            font-size: 16px;
-            border-radius: 4px;
-            text-align: center;
-            background-color: #f5f5f5;
-            vertical-align: middle;
-            // & img {
-            //     width: 32px;
-            //     height: 32px;
-            // }
-            &:hover {
-                color: #f5f5f5;
-                background-color: #212120;
-                cursor: pointer;
+                position: relative;
+                // overflow: hidden;
+                /* margin-left: 50px; */
+                & img {
+                    width: 620px;
+                    height: 500px;
+                    // object-fit: cover;
+                }
+                &:nth-of-type(1),
+                :nth-of-type(2) {
+                    // margin-left: 50px;
+                    // margin-right: 0;
+                    margin-left: auto; /* 왼쪽 여백으로 오른쪽으로 정렬 */
+                    margin-right: 0;
+                }
+                &:nth-of-type(3) {
+                    margin-right: 0;
+                }
+                &:nth-of-type(4) {
+                    // margin-left: 50px;
+                    // margin-left: 0;
+                    margin-right: auto; /* 오른쪽 여백으로 왼쪽으로 정렬 */
+                    margin-left: 0;
+                }
+                .des {
+                    width: 500px;
+                    // background-color: #fff;
+                    position: absolute;
+                    left: 10px;
+                    bottom: 20px;
+                    // & p {
+                    //     color: #fad;
+                    // }
+                }
+                .detaillink {
+                    all: unset;
+                    display: inline-block;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 20px;
+                    width: 15%;
+                    padding: 5px 0;
+                    color: #000;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    text-align: center;
+                    background-color: #f5f5f5;
+                    vertical-align: middle;
+                    // & img {
+                    //     width: 32px;
+                    //     height: 32px;
+                    // }
+                    &:hover {
+                        color: #f5f5f5;
+                        background-color: #212120;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
