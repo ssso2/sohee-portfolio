@@ -398,37 +398,37 @@ export const projectlist: plisttype = [
             content: [
                 {
                     id: 1,
-                    src: "/sohee-portfolio/img/sub/hotel.49.25.png",
+                    src: "/sohee-portfolio/img/sub/perfume7.44.png",
                     alt: "프로젝트 작업화면",
                     comment: "메인화면",
                 },
                 {
                     id: 2,
-                    src: "/sohee-portfolio/img/sub/hotel.77.png",
-                    alt: "프로젝트 작업화면",
-                    comment: "간편로그인",
-                },
-                {
-                    id: 3,
-                    src: "/sohee-portfolio/img/sub/hotel.50.19.png",
+                    src: "/sohee-portfolio/img/sub/perfume8.46.png",
                     alt: "프로젝트 작업화면",
                     comment: "센트파인더페이지",
                 },
                 {
+                    id: 3,
+                    src: "/sohee-portfolio/img/sub/perfume6.34.png",
+                    alt: "프로젝트 작업화면",
+                    comment: "매장정보",
+                },
+                {
                     id: 4,
-                    src: "/sohee-portfolio/img/sub/hotel.54.04.png",
+                    src: "/sohee-portfolio/img/sub/perfume9.56.png",
                     alt: "프로젝트 작업화면",
                     comment: "결제화면",
                 },
                 {
                     id: 5,
-                    src: "/sohee-portfolio/img/sub/hotel.54.57.png",
+                    src: "/sohee-portfolio/img/sub/perfume8.21.png",
                     alt: "프로젝트 작업화면",
                     comment: "배송조회",
                 },
                 {
                     id: 6,
-                    src: "/sohee-portfolio/img/sub/hotel.57.27.png",
+                    src: "/sohee-portfolio/img/sub/perfume6.30.png",
                     alt: "프로젝트 작업화면",
                     comment: "관리자",
                 },

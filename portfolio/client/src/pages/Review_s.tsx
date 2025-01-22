@@ -76,7 +76,7 @@ const Review_s: React.FC = () => {
             <div id="review" className="reviewWrap white flexC">
                 <div className="titlewrap white flex">
                     <img
-                        src="/sohee-portfolio/img/icon/pencil.svg"
+                        src="/sohee-portfolio/img/icon/Pencil.svg"
                         alt="aboutme"
                     />
                     <div className="header2">Feedback</div>
