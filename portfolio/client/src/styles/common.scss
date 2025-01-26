@@ -38,19 +38,35 @@
     @include fontStyle(14px, 16px, 500, 0);
 }
 //모바일
-.title1 {
+.Header1 {
+}
+.Title1 {
     @include fontStyle(24px, 32px, 600);
 }
-.title2 {
+.Title2 {
     @include fontStyle(24px, 32px, 400);
 }
-.title3 {
+.Title3 {
     @include fontStyle(18px, 28px, 600, 0.28px);
 }
-.label {
-    @include fontStyle(14px, 16px, 600, 0);
+.Body1 {
+    @include fontStyle(16px, 24px, 600);
 }
-// Header1 Title1 Title2 Title3 Body1 Body2 Body3 Caption1 Caption2 해야함
+.Body2 {
+    @include fontStyle(16px, 24px, 500);
+}
+.Body3 {
+    @include fontStyle(16px, 24px, 400);
+}
+.Caption1 {
+    @include fontStyle(14px, 16px, 500);
+}
+.Caption2 {
+    @include fontStyle(14px, 16px, 400);
+}
+.label {
+    @include fontStyle(14px, 16px, 600);
+}
 
 //컬러
 .white {
@@ -118,9 +134,9 @@ body {
 
 //헤더
 .header {
-    width: 100%;
+    width: 100vw;
     height: 80px;
-    // background-color: #000;
+    background-color: #121212;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -146,78 +162,116 @@ body {
         border-radius: 50%;
         background-color: #d9d9d9;
     }
-
-    .nav {
-        margin-right: 44px;
-        justify-content: right;
-        list-style: none;
-        display: flex;
-        /* // align-items: center; */
-        flex-direction: row;
-        .navli {
-            padding-left: 88px;
-            // padding-left: 44px;
-        }
-        .link,
-        .linkto {
-            color: #fff;
-            text-decoration: none;
-            text-align: center;
-            background: transparent;
-            all: unset;
-            cursor: pointer;
-            position: relative;
-            text-decoration: none;
-            color: #fff;
-            padding-bottom: 10px;
-        }
-        .link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
+    //모바일네비
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 24px;
+        margin-right: 32px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 0 auto;
+        span {
             height: 2px;
-            background-color: #ccc;
-            transition: width 0.3s ease-in-out;
+            width: 24px;
+            background: #fff;
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
-
-        .link:hover::after {
-            width: 100%;
+        &.open span:nth-child(1) {
+            transform: translateY(10px) rotate(45deg);
         }
-        // .linkto:hover {
-        //     color: #faf;
-        //     /* font-size: large; */
-        // }
-        .linkto {
-            margin-right: 5px;
-            &:hover::after {
-                content: "설문지페이지로 이동";
+        &.open span:nth-child(2) {
+            opacity: 0;
+        }
+        &.open span:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+    }
+    .nav {
+        &.active {
+            display: block;
+            position: fixed;
+            top: 80px;
+            right: 0;
+            background: #121212;
+            height: 100vh;
+            width: 100vw;
+            transform: translateX(0);
+            transition: transform 0.3s ease;
+        }
+        .navul {
+            margin-right: 44px;
+            justify-content: right;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            .navli {
+                padding-left: 88px;
+            }
+            .link,
+            .linkto {
+                color: #fff;
+                text-decoration: none;
+                text-align: center;
+                background: transparent;
+                all: unset;
+                cursor: pointer;
+                position: relative;
+                text-decoration: none;
+                color: #fff;
+                padding-bottom: 10px;
+            }
+            .link::after {
+                content: "";
                 position: absolute;
-                height: 20px;
-                bottom: -20px;
-                left: 50%;
-                /* transform: translateX(-50%); */
-                text-wrap: nowrap;
-                font-size: 10px;
-                line-height: 20px;
-                color: #000;
-                background-color: #fff;
-                padding: 0 4px;
-                // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                transition: color 0.8s ease-in-out;
+                left: 0;
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                background-color: #ccc;
+                transition: width 0.3s ease-in-out;
+            }
+
+            .link:hover::after {
+                width: 100%;
+            }
+            // .linkto:hover {
+            //     color: #faf;
+            //     /* font-size: large; */
+            // }
+            .linkto {
+                margin-right: 5px;
+                &:hover::after {
+                    content: "설문지페이지로 이동";
+                    position: absolute;
+                    height: 20px;
+                    bottom: -20px;
+                    left: 50%;
+                    /* transform: translateX(-50%); */
+                    text-wrap: nowrap;
+                    font-size: 10px;
+                    line-height: 20px;
+                    color: #000;
+                    background-color: #fff;
+                    padding: 0 4px;
+                    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                    transition: color 0.8s ease-in-out;
+                }
             }
         }
-    }
-    &.hidden {
-        transition: transform 2s ease, opacity 0.5s ease;
-        pointer-events: none;
-        transform: translateY(-100%);
-        opacity: 0;
-        /* display: none; */
-    }
-    &.headerbgc {
-        background-color: #121212;
+        &.hidden {
+            transition: transform 2s ease, opacity 0.5s ease;
+            pointer-events: none;
+            transform: translateY(-100%);
+            opacity: 0;
+            /* display: none; */
+        }
+        &.headerbgc {
+            background-color: #121212;
+        }
     }
 }
 
@@ -279,5 +333,96 @@ body {
         top: 25%;
         left: 25%;
         position: absolute;
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    //스크롤바
+    .scrollwrap {
+        .scrollbar {
+            display: none;
+        }
+    }
+    .header {
+        .logo {
+            margin-left: 32px;
+        }
+        .hamburger {
+            display: flex;
+        }
+        .nav {
+            display: none;
+            .navul {
+                flex-direction: column;
+                width: 261px;
+                height: 562px;
+                justify-content: space-between;
+                margin-right: 0;
+                padding-left: 0;
+                .navli {
+                    font-size: 48px;
+                    line-height: 58px;
+                    font-weight: 500;
+                }
+                .link,
+                .linkto {
+                    color: #fff;
+                    text-decoration: none;
+                    text-align: center;
+                    background: transparent;
+                    all: unset;
+                    cursor: pointer;
+                    position: relative;
+                    text-decoration: none;
+                    color: #fff;
+                    padding-bottom: 10px;
+                }
+                .link::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: #ccc;
+                    transition: width 0.3s ease-in-out;
+                }
+
+                .link:hover::after {
+                    width: 100%;
+                }
+                // .linkto:hover {
+                //     color: #faf;
+                //     /* font-size: large; */
+                // }
+                .linkto {
+                    margin-right: 5px;
+                    &:hover::after {
+                        content: "설문지페이지로 이동";
+                        position: absolute;
+                        height: 20px;
+                        bottom: -20px;
+                        left: 50%;
+                        /* transform: translateX(-50%); */
+                        text-wrap: nowrap;
+                        font-size: 10px;
+                        line-height: 20px;
+                        color: #000;
+                        background-color: #fff;
+                        padding: 0 4px;
+                        // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                        transition: color 0.8s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .center {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 }

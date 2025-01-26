@@ -19,39 +19,37 @@ const Intro_s: React.FC = () => {
                         <div className="intro-loading">
                             <svg
                                 className="loading"
-                                width="88"
-                                height="88"
-                                viewBox="0 0 88 88"
+                                width="70"
+                                height="70"
+                                viewBox="0 0 70 70"
                             >
                                 <circle
-                                    cx="25"
-                                    cy="25"
-                                    r="20"
+                                    cx="35"
+                                    cy="35"
+                                    r="30"
                                     stroke="#dbdbdb"
-                                    strokeWidth="5"
+                                    strokeWidth="8"
                                     fill="none"
-                                    strokeDasharray="125.6"
+                                    strokeDasharray="188.4"
                                     strokeDashoffset="0"
                                 ></circle>
                                 <circle
                                     className="progress red"
-                                    cx="25"
-                                    cy="25"
-                                    r="20"
+                                    cx="35"
+                                    cy="35"
+                                    r="30"
                                     stroke="#0054ff"
-                                    strokeWidth="5"
+                                    strokeWidth="8"
                                     fill="none"
-                                    strokeDasharray="125.6"
-                                    strokeDashoffset="125.6"
+                                    strokeDasharray="188.4"
+                                    strokeDashoffset="188.4"
                                 ></circle>
                             </svg>
                         </div>
                         <div className="intro-txt flex">
-                            <p className="uptxt title1 black1">Sohee's</p>
-                            <p className="uptxt title1 black1">
-                                Front-end Developer
-                            </p>
-                            <p className="uptxt title1 black1">Portfolio</p>
+                            <p className="uptxt  black1">Sohee's</p>
+                            <p className="uptxt  black1">Front-end Developer</p>
+                            <p className="uptxt  black1">Portfolio</p>
                         </div>
                     </div>
                     <div className="Ybar">

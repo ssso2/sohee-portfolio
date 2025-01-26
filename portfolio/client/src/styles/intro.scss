@@ -32,6 +32,8 @@
             opacity: 0;
             transform: translateY(20px); /* 초기 위치 */
             animation: fade 1.2s ease-out forwards;
+            font-size: 24px;
+            font-weight: 600;
         }
         .uptxt:nth-child(1) {
             animation-delay: 1s;
@@ -72,7 +74,6 @@
         // }
     }
 }
-
 .Ybar {
     display: flex;
     .bar {
@@ -117,8 +118,62 @@
         }
     }
 }
-
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1079px) {
+    .Ybar {
+        .bar {
+            width: 256px;
+            &:nth-of-type(2) {
+                left: 256px;
+            }
+            &:nth-of-type(3) {
+                left: 512px;
+            }
+            &:nth-of-type(4) {
+                left: 768px;
+            }
+            &:nth-of-type(5) {
+                left: 1024px;
+            }
+            &:nth-of-type(6) {
+                left: 1280px;
+            }
+        }
+    }
 }
 @media screen and (max-width: 767px) {
+    .intro {
+        .intro-loading {
+            justify-content: center;
+            .loading {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .intro-txt {
+            .uptxt {
+                padding-right: 10px;
+                font-size: 16px;
+            }
+        }
+    }
+    .Ybar {
+        .bar {
+            width: 120px;
+            &:nth-of-type(2) {
+                left: 120px;
+            }
+            &:nth-of-type(3) {
+                left: 240px;
+            }
+            &:nth-of-type(4) {
+                left: 360px;
+            }
+            &:nth-of-type(5) {
+                left: 480px;
+            }
+            &:nth-of-type(6) {
+                left: 600px;
+            }
+        }
+    }
 }

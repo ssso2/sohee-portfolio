@@ -1,7 +1,7 @@
 import "../styles/common.scss";
 import "../styles/main.scss";
 
-import Header from "../component/Header_s";
+import Header from "../component/Header_sh";
 import Scrollbar from "../component/Scrollbar_s";
 import Topbtn from "../component/Topbtn";
 import About from "./About_s";

@@ -125,3 +125,54 @@
         }
     }
 }
+
+@media screen and (max-width: 1079px) {
+    .main {
+        .maincontainer {
+            .mainTxt {
+                width: 680px;
+                left: 6%;
+                padding: 50px 20px;
+            }
+        }
+        .scollicon {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .main {
+        .maincontainer {
+            .mainTxt {
+                width: 80%;
+                height: 192px;
+                top: 60%;
+                left: 10%;
+                padding: 30px 16px;
+                .subtitle1 {
+                    width: 67px;
+                    height: 20px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-bottom: 16px;
+                    padding: 2px 4px;
+                }
+                p {
+                    margin: 0;
+                    font-size: 18px;
+                    line-height: 22px;
+                    &:nth-of-type(4) {
+                        margin-top: 12px;
+                        font-size: 14px;
+                        line-height: 16px;
+                    }
+                }
+            }
+        }
+        .scollicon {
+            display: none;
+        }
+    }
+}
