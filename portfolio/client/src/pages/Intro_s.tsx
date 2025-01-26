@@ -47,11 +47,11 @@ const Intro_s: React.FC = () => {
                             </svg>
                         </div>
                         <div className="intro-txt flex">
-                            <p className="uptxt title2 black1">Sohee's</p>
-                            <p className="uptxt title2 black1">
+                            <p className="uptxt title1 black1">Sohee's</p>
+                            <p className="uptxt title1 black1">
                                 Front-end Developer
                             </p>
-                            <p className="uptxt title2 black1">Portfolio</p>
+                            <p className="uptxt title1 black1">Portfolio</p>
                         </div>
                     </div>
                     <div className="Ybar">

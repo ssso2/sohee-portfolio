@@ -52,7 +52,7 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                     <div className="inner">
                         {projectview.map(project => (
                             <header key={project.id}>
-                                <div className="subtitle1 black1">
+                                <div className="header3 black1">
                                     {project.title}
                                 </div>
                                 <div className="pimgwrap">
@@ -63,14 +63,14 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                         <div className="deswrap flex">
                             {projectview.map(project => (
                                 <aside>
-                                    <p className="subtitle1">{project.title}</p>
-                                    <p className="label1 gray4">
+                                    <p className="header3">{project.title}</p>
+                                    <p className="body1 gray4">
                                         {project.people}
                                     </p>
-                                    <p className="label1 gray4">
+                                    <p className="caption2 gray4">
                                         {project.date}
                                     </p>
-                                    <p className="label1 gray4">
+                                    <p className="caption2 gray4">
                                         {" "}
                                         {project.num}
                                     </p>
@@ -95,7 +95,7 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                                 {selectarray &&
                                     selectarray.map((data, index) => (
                                         <div className="section" key={index}>
-                                            <div className="ptitle gray5 subtitle1">
+                                            <div className="ptitle gray5 header3">
                                                 {data.title}
                                             </div>
                                             <div className="pdes ">

@@ -13,18 +13,20 @@
             justify-content: center;
             .titlewrap {
                 width: 334px;
-                height: 48px;
+                height: 38px;
                 margin-bottom: 107px;
                 & img {
                     display: inline-block;
-                    width: 48px;
+                    width: 38px;
+                    height: 38px;
                     vertical-align: middle;
                     margin-right: 16px;
                 }
-                & .header2 {
+                .header3 {
                     display: inline-block;
                     vertical-align: middle;
-                    line-height: 48px;
+                    line-height: 38px;
+                    margin: 0;
                 }
             }
             .imgwrap {
@@ -61,9 +63,9 @@
                 .info {
                     padding-right: 0px;
                     border-right: 1.5px solid #fff;
-                    vertical-align: middle;
+                    // vertical-align: middle;
                     flex: 1;
-                    .subtitle1 {
+                    .body1 {
                         margin: 24px 0 0 0;
                         &::before {
                             width: 42px;
@@ -71,11 +73,11 @@
                             display: inline-block;
                             margin-right: 10px;
                             color: #000;
-                            font-size: 16px;
+                            font-size: 14px;
                             border-radius: 4px;
                             text-align: center;
                             background-color: #f5f5f5;
-                            vertical-align: middle;
+                            // vertical-align: middle;
                             &:nth-of-type(2) {
                                 content: "이직";
                             }
@@ -91,7 +93,7 @@
                         }
                     }
                     .date {
-                        margin: 6px 0 0 0;
+                        margin: 4px 0 0 0;
                     }
                 }
                 .detail {
@@ -110,6 +112,8 @@
             .stacktitle {
                 margin: 48px 0 24px 0;
                 padding: 0 22px 0 24px;
+                font-size: 20px;
+                font-weight: 600;
             }
             .stack {
                 // width: 100%;

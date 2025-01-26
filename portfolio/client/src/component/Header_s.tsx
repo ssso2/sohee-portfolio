@@ -69,7 +69,7 @@ const Header_s = (): JSX.Element => {
                 </div>
                 <ul className="nav">
                     {menus.map((item, index) => (
-                        <li key={index} className="navli">
+                        <li key={index} className="navli subtitle1">
                             <button
                                 className={"link txt" ? "link" : ""}
                                 onClick={() => {
@@ -89,7 +89,7 @@ const Header_s = (): JSX.Element => {
                             </Link> */}
                         </li>
                     ))}
-                    <li className="navli">
+                    <li className="navli subtitle1">
                         <Link
                             to="#"
                             // "https://docs.google.com/forms/d/e/1FAIpQLSd9dvY8ZfOx2NNNkXmVFnfYbB6apGYqQKQcDi6WwRlK1u27vQ/viewform?usp=sharing"

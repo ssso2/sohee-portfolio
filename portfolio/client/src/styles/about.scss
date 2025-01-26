@@ -11,41 +11,27 @@
             width: 100%;
             & img {
                 display: inline-block;
-                width: 48px;
+                width: 38px;
+                height: 38px;
                 vertical-align: middle;
                 margin-right: 16px;
             }
-            & .header2 {
+            & .header3 {
                 display: inline-block;
                 vertical-align: middle;
-                line-height: 48px;
+                line-height: 38px;
             }
         }
         .introWrap {
             width: 95%;
             height: 246px;
-            border-radius: 8px;
+            border-radius: 12px;
             background-color: #212120;
             display: flex;
             gap: 30px;
             align-items: center;
             margin-bottom: 120px; // 고민
             padding: 24px 40px;
-            // animation: zoomin 1s ease both;
-            // @keyframes zoomin {
-            //     0% {
-            //         transform: scale(0.8) translateY(100px);
-            //         opacity: 0;
-            //     }
-            //     50% {
-            //         transform: scale(1) translateY(50px);
-            //         opacity: 0.5;
-            //     }
-            //     100% {
-            //         transform: scale(1) translateY(0px);
-            //         opacity: 1;
-            //     }
-            // }
             .title2 {
                 flex: 2;
             }
@@ -61,6 +47,7 @@
                     width: 198px;
                     height: 198px;
                     object-fit: cover;
+                    border-radius: 8px;
                 }
             }
         }
@@ -69,11 +56,10 @@
             transform: scale(0.5) translateY(30px);
             transition: all 0.8s ease-out;
         }
-
-        /* 애니메이션 실행 상태 */
         .visible {
             opacity: 1;
             transform: scale(1) translateY(0);
+            transition: all 0.8s ease-out;
         }
     }
 }

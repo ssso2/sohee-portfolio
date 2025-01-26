@@ -59,6 +59,7 @@ const Conpop: React.FC<closeprops> = ({ popclose, onclose }) => {
                         <p className="header1">
                             저의 사이트와 프로젝트에 대해 더 궁금하신가요?
                         </p>
+                        {/* 더 궁금하시다면 연락주세요 / 새로운 아이디어와 제안을 기다립니다. */}
                     </div>
                     <div className="conitemwrap">
                         {contacs.map(item => (
@@ -69,12 +70,12 @@ const Conpop: React.FC<closeprops> = ({ popclose, onclose }) => {
                                         alt="이메일"
                                         className="conicon"
                                     />
-                                    <p className="subtitle1 mname">
+                                    <p className="subtitle2 mname">
                                         {item.method}
                                     </p>
                                 </div>
                                 <div className="conname">
-                                    <p className="subtitle2">{item.name}</p>
+                                    <p className="body2">{item.name}</p>
                                     <img
                                         src={item.copyicon}
                                         alt="복사"

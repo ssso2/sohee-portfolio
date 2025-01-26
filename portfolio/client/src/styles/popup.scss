@@ -40,8 +40,8 @@
             }
             header {
                 // background-color: rgb(240, 252, 252);
-                .subtitle1 {
-                    margin-bottom: 32px;
+                .header3 {
+                    margin-bottom: 40px;
                 }
                 .pimgwrap {
                     width: 100%;
@@ -61,7 +61,7 @@
                 // gap: 32px;
                 // justify-content: space-between;
                 aside {
-                    min-width: 192px;
+                    min-width: 220px;
                     // background-color: rgb(170, 244, 135);
                     & p:nth-of-type(1) {
                         color: #ad8957;
@@ -149,6 +149,9 @@
                             .caption1 {
                                 margin-bottom: 8px;
                             }
+                            .outline {
+                                line-height: 22px;
+                            }
                             .list {
                                 margin-bottom: 8px;
                             }
@@ -162,7 +165,6 @@
                                 margin-right: 8px;
                             }
                             .accordion {
-                                cursor: pointer;
                                 margin: 0;
                             }
                             .select {

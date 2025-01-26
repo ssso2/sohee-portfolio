@@ -16,7 +16,7 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
 
     // 개요
     if (typeof content === "string") {
-        return <p className="caption1">{content}</p>;
+        return <p className="body2 outline">{content}</p>;
     }
 
     // 배열-배포링크, 주요기능, 작업기여도, 스크린샷
@@ -25,7 +25,7 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
             return (
                 <ul>
                     {content.map((con, index) => (
-                        <li key={index} className="caption1">{`${con}`}</li>
+                        <li key={index} className="body2">{`${con}`}</li>
                     ))}
                 </ul>
             );
@@ -64,7 +64,7 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
                                             alt="finger"
                                             className="fingericon"
                                         ></img>
-                                        <p className="caption1 accordion">
+                                        <p className="subtitle1 accordion">
                                             {key}
                                         </p>
                                     </div>
@@ -73,7 +73,7 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
                                         {value.map(
                                             (item: string, num: number) => (
                                                 <ul key={num}>
-                                                    <li className="caption1">
+                                                    <li className="body2">
                                                         {item}
                                                     </li>
                                                 </ul>

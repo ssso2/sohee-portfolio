@@ -1,6 +1,6 @@
 import "../styles/common.scss";
 import "../styles/about.scss";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const About_s: React.FC = () => {
     interface aboutype {
@@ -24,42 +24,42 @@ const About_s: React.FC = () => {
         },
     ];
     //옵저버
-    useEffect(() => {
-        const observerOptions: IntersectionObserverInit = {
-            root: null,
-            threshold: 0.5,
-        };
+    const sectionRefs = useRef<(HTMLDivElement | null)[]>([]); // 소개div 참조
 
-        const observerCallback: IntersectionObserverCallback = entries => {
+    useEffect(() => {
+        // 콜백 함수
+        const callback = (entries: IntersectionObserverEntry[]) => {
+            //인자는 배열
             entries.forEach(entry => {
-                // console.log("디버깅", entry.target, entry.isIntersecting);
-                const target = entry.target as HTMLElement;
                 if (entry.isIntersecting) {
-                    target.classList.add("visible");
+                    // 요소가 화면에 보이면 visible 클래스 추가
+                    entry.target.classList.add("visible");
+                    entry.target.classList.remove("hidden");
                 } else {
-                    target.classList.remove("visible");
+                    // 화면에서 사라지면 hidden 클래스 추가
+                    entry.target.classList.remove("visible");
+                    entry.target.classList.add("hidden");
                 }
             });
         };
 
-        const observer = new IntersectionObserver(
-            observerCallback,
-            observerOptions
-        );
+        // Intersection Observer 생성
+        const observer = new IntersectionObserver(callback, {
+            threshold: 0.5, // 50% 이상 보일 때만
+        });
 
-        // useEffect 내부에서 직접 요소 선택
-        const elements: NodeListOf<HTMLElement> =
-            document.querySelectorAll(".zoomin");
-        // console.log("줌인선택?", elements);
+        // 참조된 모든요소 관찰
+        sectionRefs.current.forEach(ref => {
+            if (ref) observer.observe(ref);
+        });
 
-        elements.forEach(el => observer.observe(el));
-
-        //cleanup 함수 추가
-        // return () => {
-        //     elements.forEach(el => observer.unobserve(el));
-        //     observer.disconnect();
-        // };
-    }, []); // 빈 의존성 배열 유지
+        // 컴포넌트 언마운트 시 관찰 해제
+        return () => {
+            sectionRefs.current.forEach(ref => {
+                if (ref) observer.unobserve(ref);
+            });
+        };
+    }, []);
 
     return (
         <div id="about" className="aboutwrapper flexC">
@@ -69,11 +69,15 @@ const About_s: React.FC = () => {
                         src="/sohee-portfolio/img/icon/SpeechBalloon.svg"
                         alt="aboutme"
                     />
-                    <div className="header2">About me</div>
+                    <div className="header3">About me</div>
                 </div>
                 {aboutdata.map((data, index) => (
-                    <div className="introWrap zoomin hidden" key={index}>
-                        <div className="title2">{data.title}</div>
+                    <div
+                        className="introWrap hidden"
+                        key={index}
+                        ref={e => (sectionRefs.current[index] = e)}
+                    >
+                        <div className="subtitle1">{data.title}</div>
                         <div className="body2">{data.des}</div>
                         <div className="aboutimg">
                             <img src={data.img} alt={data.alt} />

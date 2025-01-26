@@ -6,7 +6,7 @@ import Scrollbar from "../component/Scrollbar_s";
 import Topbtn from "../component/Topbtn";
 import About from "./About_s";
 import Experience from "./Experience_s";
-import Project from "./Project_s";
+import Project from "./Project_new";
 import Review from "./Review_s";
 import Contact from "../component/Contact";
 
@@ -27,11 +27,11 @@ const Main_s: React.FC = () => {
                         /> */}
                         PortFolio
                     </p>
-                    <p className="header2 gray2">안녕하세요.</p>
-                    <p className="header2 gray2">
+                    <p className="header2 white">안녕하세요.</p>
+                    <p className="header2 white">
                         프론트엔드 개발자 김소희입니다.
                     </p>
-                    <p className="subtitle2 gray3">
+                    <p className="subtitle2 white">
                         웹 개발의 매력에 빠져 배움을 즐기고, 소통과 협업에서
                         가치를 느끼는 개발자입니다.
                     </p>

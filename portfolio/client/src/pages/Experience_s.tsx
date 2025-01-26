@@ -12,7 +12,7 @@ const Experience_s: React.FC = () => {
                             src="/sohee-portfolio/img/icon/Page.svg"
                             alt="experience"
                         />
-                        <h1 className="header2">Experinece</h1>
+                        <h1 className="header3">Experinece</h1>
                     </div>
                     <div className="imgwrap">
                         <img
@@ -21,7 +21,7 @@ const Experience_s: React.FC = () => {
                         />
                     </div>
                     <div className="me">
-                        <p className="title2">프론트엔드 개발자</p>
+                        <p className="subtitle1">프론트엔드 개발자</p>
                         <p className="body2">
                             minima odit? Nam asperiores ducimus enim veniam!
                         </p>
@@ -32,7 +32,7 @@ const Experience_s: React.FC = () => {
                         <div className="des" key={`${data}-${index}`}>
                             <div className="info">
                                 <p
-                                    className={`subtitle1 ${
+                                    className={`body1 ${
                                         index === 1
                                             ? "change"
                                             : index === 2
@@ -42,16 +42,16 @@ const Experience_s: React.FC = () => {
                                 >
                                     {data.name}
                                 </p>
-                                <p className="caption1 date">{data.date}</p>
+                                <p className="body2 date">{data.date}</p>
                             </div>
                             <div className="detail">
-                                <p className="body1 name">{data.info}</p>
-                                <p className="caption1 content">{data.des1}</p>
+                                <p className="subtitle1 name">{data.info}</p>
+                                <p className="body2 content">{data.des1}</p>
                                 {/* <p className="caption1">{data.des2}</p> */}
                             </div>
                         </div>
                     ))}
-                    <div className="subtitle1 stacktitle">Tech Stack</div>
+                    <div className="stacktitle">Tech Stack</div>
                     <div className="stack flex">
                         {icons.map((icon, index) => (
                             <div className="iconwrap" key={index}>

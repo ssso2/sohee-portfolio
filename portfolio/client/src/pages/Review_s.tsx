@@ -77,15 +77,15 @@ const Review_s: React.FC = () => {
                 <div className="titlewrap white flex">
                     <img
                         src="/sohee-portfolio/img/icon/Pencil.svg"
-                        alt="aboutme"
+                        alt="feedback"
                     />
-                    <div className="header2">Feedback</div>
+                    <div className="header3">Feedback</div>
                 </div>
 
                 <Swiper
                     modules={[Autoplay]}
                     loop={true} // 무한 반복
-                    slidesPerView={4.5} // 한 번에 보여줄 카드 수
+                    slidesPerView={3.5} // 한 번에 보여줄 카드 수
                     spaceBetween={30} // 카드 간 간격
                     autoplay={{ delay: 0, disableOnInteraction: false }} // 자동 슬라이드
                     speed={2500} // 슬라이드 전환 속도
@@ -94,7 +94,7 @@ const Review_s: React.FC = () => {
                     {cards.map(card => (
                         <SwiperSlide key={card.id}>
                             <div className="card">
-                                <div className="subtitle2">
+                                <div className="subtitle1">
                                     <img
                                         src="/sohee-portfolio/img/icon/man.svg"
                                         alt="person"
