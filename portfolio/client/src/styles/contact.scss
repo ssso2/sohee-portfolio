@@ -127,9 +127,118 @@
                     align-items: center;
                     .copy {
                         margin-left: 10px;
-                        width: 18;
+                        width: 18px;
                         height: 20px;
                         cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1079px) {
+    .contactwrapper {
+        .contactwrap {
+            width: 38px;
+            height: 108px;
+            .round {
+                width: 8px;
+                height: 8px;
+            }
+            .contact {
+                font-size: 18px;
+            }
+        }
+    }
+    .conpopwrapper {
+        .conpopwrap {
+            width: 75%;
+        }
+        .conitems {
+            padding: 38px 30px;
+            .contitle {
+                .header1 {
+                    width: 410px;
+                    font-size: 32px;
+                }
+            }
+            .conitemwrap {
+                justify-content: center;
+                gap: 2rem;
+                .conitem {
+                    .conmethod {
+                        display: flex;
+                        align-items: center;
+                        .mname {
+                            font-size: 18px;
+                        }
+                    }
+                    .conname {
+                        .body2 {
+                            margin: 8px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contactwrapper {
+        .contactwrap {
+            width: 32px;
+            height: 98px;
+            .round {
+                top: 15%;
+                left: 20%;
+                width: 6px;
+                height: 6px;
+            }
+            .contact {
+                font-size: 16px;
+            }
+        }
+    }
+    .conpopwrapper {
+        .conpopwrap {
+            width: 85%;
+        }
+        .conitems {
+            padding: 32px 14px;
+            border-radius: 8px;
+
+            .contitle {
+                .header1 {
+                    width: 278px;
+                    font-size: 23px;
+                    font-weight: 400;
+                }
+            }
+            .conitemwrap {
+                justify-content: center;
+                gap: 1rem;
+                flex-direction: column;
+                .conitem {
+                    .conmethod {
+                        display: flex;
+                        align-items: center;
+                        .conicon {
+                            width: 24px;
+                        }
+                        .mname {
+                            font-size: 16px;
+                        }
+                    }
+                    .conname {
+                        .body2 {
+                            margin: 8px 0;
+                            font-size: 14px;
+                        }
+                        .copy {
+                            width: 16px;
+                        }
                     }
                 }
             }

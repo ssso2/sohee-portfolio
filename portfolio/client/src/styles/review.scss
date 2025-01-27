@@ -52,6 +52,7 @@
                     }
                     & p {
                         vertical-align: middle;
+                        display: inline-block;
                         &:nth-of-type(2) {
                             margin-left: 12px;
                             color: #fdba2b;
@@ -60,16 +61,6 @@
                     }
                 }
             }
-
-            // .slide {
-            //     width: 300px;
-            //     height: 500px;
-            // }
-
-            // .slide img {
-            //     width: 300px;
-            //     height: 500px;
-            // }
         }
     }
     .subimg {
@@ -89,6 +80,9 @@
                 & img {
                     width: 48px;
                     margin-right: 12px;
+                }
+                & .header3 {
+                    font-size: 20px;
                 }
             }
             .slidewrap {
@@ -111,19 +105,18 @@
         margin-top: 124px;
         .reviewWrap {
             margin: 0;
-            padding-bottom: 165px;
+            padding-bottom: 145px;
             .titlewrap {
                 & img {
-                    width: 48px;
-                    margin-right: 12px;
+                    width: 24px;
+                    // margin-right: 12px;
                 }
             }
             .slidewrap {
                 margin-top: 32px;
                 .card {
-                    // height: 300px;
-                    border-radius: 8px;
-                    padding: 40px 8px;
+                    height: 300px;
+                    padding: 40px 12px;
                     .subtitle1 {
                         & p {
                             font-size: 16px;
@@ -134,9 +127,6 @@
                     }
                 }
             }
-        }
-        .subimg {
-            display: none;
         }
     }
 }

@@ -83,10 +83,8 @@ const Review_s: React.FC = () => {
                 </div>
 
                 <Swiper
-                    // modules={[Autoplay]}
-                    // loop={true}
-                    // slidesPerView={3.5}
-                    // spaceBetween={30}
+                    modules={[Autoplay]}
+                    loop={true}
                     slidesPerView={1.3}
                     spaceBetween={22}
                     breakpoints={{

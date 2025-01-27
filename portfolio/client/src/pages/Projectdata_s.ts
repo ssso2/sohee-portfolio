@@ -6,6 +6,7 @@ export interface viewtype {
     people: string;
     date: string;
     num: string;
+    logo: string;
 }
 export const projectview: viewtype[] = [
     {
@@ -17,6 +18,7 @@ export const projectview: viewtype[] = [
         people: "Font-End Developer",
         date: "기간 : 24.11.26 ~ 24.12.13",
         num: "인원 : 5명",
+        logo: "/sohee-portfolio/img/icon/silla.svg",
     },
     {
         id: 2,
@@ -27,6 +29,7 @@ export const projectview: viewtype[] = [
         people: "Font-End Developer",
         date: "기간 : 25.01.xx ~ 25.01.xx",
         num: "인원 : 1명",
+        logo: "/sohee-portfolio/img/icon/perfume.svg",
     },
     {
         id: 3,
@@ -37,6 +40,7 @@ export const projectview: viewtype[] = [
         people: "Font-End Developer",
         date: "기간 : 25.01.02 ~ 25.01.15",
         num: "인원 : 4명",
+        logo: "/sohee-portfolio/img/icon/silla.svg",
     },
     {
         id: 4,
@@ -46,6 +50,7 @@ export const projectview: viewtype[] = [
         people: "Font-End Developer",
         date: "기간 : 25.02 ~ 25.01",
         num: "인원 : 1명",
+        logo: "/sohee-portfolio/img/icon/silla.svg",
     },
 ];
 

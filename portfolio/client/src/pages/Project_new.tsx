@@ -11,29 +11,27 @@ const Project_s: React.FC = () => {
         <>
             <div id="project" className="projectwrapper white flexC">
                 <div className="projectwrap">
-                    <h1 className="title"> PROJECT</h1>
+                    {/* <p className="titlename">SOHEE</p> */}
+                    <p className="titlename"> PROJECT</p>
                     <div className="line">
                         {projectview.map(project => (
                             <div className="imgwrap" key={project.id}>
                                 <img src={project.img} alt="silla" />
+                                <div className="hoverimg">
+                                    <img
+                                        src={project.logo}
+                                        alt="projectlogo"
+                                        onClick={() => setpopup(project)}
+                                    />
+                                </div>
                                 <span className="des">
                                     <p className="white subtitle1">
                                         {project.title}
                                     </p>
-                                    <p className="caption1">
+                                    <p className="Caption2">
                                         {project.description}
                                     </p>
                                 </span>
-                                <button
-                                    className="black1 detaillink"
-                                    onClick={() => setpopup(project)}
-                                >
-                                    상세보기
-                                    {/* <img
-                                        src="/sohee-portfolio/img/icon/Vector.svg"
-                                        alt="프로젝트자세히보기"
-                                    /> */}
-                                </button>
                             </div>
                         ))}
                     </div>

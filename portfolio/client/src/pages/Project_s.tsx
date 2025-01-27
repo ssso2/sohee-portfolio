@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../styles/common.scss";
 import "../styles/project.scss";
-import { viewtype, projectview } from "./Projectdata";
+import { viewtype, projectview } from "./Projectdata_s";
 import Ppop from "./Ppop_new";
 
 const Project_s: React.FC = () => {
