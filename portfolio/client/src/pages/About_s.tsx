@@ -11,13 +11,13 @@ const About_s: React.FC = () => {
     }
     const aboutdata: aboutype[] = [
         {
-            title: "1. 새로운 배움",
+            title: "01. 새로운 배움",
             des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Maiores vel, sapiente quaerat tempora debitis quidemlibero dolorum amet ut, quod assumenda obcaecati impedit minima odit? Nam asperiores ducimus enim veniam!",
             img: "/sohee-portfolio/img/sub/study61.png",
             alt: "teacher",
         },
         {
-            title: "2. 개발자",
+            title: "02. 개발자",
             des: " Lorem ipsum dolor sit amet consectetur adipisicing elit.Maiores vel, sapiente quaerat tempora debitis quidemlibero dolorum amet ut, quod assumenda obcaecati impedit minima odit? Nam asperiores ducimus enim veniam!",
             img: "/sohee-portfolio/img/sub/study61.png",
             alt: "developer",

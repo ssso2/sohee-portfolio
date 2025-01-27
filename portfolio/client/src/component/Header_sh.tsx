@@ -106,7 +106,7 @@ const Header_s = (): JSX.Element => {
                             </Link> */}
                             </li>
                         ))}
-                        <li className="navli subtitle1">
+                        <li className="navli subtitle1 mflex">
                             <Link
                                 to="#"
                                 // "https://docs.google.com/forms/d/e/1FAIpQLSd9dvY8ZfOx2NNNkXmVFnfYbB6apGYqQKQcDi6WwRlK1u27vQ/viewform?usp=sharing"
@@ -116,11 +116,12 @@ const Header_s = (): JSX.Element => {
                                 // title="설문지로 이동"
                             >
                                 Feedback
+                                <img
+                                    src="/sohee-portfolio/img/icon/Vector.svg"
+                                    alt="survey"
+                                    className="surveyicon"
+                                />
                             </Link>
-                            <img
-                                src="/sohee-portfolio/img/icon/Vector.svg"
-                                alt=""
-                            />
                         </li>
                     </ul>
                 </nav>
