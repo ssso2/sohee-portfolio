@@ -11,7 +11,7 @@ export const exdata: extype[] = [
         name: "오로로대학교",
         date: "2012.03 ~ 2016.02",
         info: "사범계열 유아교육과",
-        des1: "유아발달과정, 교육이론, 다양한 교수법 학습,교구제작, 현장실습, 동아리운영리더",
+        des1: "유아발달과정, 교육이론, 다양한 교수법 학습, 교구제작, 현장실습, 동아리운영리더",
     },
     {
         name: "오로로로유치원",
@@ -29,7 +29,7 @@ export const exdata: extype[] = [
         name: "더조은아카데미",
         date: "2024.07 ~ 2025.02",
         info: "프론트엔드개발자교육과정",
-        des1: "웹 기초 기술 습득(HTML,CSS,JavaScript), API 활용 및 CRUD 기능 구현, Redux를 활용한 상태 관리,반응형 웹 구현 및 배포, 협업 프로젝트(GitHub활용), React와 React Native 통합 학습",
+        des1: "웹 기초 기술 습득(HTML,CSS, JavaScript), API 활용 및 CRUD 기능 구현,  Redux를 활용한 상태 관리, 반응형 웹 구현 및 배포, 협업 프로젝트(GitHub활용), React와 React Native 통합 학습",
     },
 ];
 

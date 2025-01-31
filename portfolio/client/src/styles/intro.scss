@@ -7,7 +7,7 @@
     // background-color: #0a0;
     .intro-loading {
         justify-content: center;
-        transform: rotate(-90deg);
+        // transform: rotate(-90deg);
         .loading {
             justify-content: center;
         }
@@ -22,43 +22,66 @@
                 stroke-dashoffset: 0;
             }
         }
+
+        .comment {
+            display: block;
+            font-size: 36px;
+            font-weight: 600;
+        }
+        .hidden {
+            position: absolute;
+            width: 50vw;
+            height: 300px;
+            background-color: #fff;
+            top: 25%;
+            left: 25%;
+        }
     }
     .intro-txt {
-        justify-content: space-between;
+        justify-content: center;
         flex-direction: row;
         overflow: hidden;
+        position: absolute;
+        background-color: #fff;
+        width: 90%;
+        height: 25%;
+
+        // top: 50%;
+        // left: 50%;
         .uptxt {
-            padding-right: 20px;
+            padding-right: 10px;
             opacity: 0;
-            transform: translateY(20px); /* 초기 위치 */
-            animation: fade 1.2s ease-out forwards;
+            transform: translateY(-20px); /* 초기 위치 */
+            animation: fade 0.4s ease-out forwards;
             font-size: 24px;
             font-weight: 600;
         }
         .uptxt:nth-child(1) {
-            animation-delay: 1s;
+            // animation-delay: 1s;
         }
         .uptxt:nth-child(2) {
-            animation-delay: 1.5s;
+            animation-delay: 0.2s;
         }
         .uptxt:nth-child(3) {
-            animation-delay: 2s;
+            animation-delay: 0.4s;
+            font-weight: 700;
+            color: #0054ff;
         }
         @keyframes fade {
             0% {
                 opacity: 0.8;
                 // transform: translateY(20px);
             }
-            50% {
-                opacity: 1;
-                transform: translateY(0); /* 위로 올라옴 */
-            }
-            70% {
-                opacity: 0.5;
-                transform: translateY(10px); /* 딜레이 효과 */
-            }
+            // 50% {
+            //     opacity: 1;
+            //     transform: translateY(0); /* 위로 올라옴 */
+            // }
+            // 70% {
+            //     opacity: 0.5;
+            //     transform: translateY(10px); /* 딜레이 효과 */
+            // }
             100% {
-                opacity: 0;
+                opacity: 1;
                 transform: translateY(20px);
             }
         }
@@ -82,31 +105,31 @@
         height: 100vh;
         background-color: #121212;
         transform: translateY(-150%); /* 화면 위로 시작 */
-        animation: slideDown 0.4s ease-out forwards;
+        animation: slideDown 0.3s ease-out forwards;
         overflow: hidden;
         &:nth-of-type(1) {
             left: 0px;
-            animation-delay: 2.4s;
+            animation-delay: 2.8s;
         }
         &:nth-of-type(2) {
             left: 320px;
-            animation-delay: 2.6s;
+            animation-delay: 3s;
         }
         &:nth-of-type(3) {
             left: 640px;
-            animation-delay: 2.8s;
+            animation-delay: 3.2s;
         }
         &:nth-of-type(4) {
             left: 960px;
-            animation-delay: 3s;
+            animation-delay: 3.4s;
         }
         &:nth-of-type(5) {
             left: 1240px;
-            animation-delay: 3.2s;
+            animation-delay: 3.6s;
         }
         &:nth-of-type(6) {
             left: 1560px;
-            animation-delay: 3.4s;
+            animation-delay: 3.8s;
         }
     }
     @keyframes slideDown {

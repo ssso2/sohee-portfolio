@@ -1,8 +1,17 @@
+import { useEffect } from "react";
 import "../styles/common.scss";
 import "../styles/experience_s.scss";
 import { exdata, icons } from "./Exdata";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Experience_s: React.FC = () => {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // 애니메이션 지속 시간
+            once: false, // 스크롤 시 한 번만 애니메이션
+        });
+    }, []);
     return (
         <div id="experience" className="exwrapper flex white">
             <div className="exwrap flexC">
@@ -78,7 +87,7 @@ const Experience_s: React.FC = () => {
                             ))}
                         </div>
                         <div className="stacktitle">Tech Stack</div>
-                        <div className="stack flex">
+                        <div className="stack flex" data-aos="fade-in">
                             {icons.map((icon, index) => (
                                 <div className="iconwrap" key={index}>
                                     <img src={icon.src} alt={icon.name} />
