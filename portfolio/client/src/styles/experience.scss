@@ -3,7 +3,7 @@
 .exwrapper {
     @include common.wrapperstyle;
     height: 100%;
-    margin-top: 200px; // 고민
+    // margin-top: 200px; // 고민
     .exwrap {
         margin: 0 4rem;
         display: flex;
@@ -14,7 +14,7 @@
             .titlewrap {
                 width: 334px;
                 height: 38px;
-                margin-bottom: 107px;
+                margin-bottom: 48px;
                 & img {
                     display: inline-block;
                     width: 38px;

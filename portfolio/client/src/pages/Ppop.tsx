@@ -78,21 +78,6 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                                     {projectinfo[0].num}
                                 </p>
                             </aside> */}
-                            {/* {projectinfo.map((project, i) => (
-                                <aside key={i}>
-                                    <p className="subtitle1">{project.title}</p>
-                                    <p className="label1 gray4">
-                                        {project.people}
-                                    </p>
-                                    <p className="label1 gray4">
-                                        {project.date}
-                                    </p>
-                                    <p className="label1 gray4">
-                                        {" "}
-                                        {project.num}
-                                    </p>
-                                </aside>
-                            ))} */}
                             <main>
                                 {deslist.map((data, index) => (
                                     <div className="section" key={index}>

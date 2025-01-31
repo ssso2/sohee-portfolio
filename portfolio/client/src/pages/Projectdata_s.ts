@@ -2,6 +2,7 @@ export interface viewtype {
     id: number;
     title: string;
     description: string;
+    bg: string;
     img: string;
     people: string;
     date: string;
@@ -14,7 +15,8 @@ export const projectview: viewtype[] = [
         title: "서울 신라호텔",
         description:
             "시맨틱 마크업, 사이트 이동 간소화, 예약 시스템 최적화, 반응형 디자인을 도입한 서울신라호텔 리뉴얼 프로젝트를 진행했습니다.",
-        img: "/sohee-portfolio/img/sub/study61.png",
+        bg: "/sohee-portfolio/img/sub/projectbg1.svg",
+        img: "/sohee-portfolio/img/sub/projectframe1.svg",
         people: "Font-End Developer",
         date: "기간 : 24.11.26 ~ 24.12.13",
         num: "인원 : 5명",
@@ -22,30 +24,33 @@ export const projectview: viewtype[] = [
     },
     {
         id: 2,
+        title: "조말론 런던",
+        description:
+            "리뉴얼 프로젝트를 진행하며 간편로그인, 결제, 배송조회등 다양한 외부 API를 연동하여 사용자 편의성을 높였습니다.",
+        bg: "/sohee-portfolio/img/sub/projectbg2.svg",
+        img: "/sohee-portfolio/img/sub/projectframe2.svg",
+        people: "Font-End Developer",
+        date: "기간 : 25.01.02 ~ 25.01.15",
+        num: "인원 : 4명",
+        logo: "/sohee-portfolio/img/icon/perfume.svg",
+    },
+    {
+        id: 3,
         title: "포트폴리오 사이트",
         description:
             "저의 경험과 프로젝트를 담아 React로 구현한 반응형 포트폴리오 사이트입니다.",
-        img: "/sohee-portfolio/img/sub/study61.png",
+        bg: "/sohee-portfolio/img/sub/projectbg2.svg",
+        img: "/sohee-portfolio/img/sub/projectframe2.svg",
         people: "Font-End Developer",
         date: "기간 : 25.01.xx ~ 25.01.xx",
         num: "인원 : 1명",
         logo: "/sohee-portfolio/img/icon/perfume.svg",
     },
     {
-        id: 3,
-        title: "조말론 런던",
-        description:
-            "리뉴얼 프로젝트를 진행하며 간편로그인, 결제, 배송조회등 다양한 외부 API를 연동하여 사용자 편의성을 높였습니다.",
-        img: "/sohee-portfolio/img/sub/study61.png",
-        people: "Font-End Developer",
-        date: "기간 : 25.01.02 ~ 25.01.15",
-        num: "인원 : 4명",
-        logo: "/sohee-portfolio/img/icon/silla.svg",
-    },
-    {
         id: 4,
         title: "다이어리",
         description: "다이어리 서비스입니다.",
+        bg: "/sohee-portfolio/img/sub/projectbg2.svg",
         img: "/sohee-portfolio/img/sub/study61.png",
         people: "Font-End Developer",
         date: "기간 : 25.02 ~ 25.01",
@@ -219,111 +224,11 @@ export const projectlist: plisttype = [
             ],
         },
     ],
-    //포트폴리오
-    [
-        {
-            id: 2,
-            title: "개요",
-            content:
-                "팀 프로젝트 경험을 토대로 전반적인 웹 개발 역량을 강화하고자 포트폴리오를 제작했습니다. React와 여러 라이브러리를 활용하고, 반응형 웹 구현으로 다양한 환경에서 접근성을 높였습니다. 피드백을 반영해서 지속적으로 개선하고 발전시켜 나갈 예정입니다.",
-        },
-        {
-            title: "배포링크",
-            content: ["깃허브 : https://www.", "벨로그 : https://www."],
-        },
-        {
-            title: "주요기능",
-            content: [
-                "스크롤 위치에 따른 페이지 진행도 표시",
-                "헤더 GNB와 contact/top 플로팅 버튼 구현",
-                "intro, main, about, experience, project, review로 섹션 구성",
-                "사이트 개선을 위한 피드백 설문 시스템 연동",
-                "다양한 디바이스와 브라우저에 최적화된 반응형 구현",
-            ],
-        },
-        {
-            title: "기술스택",
-            content: ["typecript", "scss, react"],
-        },
-        {
-            title: "작업기여도",
-            content: [
-                "기획 / 디자인 / 개발 전반을 담당했습니다.",
-                "헤더 GNB의 앵커 태그(#)를 사용해 섹션 간 이동을 구현했습니다.",
-                "프로젝트에 대한 자세한 내용은 모달 팝업으로 구현했습니다.",
-                "애니메이션과 스와이퍼로 역동적인 ui를 구현했습니다.",
-                "contact/top 플로팅 버튼으로 접근성을 높였습니다.",
-            ],
-        },
-        {
-            title: "트러블슈팅",
-            content: [
-                {
-                    "타입스크립트 타입 오류": [
-                        "문제점 : 독학으로 배워서 적용하다보니 타입오류 많이 마주함 ",
-                        "해결방법 : 오류해석하면서 하나씩 알아감.",
-                    ],
-                },
-                {
-                    "프로젝트 데이터구조화 문제": [
-                        "문제점 : 하나의 데이터를 예시로 구조화하였는데 다중데이터일경우 해당 구조로는 출력이 불가함.",
-                        "해결방법 : 다중데이터일경우 해당 구조로는 출력이 불가해서 다시 구조화작업.",
-                    ],
-                },
-                {
-                    "스크롤 이벤트 처리 오류": [
-                        "문제점 : 스크롤이 해당 영역에 왔을 때 처리방법 고민했습니다.",
-                        "해결방법 : 공부하여 옵저브로 처리했습니다.",
-                    ],
-                },
-            ],
-        },
-        {
-            title: "스크린샷 ",
-            content: [
-                {
-                    id: 1,
-                    src: "/sohee-portfolio/img/sub/hotel.49.25.png",
-                    alt: "프로젝트 작업화면",
-                    comment: "메인화면",
-                },
-                {
-                    id: 2,
-                    src: "/sohee-portfolio/img/sub/hotel.77.png",
-                    alt: "프로젝트 작업화면",
-                    comment: "소개페이지",
-                },
-                {
-                    id: 3,
-                    src: "/sohee-portfolio/img/sub/hotel.50.19.png",
-                    alt: "프로젝트 작업화면",
-                    comment: "학력,경력페이지",
-                },
-                {
-                    id: 4,
-                    src: "/sohee-portfolio/img/sub/hotel.54.04.png",
-                    alt: "프로젝트 작업화면",
-                    comment: "프로젝트리스트",
-                },
-                {
-                    id: 5,
-                    src: "/sohee-portfolio/img/sub/hotel.54.57.png",
-                    alt: "프로젝트 작업화면",
-                    comment: "프로젝트상세",
-                },
-                {
-                    id: 6,
-                    src: "/sohee-portfolio/img/sub/hotel.57.27.png",
-                    alt: "프로젝트 작업화면",
-                    comment: "리뷰페이지",
-                },
-            ],
-        },
-    ],
+
     //조말론
     [
         {
-            id: 3,
+            id: 2,
             title: "개요",
             content:
                 "기존 조말론 사이트는 지도 정보 오류, 잦은 서버 다운으로 인한 사이트 안정성 문제, 리뷰 필터링 부재등 다양한 개선이 필요했습니다. 고객 편의성과 신뢰도 향상을 위해 웹사이트 리뉴얼을 진행했으며, 다양한 외부 API를 연동하여 사용자 경험을 개선했습니다.",
@@ -437,6 +342,107 @@ export const projectlist: plisttype = [
                     src: "/sohee-portfolio/img/sub/perfume6.30.png",
                     alt: "프로젝트 작업화면",
                     comment: "관리자",
+                },
+            ],
+        },
+    ],
+    //포트폴리오
+    [
+        {
+            id: 3,
+            title: "개요",
+            content:
+                "팀 프로젝트 경험을 토대로 전반적인 웹 개발 역량을 강화하고자 포트폴리오를 제작했습니다. React와 여러 라이브러리를 활용하고, 반응형 웹 구현으로 다양한 환경에서 접근성을 높였습니다. 피드백을 반영해서 지속적으로 개선하고 발전시켜 나갈 예정입니다.",
+        },
+        {
+            title: "배포링크",
+            content: ["깃허브 : https://www.", "벨로그 : https://www."],
+        },
+        {
+            title: "주요기능",
+            content: [
+                "스크롤 위치에 따른 페이지 진행도 표시",
+                "헤더 GNB와 contact/top 플로팅 버튼 구현",
+                "intro, main, about, experience, project, review로 섹션 구성",
+                "사이트 개선을 위한 피드백 설문 시스템 연동",
+                "다양한 디바이스와 브라우저에 최적화된 반응형 구현",
+            ],
+        },
+        {
+            title: "기술스택",
+            content: ["typecript", "scss, react"],
+        },
+        {
+            title: "작업기여도",
+            content: [
+                "기획 / 디자인 / 개발 전반을 담당했습니다.",
+                "헤더 GNB의 앵커 태그(#)를 사용해 섹션 간 이동을 구현했습니다.",
+                "프로젝트에 대한 자세한 내용은 모달 팝업으로 구현했습니다.",
+                "애니메이션과 스와이퍼로 역동적인 ui를 구현했습니다.",
+                "contact/top 플로팅 버튼으로 접근성을 높였습니다.",
+            ],
+        },
+        {
+            title: "트러블슈팅",
+            content: [
+                {
+                    "타입스크립트 타입 오류": [
+                        "문제점 : 독학으로 배워서 적용하다보니 타입오류 많이 마주함 ",
+                        "해결방법 : 오류해석하면서 하나씩 알아감.",
+                    ],
+                },
+                {
+                    "프로젝트 데이터구조화 문제": [
+                        "문제점 : 하나의 데이터를 예시로 구조화하였는데 다중데이터일경우 해당 구조로는 출력이 불가함.",
+                        "해결방법 : 다중데이터일경우 해당 구조로는 출력이 불가해서 다시 구조화작업.",
+                    ],
+                },
+                {
+                    "스크롤 이벤트 처리 오류": [
+                        "문제점 : 스크롤이 해당 영역에 왔을 때 처리방법 고민했습니다.",
+                        "해결방법 : 공부하여 옵저브로 처리했습니다.",
+                    ],
+                },
+            ],
+        },
+        {
+            title: "스크린샷 ",
+            content: [
+                {
+                    id: 1,
+                    src: "/sohee-portfolio/img/sub/hotel.49.25.png",
+                    alt: "프로젝트 작업화면",
+                    comment: "메인화면",
+                },
+                {
+                    id: 2,
+                    src: "/sohee-portfolio/img/sub/hotel.77.png",
+                    alt: "프로젝트 작업화면",
+                    comment: "소개페이지",
+                },
+                {
+                    id: 3,
+                    src: "/sohee-portfolio/img/sub/hotel.50.19.png",
+                    alt: "프로젝트 작업화면",
+                    comment: "학력,경력페이지",
+                },
+                {
+                    id: 4,
+                    src: "/sohee-portfolio/img/sub/hotel.54.04.png",
+                    alt: "프로젝트 작업화면",
+                    comment: "프로젝트리스트",
+                },
+                {
+                    id: 5,
+                    src: "/sohee-portfolio/img/sub/hotel.54.57.png",
+                    alt: "프로젝트 작업화면",
+                    comment: "프로젝트상세",
+                },
+                {
+                    id: 6,
+                    src: "/sohee-portfolio/img/sub/hotel.57.27.png",
+                    alt: "프로젝트 작업화면",
+                    comment: "리뷰페이지",
                 },
             ],
         },

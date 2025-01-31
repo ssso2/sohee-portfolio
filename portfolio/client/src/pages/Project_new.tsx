@@ -12,17 +12,46 @@ const Project_s: React.FC = () => {
             <div id="project" className="projectwrapper white flexC">
                 <div className="projectwrap">
                     {/* <p className="titlename">SOHEE</p> */}
-                    <p className="titlename"> PROJECT</p>
+                    {/* <p className="titlename"> PROJECT</p> */}
+                    <div className="maintitle flexC">
+                        <img
+                            src="/sohee-portfolio/img/icon/projecticon.svg"
+                            alt="project"
+                        />
+                        <div>
+                            <p className="header3">P</p>
+                            <p className="header3">roject</p>
+                        </div>
+
+                        <p className="caption2">
+                            {/* 제가 작업한 프로젝트를 소개합니다 */}
+                            도전과 협업으로 만든 팀 / 개인 프로젝트 모음입니다.
+                        </p>
+                    </div>
                     <div className="line">
                         {projectview.map(project => (
                             <div className="imgwrap" key={project.id}>
-                                <img src={project.img} alt="silla" />
-                                <div className="hoverimg">
+                                <img
+                                    src={project.bg}
+                                    alt="projectimg"
+                                    className="imgbg"
+                                />
+                                <div
+                                    className="hoverimg"
+                                    onClick={() => setpopup(project)}
+                                >
                                     <img
                                         src={project.logo}
                                         alt="projectlogo"
-                                        onClick={() => setpopup(project)}
+                                        className="projectlogo"
                                     />
+                                    <div className="mainbg">
+                                        <img
+                                            src={project.img}
+                                            alt="projectmain"
+                                            className="mainframe"
+                                        />
+                                    </div>
                                 </div>
                                 <span className="des">
                                     <p className="white subtitle1">

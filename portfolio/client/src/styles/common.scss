@@ -1,8 +1,14 @@
 //영역
 @mixin wrapperstyle {
-    width: 95%;
+    // width: 95%;
     height: 100%;
+    // margin: 0 auto;
+    // margin-top: 128px;
+    max-width: 1280px;
     margin: 0 auto;
+    margin-top: 128px;
+    align-items: center;
+    padding: 0 40px;
 }
 
 //폰트
@@ -122,14 +128,16 @@ body {
 }
 
 .center {
-    width: calc(100% - 80px);
-    box-sizing: border-box;
+    max-width: 1280px;
     margin: 0 auto;
-    padding: 0 2.7rem;
-    // background-color: rgb(77, 78, 77);
     display: flex;
-    // justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+    // width: calc(100% - 80px);
+    // padding: 0 2.7rem;
+    // background-color: rgb(77, 78, 77);
+
+    // justify-content: center;
 }
 
 //헤더
@@ -138,7 +146,8 @@ body {
     height: 80px;
     background-color: #121212;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     position: fixed;
     top: 0;
@@ -154,34 +163,48 @@ body {
             transform: translateY(0px);
         }
     }
-
-    .logo {
-        margin-left: 18px;
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        background-color: #d9d9d9;
+    &.hidden {
+        transition: transform 2s ease, opacity 0.5s ease;
+        pointer-events: none;
+        transform: translateY(-100%);
+        opacity: 0;
+        /* display: none; */
+        background-color: transparent;
     }
+    &.headerbgc {
+        background-color: #121212;
+        // background-color: transparent;
+    }
+    // .logo {
+    //     margin-left: 18px;
+    //     width: 38px;
+    //     height: 38px;
+    //     border-radius: 50%;
+    //     background-color: #d9d9d9;
+    //     img {
+    //         width: 100%;
+    //     }
+    // }
     //모바일네비
     .hamburger {
         display: none;
         flex-direction: column;
         justify-content: space-between;
-        width: 40px;
-        height: 24px;
-        margin-right: 32px;
+        width: 24px;
+        height: 18px;
+        margin-right: 19px;
         border: none;
         background: transparent;
         cursor: pointer;
-        padding: 0 auto;
+        padding: 0;
         span {
             height: 2px;
-            width: 24px;
+            width: 18px;
             background: #fff;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
         &.open span:nth-child(1) {
-            transform: translateY(10px) rotate(45deg);
+            transform: translateY(6px) rotate(45deg);
         }
         &.open span:nth-child(2) {
             opacity: 0;
@@ -208,6 +231,7 @@ body {
             list-style: none;
             display: flex;
             flex-direction: row;
+            padding-left: 0;
             .navli {
                 padding-left: 88px;
             }
@@ -244,6 +268,11 @@ body {
             // }
             .linkto {
                 margin-right: 5px;
+                img {
+                    width: 13px;
+                    height: 13px;
+                    margin-left: 9.5px;
+                }
                 &:hover::after {
                     content: "설문지페이지로 이동";
                     position: absolute;
@@ -262,16 +291,6 @@ body {
                 }
             }
         }
-        &.hidden {
-            transition: transform 2s ease, opacity 0.5s ease;
-            pointer-events: none;
-            transform: translateY(-100%);
-            opacity: 0;
-            /* display: none; */
-        }
-        &.headerbgc {
-            background-color: #121212;
-        }
     }
 }
 
@@ -282,7 +301,7 @@ body {
     .scrollbar {
         position: fixed;
         z-index: 998;
-        width: 80px;
+        width: 40px;
         height: calc(100% - 80px);
         // background-color: #121212;
         display: flex;
@@ -295,7 +314,7 @@ body {
             color: #fff;
             /* position: "fixed"; */
             transform: rotate(90deg);
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             /* width: 2px; */
             /* height: 40%; */
@@ -328,6 +347,7 @@ body {
     z-index: 99;
     background-color: #fff;
     border-radius: 50%;
+    cursor: pointer;
     .top {
         width: 20px;
         top: 25%;
@@ -336,7 +356,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1079px) {
+@media screen and (max-width: 1279px) {
     //스크롤바
     .scrollwrap {
         .scrollbar {
@@ -349,7 +369,6 @@ body {
         }
         .hamburger {
             display: flex;
-            margin-right: 19px;
         }
         .nav {
             display: none;

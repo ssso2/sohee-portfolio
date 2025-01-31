@@ -61,13 +61,13 @@ const Header_s = (): JSX.Element => {
                     headerbg ? "headerbgc" : ""
                 }`}
             >
-                <div className="logo">
+                {/* <div className="logo">
                     <img
                         className="img"
                         src="/sohee-portfolio/img/icon/plogo.svg"
                         alt="Profile"
                     />
-                </div>
+                </div> */}
                 {/* 햄버거 버튼 */}
                 <button
                     className={`hamburger ${menuOpen ? "open" : ""}`}
@@ -84,7 +84,7 @@ const Header_s = (): JSX.Element => {
                         {menus.map((item, index) => (
                             <li
                                 key={index}
-                                className="navli subtitle1"
+                                className="navli body1"
                                 onClick={() => setMenuOpen(false)}
                             >
                                 <button
@@ -106,7 +106,7 @@ const Header_s = (): JSX.Element => {
                             </Link> */}
                             </li>
                         ))}
-                        <li className="navli subtitle1 mflex">
+                        <li className="navli body1 mflex">
                             <Link
                                 to="#"
                                 // "https://docs.google.com/forms/d/e/1FAIpQLSd9dvY8ZfOx2NNNkXmVFnfYbB6apGYqQKQcDi6WwRlK1u27vQ/viewform?usp=sharing"

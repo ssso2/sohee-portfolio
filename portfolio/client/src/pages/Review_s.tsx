@@ -72,26 +72,39 @@ const Review_s: React.FC = () => {
         },
     ];
     return (
-        <div className="reviewwrapper">
+        <div className="reviewwrapper flex">
             <div id="review" className="reviewWrap white flexC">
-                <div className="titlewrap white flex">
+                {/* <div className="titlewrap white flex">
                     <img
                         src="/sohee-portfolio/img/icon/Pencil.svg"
                         alt="feedback"
                     />
                     <div className="header3">Feedback</div>
+                </div> */}
+                <div className="maintitle flexC">
+                    <img
+                        src="/sohee-portfolio/img/icon/reviewicon.svg"
+                        alt="review"
+                    />
+                    <div>
+                        <p className="header3">R</p>
+                        <p className="header3">eview</p>
+                    </div>
+                    <p className="caption2">함께 작업한 동료들의 생각입니다</p>
                 </div>
-
                 <Swiper
                     modules={[Autoplay]}
                     loop={true}
                     slidesPerView={1.3}
                     spaceBetween={22}
                     breakpoints={{
-                        768: {
+                        520: {
                             slidesPerView: 2.5,
                         },
-                        1080: {
+                        768: {
+                            slidesPerView: 3,
+                        },
+                        1280: {
                             slidesPerView: 3.5,
                         },
                     }}

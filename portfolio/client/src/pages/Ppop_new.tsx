@@ -61,8 +61,8 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                             </header>
                         ))}
                         <div className="deswrap flex">
-                            {projectview.map(project => (
-                                <aside>
+                            {projectview.map((project, idx) => (
+                                <aside key={idx}>
                                     <p className="header3">{project.title}</p>
                                     <p className="body1 gray4">
                                         {project.people}

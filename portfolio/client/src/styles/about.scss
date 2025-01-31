@@ -2,46 +2,58 @@
 
 .aboutwrapper {
     @include common.wrapperstyle;
-    justify-content: center;
-    margin-top: 200px; // 고민
     .aboutwrap {
-        margin: 0 4rem;
+        max-width: 1200px;
+        width: 100%;
+        box-sizing: border-box;
         .maintitle {
-            margin-bottom: 48px;
+            margin-bottom: 40px;
             width: 100%;
+            align-items: center;
             & img {
                 display: inline-block;
                 width: 38px;
                 height: 38px;
-                vertical-align: middle;
-                margin-right: 16px;
+                // vertical-align: middle;
             }
-            & .header3 {
+            .header3 {
                 display: inline-block;
                 vertical-align: middle;
                 line-height: 38px;
+                margin: 8px 0;
+                &:nth-of-type(2) {
+                    padding-left: 4px;
+                    color: #ead500;
+                }
+            }
+            .caption2 {
+                margin: 0;
             }
         }
         .introWrap {
-            width: 95%;
+            width: 1200px;
             height: 246px;
             border-radius: 12px;
             background-color: #212120;
             display: flex;
-            gap: 30px;
+            gap: 32px;
             align-items: center;
-            margin-bottom: 120px; // 고민
             padding: 24px 40px;
-            .title2 {
-                flex: 2;
+            box-sizing: border-box;
+            &:nth-of-type(2) {
+                margin-bottom: 24px;
+            }
+            .subtitle1 {
+                // flex: 2;
+                width: 172px;
             }
             .body2 {
-                flex: 8;
+                // flex: 8;
+                width: 686px;
             }
             .aboutimg {
                 width: 198px;
                 height: 198px;
-
                 img {
                     // display: inline-block;
                     width: 198px;
@@ -64,28 +76,21 @@
     }
 }
 
-@media screen and (max-width: 1079px) {
+@media screen and (max-width: 1279px) {
     .aboutwrapper {
-        margin-top: 124px;
+        margin-top: 108px;
+        padding: 0 32px;
         .aboutwrap {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
             align-items: center;
             .maintitle {
                 margin-bottom: 32px;
-                align-items: flex-start;
-                margin-left: 5%;
-                // padding-right: 5%;
-                & img {
-                    margin-right: 12px;
-                }
             }
             .introWrap {
-                margin: 0;
+                // margin: 0;
                 box-sizing: border-box;
+                width: 90%;
                 min-width: 704px;
-                height: 100%;
+                height: auto;
                 border-radius: 8px;
                 margin-bottom: 24px;
                 flex-direction: column;
@@ -100,8 +105,9 @@
                     height: 100%;
                     img {
                         width: 100%;
-                        min-width: 624px;
-                        min-height: 268px;
+                        height: 328px;
+                        // min-width: 624px;
+                        // min-height: 268px;
                     }
                 }
             }
@@ -111,10 +117,12 @@
 
 @media screen and (max-width: 767px) {
     .aboutwrapper {
-        margin-top: 124px;
+        margin-top: 68px;
+        padding: 0 16px;
         .aboutwrap {
             .maintitle {
                 margin-bottom: 16px;
+                align-items: flex-start;
                 img {
                     width: 24px;
                     height: 24px;
@@ -126,6 +134,9 @@
                 }
             }
             .introWrap {
+                // max-width: 704px;
+                // min-width: 328px;
+                width: 100%;
                 min-width: 328px;
                 margin-bottom: 16px;
                 padding: 24px 16px;
@@ -139,8 +150,7 @@
                 }
                 .aboutimg {
                     img {
-                        min-width: 296px;
-                        min-height: 168px;
+                        height: 248px;
                     }
                 }
             }

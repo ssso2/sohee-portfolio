@@ -1,11 +1,13 @@
 import "../styles/common.scss";
 import "../styles/main.scss";
 
+import ReactPlayer from "react-player";
+
 import Header from "../component/Header_sh";
 import Scrollbar from "../component/Scrollbar_s";
 import Topbtn from "../component/Topbtn";
 import About from "./About_s";
-import Experience from "./Experience_s";
+import Experience from "./Experience_new";
 import Project from "./Project_new";
 import Review from "./Review_s";
 import Contact from "../component/Contact";
@@ -43,23 +45,29 @@ const Main_s: React.FC = () => {
                 <div className="imgwrap">
                     <img
                         className="mainimg"
-                        src="/sohee-portfolio/img/sub/study61.png"
+                        src="/sohee-portfolio/img/sub/4833.GIF"
                         alt="mainIMG"
                     />
+                    {/* <ReactPlayer
+                        url="/sohee-portfolio/img/sub/videosample.mp4"
+                        controls
+                        width="100%"
+                        height="100%"
+                    /> */}
                 </div>
             </div>
             <About />
             <Experience />
             <Project />
             <Review />
-            <Topbtn />
-            <div className="scollicon">
+            {/* <Topbtn /> */}
+            {/* <div className="scollicon">
                 <img
                     src="/sohee-portfolio/img/icon/scroll-icon.svg"
                     alt="scroll"
                     className="bottomicon"
                 />
-            </div>
+            </div> */}
         </div>
     );
 };

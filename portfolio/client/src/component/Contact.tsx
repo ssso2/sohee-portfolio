@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
     return (
         <div className="contactwrapper" onClick={clickbtn}>
             <div className="contactwrap">
-                <div className="round"> </div>
+                {/* <div className="round"> </div> */}
                 <div className="contact black1">Contact</div>
             </div>
             {popup && <Conpop popclose={popclose} onclose={clickbtn} />}

@@ -14,7 +14,7 @@ const Experience_s: React.FC = () => {
                         />
                         <h1 className="header3">Experinece</h1>
                     </div>
-                    <div className="imgwrap">
+                    {/* <div className="imgwrap">
                         <img
                             src="/sohee-portfolio/img/sub/profile.svg"
                             alt="teacher"
@@ -25,32 +25,43 @@ const Experience_s: React.FC = () => {
                         <p className="body2">
                             minima odit? Nam asperiores ducimus enim veniam!
                         </p>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="deswrap">
-                    {exdata.map((data, index) => (
-                        <div className="des" key={`${data}-${index}`}>
-                            <div className="info">
-                                <p
-                                    className={`body1 ${
-                                        index === 1
-                                            ? "change"
-                                            : index === 2
-                                            ? "retire"
-                                            : "project"
-                                    }`}
-                                >
-                                    {data.name}
-                                </p>
-                                <p className="body2 date">{data.date}</p>
+                    <div className="imgwrap">
+                        <img
+                            src="/sohee-portfolio/img/sub/profile.svg"
+                            alt="teacher"
+                        />
+                    </div>
+                    <div className="past">
+                        {exdata.map((data, index) => (
+                            <div className="des" key={`${data}-${index}`}>
+                                <div className="info">
+                                    <p
+                                        className={`body1 ${
+                                            index === 1
+                                                ? "change"
+                                                : index === 2
+                                                ? "retire"
+                                                : "project"
+                                        }`}
+                                    >
+                                        {data.name}
+                                    </p>
+                                    <p className="body2 date">{data.date}</p>
+                                </div>
+                                <div className="detail">
+                                    <p className="subtitle1 name">
+                                        {data.info}
+                                    </p>
+                                    <p className="body2 content">{data.des1}</p>
+                                    {/* <p className="caption1">{data.des2}</p> */}
+                                </div>
                             </div>
-                            <div className="detail">
-                                <p className="subtitle1 name">{data.info}</p>
-                                <p className="body2 content">{data.des1}</p>
-                                {/* <p className="caption1">{data.des2}</p> */}
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+
                     <div className="stacktitle">Tech Stack</div>
                     <div className="stack flex">
                         {icons.map((icon, index) => (

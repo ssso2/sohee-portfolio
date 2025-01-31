@@ -63,13 +63,18 @@ const About_s: React.FC = () => {
 
     return (
         <div id="about" className="aboutwrapper flexC">
-            <div className="white aboutwrap">
-                <div className="maintitle flex">
+            <div className="white aboutwrap flexC">
+                <div className="maintitle flexC">
                     <img
-                        src="/sohee-portfolio/img/icon/SpeechBalloon.svg"
+                        src="/sohee-portfolio/img/icon/abouticon.svg"
                         alt="aboutme"
                     />
-                    <div className="header3">About me</div>
+                    <div>
+                        <p className="header3">About</p>
+                        <p className="header3">me</p>
+                    </div>
+
+                    <p className="caption2">저는 ENFJ입니다</p>
                 </div>
                 {aboutdata.map((data, index) => (
                     <div
