@@ -16,9 +16,9 @@ export const projectview: viewtype[] = [
         description:
             "시맨틱 마크업, 사이트 이동 간소화, 예약 시스템 최적화, 반응형 디자인을 도입한 서울신라호텔 리뉴얼 프로젝트를 진행했습니다.",
         bg: "/sohee-portfolio/img/sub/projectbg1.svg",
-        img: "/sohee-portfolio/img/sub/hotelframe.svg",
-        people: "Font-End Developer",
-        date: "기간 : 24.11.26 ~ 24.12.13",
+        img: "/sohee-portfolio/img/sub/sillanew.svg",
+        people: "Front-End Developer",
+        date: "기간 : 24.11.26 ~ 24.12.24",
         num: "인원 : 5명",
         logo: "/sohee-portfolio/img/icon/silla.svg",
     },
@@ -29,7 +29,7 @@ export const projectview: viewtype[] = [
             "리뉴얼 프로젝트를 진행하며 간편로그인, 결제, 배송조회등 다양한 외부 API를 연동하여 사용자 편의성을 높였습니다.",
         bg: "/sohee-portfolio/img/sub/projectbg2.svg",
         img: "/sohee-portfolio/img/sub/projectframe2.svg",
-        people: "Font-End Developer",
+        people: "Front-End Developer",
         date: "기간 : 25.01.02 ~ 25.01.15",
         num: "인원 : 4명",
         logo: "/sohee-portfolio/img/icon/perfume.svg",
@@ -41,22 +41,22 @@ export const projectview: viewtype[] = [
             "저의 경험과 프로젝트를 담아 React로 구현한 반응형 포트폴리오 사이트입니다.",
         bg: "/sohee-portfolio/img/sub/projectbg2.svg",
         img: "/sohee-portfolio/img/sub/projectframe2.svg",
-        people: "Font-End Developer",
-        date: "기간 : 25.01.xx ~ 25.01.xx",
+        people: "Front-End Developer",
+        date: "기간 : 25.01.13 ~ 진행중",
         num: "인원 : 1명",
-        logo: "/sohee-portfolio/img/icon/perfume.svg",
+        logo: "/sohee-portfolio/img/icon/portpolio.svg",
     },
     {
         id: 4,
-        title: "영화다이어리 (진행중)",
+        title: "씬-기록 (진행중)",
         description:
-            "내가 감상한 영화와 드라마의 순간들을 기록하고 감정을 남기는 아카이빙 플랫폼입니다. ",
+            "내가 감상한 영화와 드라마의 순간들을 기록하고 감정을 남기는 아카이빙 플랫폼입니다.",
         bg: "/sohee-portfolio/img/sub/projectbg2.svg",
         img: "/sohee-portfolio/img/sub/study61.png",
-        people: "Font-End Developer",
-        date: "기간 : 25.02 ~ 25.01",
-        num: "인원 : 1명",
-        logo: "/sohee-portfolio/img/icon/silla.svg",
+        people: "Product Designer Front-End Developer ",
+        date: "기간 : 25.02.01 ~ 진행중",
+        num: "인원 : 2명",
+        logo: "/sohee-portfolio/img/icon/diarylogo.svg",
     },
 ];
 
@@ -188,7 +188,7 @@ export const projectlist: plisttype = [
             content: [
                 {
                     id: 1,
-                    src: "/sohee-portfolio/img/sub/hotel.49.25.png",
+                    src: "/sohee-portfolio/img/sub/sillanew.svg",
                     alt: "프로젝트 작업화면",
                     comment: "메인화면",
                 },
@@ -314,7 +314,7 @@ export const projectlist: plisttype = [
                 },
                 {
                     id: 2,
-                    src: "/sohee-portfolio/img/sub/perfume8.46.png",
+                    src: "/sohee-portfolio/img/sub/perfume8.461.png",
                     alt: "프로젝트 작업화면",
                     comment: "센트파인더페이지",
                 },
@@ -456,7 +456,7 @@ export const projectlist: plisttype = [
             title: "개요",
             content:
                 // "영화와 드라마를 사랑하지만 감상 후 기억이 희미해지는 분들을 위해, 소중한 순간들을 체계적으로 기록할 수 있는 서비스를 기획했습니다./컨텐츠의 홍수 속에서 잊혀지는 소중한 감상들을 체계적으로 기록하고 관리할 수 있는 서비스입니다.
-                "API 연동으로 드라마와 영화 정보를 제공하며 인상 깊은 장면, 감상평, 감정 등을 기록하고 개인화된 통계 데이터를 확인할 수 있습니다. 나아가 비슷한 취향을 가진 사람들과 감상을 공유할 수 있는 는 커뮤니티 기능도 제공할 예정입니다.",
+                "API 연동으로 드라마와 영화 정보를 제공하며 인상 깊은 장면, 감상평, 감정 등을 기록하고 개인화된 통계 데이터를 확인할 수 있습니다. 나아가 비슷한 취향을 가진 사람들과 감상을 공유할 수 있는  커뮤니티 기능도 제공할 예정입니다.",
         },
         {
             title: "배포링크",

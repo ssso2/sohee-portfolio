@@ -5,6 +5,7 @@
     .projectwrap {
         max-width: 1200px;
         width: 100%;
+        height: 100%;
         box-sizing: border-box;
         .maintitle {
             margin-bottom: 40px;
@@ -72,7 +73,27 @@
 
                     // }
                 }
-
+                .mainbg {
+                    width: 262px;
+                    height: 156px;
+                    border-radius: 8px;
+                    //     background-color: #000;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    .mainframe {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        // width: 262px;
+                        // height: 156px;
+                        border-radius: 8px;
+                        border: 4px solid #000;
+                        top: 100%;
+                        right: 0;
+                        object-fit: cover;
+                    }
+                }
                 .hoverimg {
                     position: absolute;
                     top: 0;
@@ -89,6 +110,7 @@
                         opacity: 1;
                         background-color: rgba(0, 0, 0, 0.6);
                     }
+
                     .projectlogo {
                         width: auto;
                         height: 76px;
@@ -97,46 +119,26 @@
                         top: 40px;
                         left: 63px;
                     }
-                    .mainbg {
-                        width: 262px;
-                        height: 156px;
-                        border-radius: 8px;
-                        //     background-color: #000;
-                        position: absolute;
-                        bottom: 49px;
-                        right: 0;
-                        .mainframe {
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            // width: 262px;
-                            // height: 156px;
-                            border-radius: 8px;
-                            border: 4px solid #000;
-                            bottom: 0;
-                            right: 0px;
-                            object-fit: cover;
-                        }
-                    }
-                    // }
-                    // &::after {
-                    //     content: "프로젝트 자세히보기↗︎";
+                    // .mainbg {
+                    //     width: 262px;
+                    //     height: 156px;
+                    //     border-radius: 8px;
+                    //     //     background-color: #000;
                     //     position: absolute;
-                    //     height: 20px;
-                    //     top: 212px;
-                    //     left: 148px;
-                    //     /* transform: translateX(-50%); */
-                    //     text-wrap: nowrap;
-                    //     font-size: 10px;
-                    //     line-height: 20px;
-                    //     color: #000;
-                    //     background-color: #0054ff;
-                    //     color: #fff;
-                    //     font-weight: 600;
-                    //     padding: 0 4px;
-                    //     // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                    //     transition: color 0.8s ease-in-out;
-                    //     cursor: pointer;
+                    //     bottom: 49px;
+                    //     right: 0;
+                    //     .mainframe {
+                    //         position: absolute;
+                    //         width: 100%;
+                    //         height: 100%;
+                    //         // width: 262px;
+                    //         // height: 156px;
+                    //         border-radius: 8px;
+                    //         border: 4px solid #000;
+                    //         bottom: 0;
+                    //         right: 0px;
+                    //         object-fit: cover;
+                    //     }
                     // }
                 }
                 .des {
@@ -201,6 +203,13 @@
                         height: 268px;
                         object-fit: cover;
                     }
+                    .mainbg {
+                        width: 182px;
+                        height: 106px;
+                        top: 5%;
+                        .mainframe {
+                        }
+                    }
                     .hoverimg {
                         width: 344px;
                         height: 268px;
@@ -246,6 +255,7 @@
             .line {
                 width: 100%;
                 justify-content: center;
+                max-width: 600px;
                 min-width: 328px;
                 height: auto;
                 .imgwrap {
@@ -256,6 +266,12 @@
                         width: 100%;
                         min-height: 218px;
                         object-fit: cover;
+                        object-position: center top;
+                    }
+                    .mainbg {
+                        width: 212px;
+                        height: 116px;
+                        top: -2%;
                     }
                     .hoverimg {
                         width: 100%;
@@ -266,11 +282,6 @@
                             top: 25%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                        }
-                        .mainbg {
-                            width: 222px;
-                            height: 116px;
-                            bottom: 29px;
                         }
                     }
                     .des {

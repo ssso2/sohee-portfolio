@@ -15,7 +15,7 @@ const About_s: React.FC = () => {
         {
             title: "01. 새로운 배움",
             des: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Maiores vel, sapiente quaerat tempora debitis quidemlibero dolorum amet ut, quod assumenda obcaecati impedit minima odit? Nam asperiores ducimus enim veniam!",
-            img: "/sohee-portfolio/img/sub/study61.png",
+            img: "/sohee-portfolio/img/sub/about1.jpeg",
             alt: "teacher",
         },
         {

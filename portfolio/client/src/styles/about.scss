@@ -59,6 +59,7 @@
                     width: 198px;
                     height: 198px;
                     object-fit: cover;
+                    object-position: center bottom;
                     border-radius: 8px;
                 }
             }
@@ -88,9 +89,9 @@
             .introWrap {
                 // margin: 0;
                 box-sizing: border-box;
-                width: 90%;
-                min-width: 704px;
-                height: auto;
+                // width: 90%;
+                width: 704px;
+                height: 564px;
                 border-radius: 8px;
                 margin-bottom: 24px;
                 flex-direction: column;
@@ -151,6 +152,7 @@
                 .aboutimg {
                     img {
                         height: 248px;
+                        height: 168px;
                     }
                 }
             }

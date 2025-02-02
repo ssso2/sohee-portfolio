@@ -1,7 +1,7 @@
 // import styles from "../styles/common.module.scss";
 import { useState } from "react";
 import { contenttype, imgtype as imgtype } from "./Projectdata_s";
-import Imgpop from "./Imgpop";
+import Imgpop from "./Imgpop_new";
 interface rendertype {
     content: contenttype["content"];
 }
@@ -11,6 +11,9 @@ const Poprender: React.FC<rendertype> = ({ content }) => {
         setcurrent(src); // 클릭된 이미지 src 저장
     };
     const closePopup = () => {
+        // if (e) {
+        //     e.stopPropagation();
+        // }
         setcurrent(null); // 팝업 닫기
     };
 

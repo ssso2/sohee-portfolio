@@ -90,7 +90,9 @@ const Review_s: React.FC = () => {
                         <p className="header3">R</p>
                         <p className="header3">eview</p>
                     </div>
-                    <p className="caption2">함께 작업한 동료들의 생각입니다</p>
+                    <p className="caption2">
+                        함께 작업한 동료들의 솔직한 평가입니다.
+                    </p>
                 </div>
                 <Swiper
                     modules={[Autoplay]}

@@ -41,7 +41,7 @@ const Intro_s: React.FC = () => {
         //     text: "Sohee's Portfolio",
         // },
         {
-            text: "  ",
+            text: "Sohee's Portfolio",
             images: {
                 src: "/sohee-portfolio/img/icon/hand.svg",
                 alt: "greeting",
@@ -153,10 +153,10 @@ const Intro_s: React.FC = () => {
                             <ReactTypingEffect
                                 text={typingimg.map(item => item.text)}
                                 className="comment"
-                                speed={10}
-                                eraseSpeed={50}
+                                speed={20}
+                                eraseSpeed={70}
                                 typingDelay={50}
-                                eraseDelay={100}
+                                eraseDelay={150}
                                 displayTextRenderer={(text, index) => {
                                     const currentItem = typingimg[index];
 

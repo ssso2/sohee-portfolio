@@ -25,7 +25,8 @@ const Project_s: React.FC = () => {
 
                         <p className="caption2">
                             {/* 제가 작업한 프로젝트를 소개합니다 */}
-                            도전과 협업으로 만든 팀 / 개인 프로젝트 모음입니다.
+                            협업과 도전으로 만든 팀 / 개인 프로젝트들을
+                            소개합니다.
                         </p>
                     </div>
                     <div className="line">
@@ -36,6 +37,13 @@ const Project_s: React.FC = () => {
                                     alt="projectimg"
                                     className="imgbg"
                                 />
+                                <div className="mainbg">
+                                    <img
+                                        src={project.img}
+                                        alt="projectmain"
+                                        className="mainframe"
+                                    />
+                                </div>
                                 <div
                                     className="hoverimg"
                                     onClick={() => setpopup(project)}
@@ -45,13 +53,13 @@ const Project_s: React.FC = () => {
                                         alt="projectlogo"
                                         className="projectlogo"
                                     />
-                                    <div className="mainbg">
+                                    {/* <div className="mainbg">
                                         <img
                                             src={project.img}
                                             alt="projectmain"
                                             className="mainframe"
                                         />
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <span className="des">
                                     <p className="white subtitle1">

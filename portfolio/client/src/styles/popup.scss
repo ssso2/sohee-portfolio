@@ -2,33 +2,42 @@
     background-color: rgba(0, 0, 0, 0.9);
     position: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 100%;
+    // height: calc(100% - 80px);
+    // min-height: 100vh;
     top: 0;
     left: 0;
     z-index: 999;
     display: flex;
     justify-content: center;
-
+    // overflow-y: auto;
     .projectpop {
         // background-color: rgba(0, 0, 0);
-        padding: 120px 0 0 0;
+        padding-top: 80px;
+        padding-bottom: 80px;
         width: 100%;
         max-width: 1200px; // 최대 너비 설정
-        height: auto;
+        // height: auto;
+        height: 100%;
         position: relative;
         z-index: 1000;
         .popclose {
             position: absolute;
-            top: 73px;
+            top: 38px;
             right: 0;
             width: 32px;
             height: 32px;
             cursor: pointer;
             z-index: 10001;
+            img {
+                width: 100%;
+                height: 100%;
+            }
         }
         .inner {
             // width: 100%;
             height: 100%;
+            height: calc(100% - 80px);
             overflow-y: auto;
             background-color: #fff;
             border-radius: 8px 8px 0 0;
@@ -61,18 +70,29 @@
                 // background-color: rgb(219, 176, 227);
                 // gap: 32px;
                 // justify-content: space-between;
+                // height: 100%;
                 aside {
                     min-width: 220px;
                     // background-color: rgb(170, 244, 135);
                     & p:nth-of-type(1) {
                         color: #ad8957;
-                        margin-top: 0;
+                        margin: 0;
+                    }
+                    .body1,
+                    .caption2 {
+                        margin: 0;
+                        line-height: 24px;
+                    }
+                    .body1 {
+                        width: 178px;
+                        margin: 8px 0 16px;
                     }
                 }
                 main {
                     // width: 1051px;
                     .section {
                         width: 100%;
+
                         // background-color: rgb(124, 148, 253);
                         margin-bottom: 48px;
                         position: relative;
@@ -182,7 +202,7 @@
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(0, 0, 0, 0.9);
+                background-color: rgba(0, 0, 0, 0.95);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -192,254 +212,22 @@
                     // padding: 20px;
                     border-radius: 10px;
                     position: relative;
-                    max-width: 80%;
-                    max-height: 80%;
-                    overflow: auto;
-                }
-                .popupimage {
-                    // width: 100%;
-                    // height: auto;
-                    width: 100%;
-                    aspect-ratio: 1/0.633333;
-                    display: block;
-                    border-radius: 8px;
-                    // object-fit: cover;
-                }
-                .closebutton {
-                    // width: 32px;
-                    // height: 32px;
-                    all: unset;
-                    position: absolute;
-                    top: 10px;
-                    right: 10px;
-                    border: none;
-                    // background: #000;
-                    // color: white;
-                    // border: none;
-                    // padding: 5px 10px;
-                    cursor: pointer;
-                    // border-radius: 100%;
-                    // font-size: 16px;
-                    img {
-                        border-radius: 100%;
-                        border-color: #fff;
-                        // width: 32px;
-                        // height: 32px;
-                        // top: 0;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1279px) {
-    .projectpopwrap {
-        background-color: rgba(0, 0, 0, 0.9);
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        z-index: 999;
-        display: flex;
-        justify-content: center;
-
-        .projectpop {
-            // background-color: rgba(0, 0, 0);
-            padding: 120px 0 0 0;
-            width: 100%;
-            max-width: 1200px; // 최대 너비 설정
-            height: auto;
-            position: relative;
-            z-index: 1000;
-            .popclose {
-                position: absolute;
-                top: 73px;
-                right: 0;
-                width: 32px;
-                height: 32px;
-                cursor: pointer;
-                z-index: 10001;
-            }
-            .inner {
-                // width: 100%;
-                height: 100%;
-                overflow-y: auto;
-                background-color: #fff;
-                border-radius: 8px 8px 0 0;
-                padding: 48px 40px;
-                scrollbar-width: none; /* Firefox */
-                -ms-overflow-style: none;
-                &::-webkit-scrollbar {
-                    display: none; /* Chrome, Safari, Edge */
-                }
-                header {
-                    // background-color: rgb(240, 252, 252);
-                    .header3 {
-                        margin-bottom: 40px;
-                    }
-                    .pimgwrap {
-                        width: 100%;
-                        height: 510px;
-                        margin-bottom: 59px;
-                        & img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            // object-position: center top;
-                        }
-                    }
-                }
-
-                .deswrap {
-                    // width: 100%;
-                    // background-color: rgb(219, 176, 227);
-                    // gap: 32px;
-                    // justify-content: space-between;
-                    aside {
-                        min-width: 220px;
-                        // background-color: rgb(170, 244, 135);
-                        & p:nth-of-type(1) {
-                            color: #ad8957;
-                            margin-top: 0;
-                        }
-                    }
-                    main {
-                        // width: 1051px;
-                        .section {
-                            width: 100%;
-                            // background-color: rgb(124, 148, 253);
-                            margin-bottom: 48px;
-                            position: relative;
-                            &:nth-of-type(2) .pdes ul {
-                                background-color: #f5f5f5;
-                                border-radius: 8px;
-                                padding-top: 8px;
-                                padding-bottom: 8px;
-                            }
-                            &:nth-of-type(2) .pdes ul,
-                            &:nth-of-type(3) .pdes ul,
-                            &:nth-of-type(4) .pdes ul,
-                            &:nth-of-type(5) .pdes ul {
-                                padding-left: 30px;
-                            }
-                            &:nth-of-type(2) .pdes,
-                            &:nth-of-type(3) .pdes,
-                            &:nth-of-type(4) .pdes,
-                            &:nth-of-type(5) .pdes {
-                                padding-left: 0px;
-                            }
-
-                            .ptitle {
-                                margin-bottom: 12px;
-                                &::before {
-                                    content: "";
-                                    display: block;
-                                    position: absolute;
-                                    width: 3px;
-                                    height: 32px;
-                                    background-color: #ad8957;
-                                    left: 0;
-                                    top: 0;
-                                }
-                                padding-left: 12px;
-                            }
-
-                            .pdes {
-                                // padding-left: 12px;
-                                .screen {
-                                    padding: 0 12px;
-                                    .flex {
-                                        width: 100%;
-                                        height: 100%;
-                                        justify-content: space-between;
-                                        flex-wrap: wrap;
-                                        .siteimg {
-                                            width: 30%;
-                                            aspect-ratio: 1/0.633333;
-                                            // overflow: hidden;
-                                            transition: transform 0.3s ease;
-                                            &:hover {
-                                                transform: scale(1.05);
-                                            }
-                                            img {
-                                                width: 100%;
-                                                height: 100%;
-                                                object-fit: cover;
-                                                object-position: center;
-                                                cursor: pointer;
-                                            }
-                                            .imgdes {
-                                                margin: 12px 0 36px 0;
-                                                text-align: center;
-                                            }
-                                        }
-                                    }
-                                    // .on {
-                                    //     display: block;
-                                    // }
-                                    // .off {
-                                    //     display: none;
-                                    // }
-                                }
-                                .caption1 {
-                                    margin-bottom: 8px;
-                                }
-                                .outline {
-                                    line-height: 22px;
-                                }
-                                .list {
-                                    margin-bottom: 8px;
-                                }
-                                .flex {
-                                    align-items: center;
-                                    // font-weight: 500;
-                                }
-                                .fingericon {
-                                    width: 24px;
-                                    height: 24px;
-                                    margin-right: 8px;
-                                }
-                                .accordion {
-                                    margin: 0;
-                                }
-                                .select {
-                                    line-height: 1.6;
-                                }
-                            }
-                        }
-                        // background-color: rgb(237, 216, 57);
-                    }
-                }
-                .imgpopup {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0, 0, 0, 0.9);
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    z-index: 99999;
-                    .popupcon {
-                        background: #fff;
-                        // padding: 20px;
-                        border-radius: 10px;
-                        position: relative;
-                        max-width: 80%;
-                        max-height: 80%;
-                        overflow: auto;
-                    }
+                    // width: 60%;
+                    // height: 65%;
+                    width: 810px;
+                    height: 470px;
+                    // object-fit: fill;
+                    // overflow: auto;
                     .popupimage {
                         // width: 100%;
                         // height: auto;
                         width: 100%;
-                        aspect-ratio: 1/0.633333;
+                        height: 100%;
+                        // aspect-ratio: 1/0.633333;
                         display: block;
                         border-radius: 8px;
-                        // object-fit: cover;
+                        object-fit: cover;
+                        object-position: center top;
                     }
                     .closebutton {
                         // width: 32px;
@@ -469,6 +257,119 @@
         }
     }
 }
+@media screen and (max-width: 1279px) {
+    .projectpopwrap {
+        .projectpop {
+            padding: 48px 0 0 0;
+            max-width: 768px; // 최대 너비 설정
+            .popclose {
+                top: 10px;
+                width: 28px;
+                height: 28px;
+            }
+            .inner {
+                border-radius: 0;
+                padding: 32px;
+                header {
+                    // background-color: rgb(240, 252, 252);
+                    .header3 {
+                        margin-bottom: 36px;
+                    }
+                    .pimgwrap {
+                        width: 704px;
+                        height: 425px;
+                        margin-bottom: 48px;
+                    }
+                }
+                .deswrap {
+                    aside {
+                        min-width: 192px;
+                        .body1,
+                        .caption2 {
+                            font-size: 14px;
+                            line-height: 22px;
+                        }
+                        .body1 {
+                            width: 155px;
+                            line-height: 16px;
+                        }
+                    }
+                }
+                .imgpopup {
+                    .popupcon {
+                        border-radius: 0;
+                        width: 640px;
+                        height: 370px;
+                        .popupimage {
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 767px) {
+    .projectpopwrap {
+        .projectpop {
+            padding: 48px 0 0 0;
+            max-width: 360px; // 최대 너비 설정
+            .popclose {
+                top: 12px;
+                width: 24px;
+                height: 24px;
+            }
+            .inner {
+                // border-radius: 0;
+                padding: 32px 16px;
+                header {
+                    // background-color: rgb(240, 252, 252);
+                    .header3 {
+                        margin-bottom: 24px;
+                    }
+                    .pimgwrap {
+                        width: 328px;
+                        height: 198px;
+                        margin-bottom: 24px;
+                    }
+                }
+                .deswrap {
+                    flex-direction: column;
+                    main {
+                        margin-top: 32px;
+                        .section {
+                            // padding-bottom: 24px;
+                            .pdes {
+                                .screen {
+                                    padding: 0 12px;
+                                    .flex {
+                                        width: 100%;
+                                        height: 100%;
+                                        gap: 60px;
+                                        .siteimg {
+                                            width: 100%;
+                                            height: 100%;
+                                            aspect-ratio: 1/0.5333;
+                                            border: 1px solid #f5f5f5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .imgpopup {
+                    .popupcon {
+                        border-radius: 0;
+                        width: 640px;
+                        height: 370px;
+                        .popupimage {
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
