@@ -1,3 +1,8 @@
+export interface floatingtype {
+    name: string;
+    url: string;
+    icon: string;
+}
 export interface viewtype {
     id: number;
     title: string;
@@ -8,7 +13,9 @@ export interface viewtype {
     date: string;
     num: string;
     logo: string;
+    floatingLinks: floatingtype[];
 }
+
 export const projectview: viewtype[] = [
     {
         id: 1,
@@ -21,6 +28,18 @@ export const projectview: viewtype[] = [
         date: "기간 : 24.11.26 ~ 24.12.24",
         num: "인원 : 5명",
         logo: "/sohee-portfolio/img/icon/silla.svg",
+        floatingLinks: [
+            {
+                name: "GitHub",
+                url: "https://www.goole.com",
+                icon: "/sohee-portfolio/img/icon/github.svg",
+            },
+            {
+                name: "Velog",
+                url: "https://www.naver.com",
+                icon: "/sohee-portfolio/img/icon/blogger.svg",
+            },
+        ],
     },
     {
         id: 2,
@@ -33,6 +52,18 @@ export const projectview: viewtype[] = [
         date: "기간 : 25.01.02 ~ 25.01.15",
         num: "인원 : 4명",
         logo: "/sohee-portfolio/img/icon/perfume.svg",
+        floatingLinks: [
+            {
+                name: "GitHub",
+                url: "https://velog.io",
+                icon: "/sohee-portfolio/img/icon/github.svg",
+            },
+            {
+                name: "Velog",
+                url: "https://www.nate.com",
+                icon: "/sohee-portfolio/img/icon/blogger.svg",
+            },
+        ],
     },
     {
         id: 3,
@@ -45,6 +76,18 @@ export const projectview: viewtype[] = [
         date: "기간 : 25.01.13 ~ 진행중",
         num: "인원 : 1명",
         logo: "/sohee-portfolio/img/icon/portpolio.svg",
+        floatingLinks: [
+            {
+                name: "GitHub",
+                url: "https://velog.io",
+                icon: "/sohee-portfolio/img/icon/github.svg",
+            },
+            {
+                name: "Velog",
+                url: "https://www.nate.com",
+                icon: "/sohee-portfolio/img/icon/blogger.svg",
+            },
+        ],
     },
     {
         id: 4,
@@ -57,6 +100,18 @@ export const projectview: viewtype[] = [
         date: "기간 : 25.02.01 ~ 진행중",
         num: "인원 : 2명",
         logo: "/sohee-portfolio/img/icon/diarylogo.svg",
+        floatingLinks: [
+            {
+                name: "GitHub",
+                url: "https://velog.io",
+                icon: "/sohee-portfolio/img/icon/github.svg",
+            },
+            {
+                name: "Velog",
+                url: "https://www.nate.com",
+                icon: "/sohee-portfolio/img/icon/blogger.svg",
+            },
+        ],
     },
 ];
 
