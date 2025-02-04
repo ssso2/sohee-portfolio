@@ -233,7 +233,6 @@
         }
     }
 }
-
 @media screen and (max-width: 767px) {
     .projectwrapper {
         margin-top: 68px;
@@ -255,7 +254,7 @@
             .line {
                 width: 100%;
                 justify-content: center;
-                max-width: 600px;
+                max-width: 600px; // 고민
                 min-width: 328px;
                 height: auto;
                 .imgwrap {

@@ -291,8 +291,16 @@
                 .imgwrap {
                     width: 100%;
                     min-width: 328px;
+                    // height: 432px;
                     // margin-right: 0;
                     // margin-bottom: 50px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 8px;
+                        object-fit: cover;
+                        object-position: center right;
+                    }
                 }
                 .deswrap {
                     width: 100%;
@@ -316,29 +324,28 @@
                                 &::before {
                                     margin-right: 8px;
                                 }
-                                // .date {
-                                //     margin: 4px 0 0 0;
-                                //     font-size: 14px;
-                                //     line-height: 16px;
-                                // }
                             }
-                            .detail {
-                                // flex: 1;
-                                // width: 70%;
-                                .name {
-                                    // width: 100%;
-                                    padding-bottom: 6px;
-                                    // margin: 0;
-                                    // line-height: 18px;
-                                    // font-size: 16px;
-                                    // line-height: 24px;
-                                }
-                                .content {
-                                    // margin: 8px 0 12px;
-                                    // font-size: 16px;
-                                    // line-height: 24px;
-                                    // font-weight: 400;
-                                }
+                            .date {
+                                // margin: 4px 0 0 0;
+                                font-size: 14px;
+                            }
+                        }
+                        .detail {
+                            // flex: 1;
+                            // width: 70%;
+                            .name {
+                                // width: 100%;
+                                padding-bottom: 6px;
+                                // margin: 0;
+                                // line-height: 18px;
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+                            .content {
+                                // margin: 8px 0 12px;
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-weight: 400;
                             }
                         }
                         .stacktitle {

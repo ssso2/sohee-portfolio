@@ -89,8 +89,8 @@
             .introWrap {
                 // margin: 0;
                 box-sizing: border-box;
-                // width: 90%;
-                width: 704px;
+                width: 90%;
+                // width: 704px;
                 height: 564px;
                 border-radius: 8px;
                 margin-bottom: 24px;
@@ -139,6 +139,7 @@
                 // min-width: 328px;
                 width: 100%;
                 min-width: 328px;
+                height: 100%;
                 margin-bottom: 16px;
                 padding: 24px 16px;
                 .subtitle1 {
@@ -151,8 +152,10 @@
                 }
                 .aboutimg {
                     img {
+                        width: 100%;
+                        // min-width: 296px;
                         height: 248px;
-                        height: 168px;
+                        min-height: 168px;
                     }
                 }
             }

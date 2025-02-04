@@ -76,13 +76,6 @@ const Intro_s: React.FC = () => {
         //         alt: "airplane",
         //     },
         // },
-        {
-            text: "  ",
-            images: {
-                src: "/sohee-portfolio/img/icon/sparkles.svg",
-                alt: "sparkles",
-            },
-        },
         // {
         //     text: "  ",
         //     images: {
@@ -90,11 +83,12 @@ const Intro_s: React.FC = () => {
         //         alt: "lifting",
         //     },
         // },
+
         {
             text: "  ",
             images: {
-                src: "/sohee-portfolio/img/icon/abouticon.svg",
-                alt: "eye",
+                src: "/sohee-portfolio/img/icon/dev.svg",
+                alt: "develpoer",
             },
         },
         {
@@ -107,8 +101,15 @@ const Intro_s: React.FC = () => {
         {
             text: "  ",
             images: {
-                src: "/sohee-portfolio/img/icon/dev.svg",
-                alt: "develpoer",
+                src: "/sohee-portfolio/img/icon/abouticon.svg",
+                alt: "eye",
+            },
+        },
+        {
+            text: "  ",
+            images: {
+                src: "/sohee-portfolio/img/icon/sparkles.svg",
+                alt: "sparkles",
             },
         },
     ];
@@ -153,10 +154,10 @@ const Intro_s: React.FC = () => {
                             <ReactTypingEffect
                                 text={typingimg.map(item => item.text)}
                                 className="comment"
-                                speed={20}
-                                eraseSpeed={70}
-                                typingDelay={50}
-                                eraseDelay={150}
+                                speed={30}
+                                eraseSpeed={80}
+                                typingDelay={60}
+                                eraseDelay={160}
                                 displayTextRenderer={(text, index) => {
                                     const currentItem = typingimg[index];
 

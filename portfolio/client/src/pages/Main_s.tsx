@@ -45,7 +45,7 @@ const Main_s: React.FC = () => {
                 <div className="imgwrap">
                     <img
                         className="mainimg"
-                        src="/sohee-portfolio/img/sub/4833.GIF"
+                        src="/sohee-portfolio/img/sub/study61.png"
                         alt="mainIMG"
                     />
                     {/* <ReactPlayer
