@@ -1,0 +1,262 @@
+@use "./common.scss";
+
+.projectwrapper {
+    @include common.wrapperstyle;
+    .projectwrap {
+        max-width: 1200px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        .maintitle {
+            margin-bottom: 40px;
+            width: 100%;
+            align-items: center;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #d9d9d9;
+            & img {
+                display: inline-block;
+                width: 38px;
+                height: 38px;
+            }
+            .header3 {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 38px;
+                margin: 8px 0;
+                &:nth-of-type(1) {
+                    color: #1f6ebe;
+                }
+            }
+            .caption2 {
+                margin: 0;
+            }
+        }
+        .line {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 1200px;
+            .imgwrap {
+                width: 100%;
+                max-width: 388px;
+                height: 454px;
+                position: relative;
+                margin-bottom: 47px;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #d9d9d9;
+                &:nth-of-type(1),
+                :nth-of-type(2) {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+                &:nth-of-type(3) {
+                    margin-right: 0;
+                }
+                &:nth-of-type(4) {
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+                .imgbg {
+                    // position: absolute;
+                    width: 100%;
+                    height: 362px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+                .mainbg {
+                    width: 262px;
+                    height: 156px;
+                    border-radius: 8px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    .mainframe {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        // width: 262px;
+                        // height: 156px;
+                        border-radius: 8px;
+                        border: 4px solid #000;
+                        top: 100%;
+                        right: 0;
+                        object-fit: cover;
+                    }
+                }
+                .hoverimg {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    transition: opacity 0.3s ease;
+                    opacity: 0;
+                    width: 100%;
+                    height: 362px;
+                    border-radius: 8px;
+                    &:hover {
+                        cursor: pointer;
+                        opacity: 1;
+                        background-color: rgba(0, 0, 0, 0.6);
+                    }
+
+                    .projectlogo {
+                        width: auto;
+                        height: 76px;
+                        z-index: 2;
+                        position: absolute;
+                        top: 40px;
+                        left: 63px;
+                    }
+                }
+                .des {
+                    width: 380px;
+                    color: #fff;
+                    .subtitle1 {
+                        margin: 24px 0 8px 0;
+                    }
+                    .Caption2 {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .projectwrapper {
+        margin-top: 108px;
+        padding: 0 32px;
+        .projectwrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .maintitle {
+                margin-bottom: 32px;
+            }
+            .line {
+                gap: 16px;
+                width: 90%;
+                min-width: 704px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 944px) {
+    .projectwrapper {
+        .projectwrap {
+            .line {
+                width: 100%;
+                justify-content: center;
+                .imgwrap {
+                    width: 344px;
+                    height: 376px;
+                    margin-bottom: 24px;
+                    &:nth-of-type(1),
+                    :nth-of-type(2) {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                    &:nth-of-type(3) {
+                        margin-right: 0;
+                    }
+                    &:nth-of-type(4) {
+                        margin-right: 0;
+                        margin-left: 0;
+                    }
+                    .imgbg {
+                        width: 100%;
+                        height: 268px;
+                        object-fit: cover;
+                    }
+                    .mainbg {
+                        width: 182px;
+                        height: 106px;
+                        top: 5%;
+                        .mainframe {
+                        }
+                    }
+                    .hoverimg {
+                        width: 344px;
+                        height: 268px;
+                        left: 0;
+                        .projectlogo {
+                            height: 56px;
+                            top: 30px;
+                            left: 76px;
+                        }
+                        .mainbg {
+                            width: 182px;
+                            height: 106px;
+                            bottom: 29px;
+                        }
+                    }
+                    .des {
+                        width: 344px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .projectwrapper {
+        margin-top: 68px;
+        padding: 0 16px;
+        .projectwrap {
+            .maintitle {
+                margin-bottom: 16px;
+                align-items: flex-start;
+                padding-bottom: 16px;
+                img {
+                    width: 24px;
+                    height: 24px;
+                }
+                .header3 {
+                    font-size: 18px;
+                    line-height: 24px;
+                }
+            }
+            .line {
+                width: 100%;
+                justify-content: center;
+                max-width: 600px;
+                min-width: 328px;
+                height: auto;
+                .imgwrap {
+                    width: 100%;
+                    height: auto;
+                    padding-bottom: 16px;
+                    .imgbg {
+                        width: 100%;
+                        min-height: 218px;
+                        object-fit: cover;
+                        object-position: center top;
+                    }
+                    .mainbg {
+                        width: 212px;
+                        height: 116px;
+                        top: -2%;
+                    }
+                    .hoverimg {
+                        width: 100%;
+                        min-width: 328px;
+                        left: 0;
+                        .projectlogo {
+                            height: 56px;
+                            top: 25%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                    .des {
+                        width: 100%;
+                        min-width: 328px;
+                    }
+                }
+            }
+        }
+    }
+}

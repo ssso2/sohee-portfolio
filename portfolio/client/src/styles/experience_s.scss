@@ -1,0 +1,252 @@
+@use "./common.scss";
+
+.exwrapper {
+    @include common.wrapperstyle;
+    justify-content: center;
+    display: flex;
+    .exwrap {
+        max-width: 1200px;
+        width: 100%;
+        box-sizing: border-box;
+        .maintitle {
+            margin-bottom: 60px;
+            width: 100%;
+            & img {
+                display: inline-block;
+                width: 38px;
+                height: 38px;
+            }
+            .header3 {
+                display: inline-block;
+                vertical-align: middle;
+                line-height: 38px;
+                margin: 8px 0 16px 0;
+                &:nth-of-type(1) {
+                    color: #ff696c;
+                }
+            }
+            .option {
+                line-height: 28px;
+                margin: 0;
+            }
+        }
+        .profile {
+            .imgwrap {
+                width: 514px;
+                height: 412px;
+                margin-right: 58px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 8px;
+                    object-fit: cover;
+                    object-position: center right;
+                }
+            }
+
+            .deswrap {
+                width: 628px;
+                .des {
+                    display: flex;
+                    gap: 20px;
+                    margin-bottom: 32px;
+                    .caption1 {
+                        line-height: 24px;
+                    }
+                    .info {
+                        padding-right: 0px;
+                        border-right: 1.5px solid #fff;
+                        // vertical-align: middle;
+                        flex: 1;
+                        .body1 {
+                            margin: 0 0 0 0;
+                            &::before {
+                                width: 42px;
+                                content: "졸업";
+                                display: inline-block;
+                                margin-right: 10px;
+                                color: #000;
+                                font-size: 14px;
+                                border-radius: 4px;
+                                text-align: center;
+                                background-color: #f5f5f5;
+                            }
+                            &.change::before {
+                                content: "이직";
+                            }
+                            &.retire::before {
+                                content: "퇴사";
+                            }
+                            &.project::before {
+                                content: "수료";
+                            }
+                        }
+                        .date {
+                            margin: 4px 0 0 0;
+                        }
+                    }
+                    .detail {
+                        flex: 2;
+                        .name {
+                            width: 100%;
+                            padding-bottom: 10px;
+                            border-bottom: 1px solid #373636;
+                            margin: 0;
+                            line-height: 18px;
+                        }
+                        .content {
+                            margin: 8px 0 12px;
+                        }
+                    }
+                }
+                .stacktitle {
+                    margin: 32px 0 16px;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                .stack {
+                    // width: 100%;
+                    // justify-content: space-between;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                    // padding: 0 24px;
+                    .iconwrap {
+                        width: 48px;
+                        height: 48px;
+                        display: inline-block;
+                        // background-color: #822424;
+                        text-align: center;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        & img {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .exwrapper {
+        margin-top: 108px;
+        padding: 0 32px;
+        .exwrap {
+            .maintitle {
+                align-items: center;
+            }
+            .profile {
+                flex-direction: column;
+                align-items: center;
+                min-width: 704px;
+                .imgwrap {
+                    width: 90%;
+                    min-width: 704px;
+                    margin-right: 0;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .exwrapper {
+        margin-top: 68px;
+        padding: 0 16px;
+        .exwrap {
+            .maintitle {
+                // align-items: center;
+                margin-bottom: 16px;
+                align-items: flex-start;
+                img {
+                    width: 24px;
+                    height: 24px;
+                    margin-right: 10px;
+                }
+                .header3 {
+                    font-size: 18px;
+                    line-height: 18px;
+                    margin: 8px 0;
+                }
+                .option {
+                    line-height: 24px;
+                    margin: 0;
+                }
+            }
+            .profile {
+                min-width: 328px;
+                .imgwrap {
+                    width: 100%;
+                    min-width: 328px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 8px;
+                        object-fit: cover;
+                        object-position: center right;
+                    }
+                }
+                .deswrap {
+                    width: 100%;
+                    min-width: 328px;
+                    .des {
+                        .caption1 {
+                            line-height: 24px;
+                        }
+                        .info {
+                            padding-right: 0px;
+                            border-right: 1.5px solid #fff;
+                            min-width: 165px;
+                            .body1 {
+                                margin: 0 16px 0 0;
+                                font-weight: 500;
+                                &::before {
+                                    margin-right: 8px;
+                                }
+                            }
+                            .date {
+                                font-size: 14px;
+                            }
+                        }
+                        .detail {
+                            .name {
+                                padding-bottom: 6px;
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+                            .content {
+                                font-size: 16px;
+                                line-height: 24px;
+                                font-weight: 400;
+                            }
+                        }
+                        .stacktitle {
+                            margin: 32px 0 16px;
+                            font-size: 20px;
+                            font-weight: 600;
+                        }
+                        .stack {
+                            flex-wrap: wrap;
+                            gap: 0.5rem;
+                            .iconwrap {
+                                width: 48px;
+                                height: 48px;
+                                display: inline-block;
+                                text-align: center;
+                                padding: 10px;
+                                box-sizing: border-box;
+                                & img {
+                                    width: 28px;
+                                    height: 28px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
