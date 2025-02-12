@@ -11,8 +11,17 @@ import Experience from "./Experience_new";
 import Project from "./Project_new";
 import Review from "./Review_s";
 import Contact from "../component/Contact";
+import { useEffect, useRef, useState } from "react";
 
 const Main_s: React.FC = () => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const [speed, setSpeed] = useState(5.0); // 기본 2배속
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.playbackRate = speed;
+        }
+    }, [speed]);
     return (
         <div className="main">
             <Header />
@@ -22,38 +31,35 @@ const Main_s: React.FC = () => {
             {/* <div className="center mainpg"> */}
             <div className="maincontainer flex">
                 <div className="mainTxt">
-                    <p className="subtitle1 white">
-                        {/* <img
-                            src="/sohee-portfolio/img/icon/page.svg"
-                            alt="mainIMG"
-                        /> */}
-                        PortFolio
-                    </p>
+                    <p className="subtitle1 white">PortFolio</p>
                     <p className="header2 white">안녕하세요.</p>
                     <p className="header2 white">
                         프론트엔드 개발자 김소희입니다.
                     </p>
                     <p className="subtitle2 white">
-                        웹 개발의 매력에 빠져 배움을 즐기고, 소통과 협업에서
-                        가치를 느끼는 개발자입니다.
+                        문제 해결의 즐거움을 알고, 소통과 협업에서 가치를 느끼는
+                        개발자입니다.
                     </p>
-                    {/* <p className="subtitle2 gray3">
-                        소통과 협업에서 가치를 느끼는 개발자입니다.
-                    </p> */}
                 </div>
-                {/* <div className="shadowbox" /> */}
                 <div className="imgwrap">
-                    <img
+                    {/* <img
                         className="mainimg"
-                        src="/sohee-portfolio/img/sub/study61.png"
+                        src="/sohee-portfolio/img/sub/제목.gif"
                         alt="mainIMG"
-                    />
-                    {/* <ReactPlayer
-                        url="/sohee-portfolio/img/sub/videosample.mp4"
-                        controls
-                        width="100%"
-                        height="100%"
                     /> */}
+                    <video
+                        ref={videoRef}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="mainimg"
+                    >
+                        <source
+                            src="/sohee-portfolio/img/sub/메인영상.mp4"
+                            type="video/mp4"
+                        />
+                    </video>
                 </div>
             </div>
             <About />

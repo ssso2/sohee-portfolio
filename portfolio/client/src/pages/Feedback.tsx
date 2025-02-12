@@ -93,15 +93,6 @@ const Feedback: React.FC = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-
-                {/* <div className={fbstyles.slidewrap}>
-                    <div className={fbstyles.slide}>
-                        <img
-                            src="/sohee-portfolio/img/sub/study61.png"
-                            alt="feedback"
-                        />
-                    </div>
-                </div> */}
             </div>
         </>
     );

@@ -2,6 +2,7 @@ export interface floatingtype {
     name: string;
     url: string;
     icon: string;
+    title: string;
 }
 export interface viewtype {
     id: number;
@@ -31,13 +32,21 @@ export const projectview: viewtype[] = [
         floatingLinks: [
             {
                 name: "GitHub",
-                url: "https://www.goole.com",
+                url: "https://github.com/ssso2/hotel_renewal",
                 icon: "/sohee-portfolio/img/icon/github.svg",
+                title: "깃허브로 이동",
             },
             {
                 name: "Velog",
-                url: "https://www.naver.com",
+                url: "https://velog.io/@ssssso2/series/%ED%98%B8%ED%85%94-%EB%A6%AC%EB%89%B4%EC%96%BC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8",
                 icon: "/sohee-portfolio/img/icon/blogger.svg",
+                title: "벨로그로 이동",
+            },
+            {
+                name: "Link",
+                url: "http://gagaclub.cafe24app.com/",
+                icon: "/sohee-portfolio/img/icon/siteicon.svg",
+                title: "사이트로 이동",
             },
         ],
     },
@@ -55,13 +64,21 @@ export const projectview: viewtype[] = [
         floatingLinks: [
             {
                 name: "GitHub",
-                url: "https://velog.io",
+                url: "https://github.com/ssso2/perfume_renewal",
                 icon: "/sohee-portfolio/img/icon/github.svg",
+                title: "깃허브로 이동",
             },
             {
                 name: "Velog",
-                url: "https://www.nate.com",
+                url: "https://velog.io/@ssssso2/series/%ED%96%A5%EC%88%98%EC%87%BC%ED%95%91%EB%AA%B0-%EB%A6%AC%EB%89%B4%EC%96%BC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8",
                 icon: "/sohee-portfolio/img/icon/blogger.svg",
+                title: "벨로그로 이동",
+            },
+            {
+                name: "Link",
+                url: "https://web-jomaloneclonefront-m5w8vc08a2903486.sel4.cloudtype.app/",
+                icon: "/sohee-portfolio/img/icon/siteicon.svg",
+                title: "사이트로 이동",
             },
         ],
     },
@@ -70,23 +87,31 @@ export const projectview: viewtype[] = [
         title: "포트폴리오",
         description:
             "저의 경험과 프로젝트를 담아 React로 구현한 반응형 포트폴리오 사이트입니다.",
-        bg: "/sohee-portfolio/img/sub/projectbg2.svg",
-        img: "/sohee-portfolio/img/sub/projectframe2.svg",
+        bg: "/sohee-portfolio/img/sub/pbg.svg",
+        img: "/sohee-portfolio/img/sub/pframe.svg",
         people: "Front-End Developer",
-        date: "기간 : 25.01.13 ~ 진행중",
+        date: "기간 : 25.01.13 ~ 25.02.05",
         num: "인원 : 1명",
         logo: "/sohee-portfolio/img/icon/portpolio.svg",
         floatingLinks: [
             {
                 name: "GitHub",
-                url: "https://velog.io",
+                url: "https://github.com/ssso2/sohee-portfolio",
                 icon: "/sohee-portfolio/img/icon/github.svg",
+                title: "깃허브로 이동",
             },
             {
                 name: "Velog",
-                url: "https://www.nate.com",
+                url: "https://velog.io/@ssssso2/series/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4",
                 icon: "/sohee-portfolio/img/icon/blogger.svg",
+                title: "벨로그로 이동",
             },
+            // {
+            //     name: "Link",
+            //     url: "https://www.nate.com",
+            //     icon: "/sohee-portfolio/img/icon/siteicon.svg",
+            //     title: "사이트로 이동",
+            // },
         ],
     },
     {
@@ -94,8 +119,8 @@ export const projectview: viewtype[] = [
         title: "씬-기록 (진행중)",
         description:
             "내가 감상한 영화와 드라마의 순간들을 기록하고 감정을 남기는 아카이빙 플랫폼입니다.",
-        bg: "/sohee-portfolio/img/sub/projectbg2.svg",
-        img: "/sohee-portfolio/img/sub/study61.png",
+        bg: "/sohee-portfolio/img/sub/diarybg.svg",
+        img: "/sohee-portfolio/img/sub/diaryframe.svg",
         people: "Product Designer Front-End Developer ",
         date: "기간 : 25.02.01 ~ 진행중",
         num: "인원 : 2명",
@@ -103,44 +128,19 @@ export const projectview: viewtype[] = [
         floatingLinks: [
             {
                 name: "GitHub",
-                url: "https://velog.io",
+                url: "https://github.com/ssso2",
                 icon: "/sohee-portfolio/img/icon/github.svg",
+                title: "깃허브로 이동",
             },
             {
                 name: "Velog",
-                url: "https://www.nate.com",
+                url: "https://velog.io/@ssssso2/series/%EB%8B%A4%EC%9D%B4%EC%96%B4%EB%A6%AC-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8",
                 icon: "/sohee-portfolio/img/icon/blogger.svg",
+                title: "벨로그로 이동",
             },
         ],
     },
 ];
-
-// export interface infotype {
-//     title: string;
-//     people: string;
-//     date: string;
-//     num: string;
-// }
-// export const projectinfo: infotype[] = [
-//     {
-//         title: "서울 신라호텔",
-//         people: "Font-End Developer",
-//         date: "기간 : 24.12 ~ 25.01",
-//         num: "인원 : 5명",
-//     },
-//     {
-//         title: "포트폴리오",
-//         people: "Font-End Developer",
-//         date: "기간 : 25.01 ~ 25.01",
-//         num: "인원 : 1명",
-//     },
-//     {
-//         title: "조말론",
-//         people: "Font-End Developer",
-//         date: "기간 : 25.01 ~ 25.01",
-//         num: "인원 : 4명",
-//     },
-// ];
 
 export interface imgtype {
     id: number;
@@ -171,14 +171,6 @@ export const projectlist: plisttype = [
                 "기존 '서울신라호텔'은 이미지 기반 구조로 검색엔진 최적화(SEO)가 미흡했고, 예약 시 통합 사이트로 페이지가 전환되는 불편함이 있었습니다. 또한 반응형 웹 디자인이 적용되지 않아 디바이스 호환성이 부족했습니다. 이러한 문제점들을 개선하기위해 시맨틱 마크업으로  검색엔진 최적화를 강화하고, 예약 시스템 연동 최적화 및 반응형 디자인을 도입하여 사용자 경험을 개선했습니다.",
         },
         {
-            title: "배포링크",
-            content: [
-                "사이트 : https://www.",
-                "깃허브 : https://www.",
-                "벨로그 : https://www.",
-            ],
-        },
-        {
             title: "주요기능",
             content: [
                 "사용자 유형(회원, 비회원, 관리자)에 따라 2depth 접근처리",
@@ -186,25 +178,21 @@ export const projectlist: plisttype = [
                 "객실예약 및 취소 시스템",
                 "문의하기와 공지사항게시판 CRUD기능 지원",
                 "카드와 리스트 개수에 따라 페이지네이션 처리",
-                "관리자페이지 - 대시보드, 고객관리, 객식관리, 게시판관리, 매출현황",
+                "관리자페이지 - 대시보드, 고객관리, 객실관리, 게시판관리, 매출현황",
                 "다양한 디바이스와 브라우저에 최적화된 반응형 구현",
             ],
         },
         {
             title: "기술스택",
-            content: [
-                "javascript",
-                "scss, react, axios",
-                "node.js, express, mariadb",
-            ],
+            content: ["Javascript, SCSS", "React", "Node.js, MariaDB"],
         },
         {
             title: "작업기여도",
             content: [
-                "date range picker, selectbox, checkbox를 활용한 다중 필터링 검색 기능을 구현했습니다.",
+                "Date Range Picker, Select Box, Checkbox를 활용한 다중 검색 필터기능을 구현했습니다.",
                 "다양한 디바이스 환경에 맞춘 반응형 이벤트 페이지를 구현했습니다.",
-                "공지사항을 제목과 내용으로 검색할 수 있는 기능을 추가했습니다.",
-                "사용자가 계정 정보를 쉽게 복구할 수 있도록 아이디/비밀번호 찾기  프로세스를 구현했습니다.",
+                "제목과 내용으로 공지사항과 문의글을 검색할 수 있는 공통 컴포넌트를 구현했습니다.",
+                "사용자가 계정 정보를 쉽게 복구할 수 있도록 아이디/비밀번호 찾기 프로세스를 구현했습니다.",
                 "관리자 공지사항관리 시스템(등록,수정,삭제)을 구축했습니다.",
                 "게시판 글 등록시 파일 업로드 및 조회 기능을 추가했습니다.",
             ],
@@ -214,8 +202,8 @@ export const projectlist: plisttype = [
             content: [
                 {
                     "스페셜 오퍼 필터링 기능에서 조건에 맞는 상품 미출력": [
-                        "문제점 : 3가지 필터(기간조회, 유형구분, 키워드)가 변경될 때마다 상품이 올바르게 출력되어야하지만 필터링이 제대로 되지않는 오류가 있었습니다. ",
-                        "해결방법 : 백엔드 쿼리를 반복적으로 수정하면서 해결했습니다.",
+                        "문제점 : 3가지 필터(기간조회, 유형구분, 키워드)가 변경될 때마다 상품이 올바르게 출력되어야하지만, 필터링이 정상적으로 동작하지 않는 오류가 있었습니다.",
+                        "해결방법 : 백엔드 쿼리에서 WHERE 절을 동적 조건으로 적용하고, 반복적인 수정 과정을 거쳐 최적화했습니다.",
                     ],
                 },
                 {
@@ -225,15 +213,9 @@ export const projectlist: plisttype = [
                     ],
                 },
                 {
-                    "스페셜 오퍼 객실 패키지 마감기간 설정": [
-                        "문제점 : 스페셜오퍼 상품 마감일에 대한 검색 로직과 체크인 허용 기준에 대한 고민이 있었습니다.",
-                        "해결방법 : 팀원들과 회의후에 마감일 당일까지 출력하고 다음 날 체크아웃을 허용하도록 결정했습니다.",
-                    ],
-                },
-                {
-                    "디자인 통일성 문제": [
-                        "문제점 : 역할 분담받은 페이지를 미리 작업했으나 이후 다른 팀원들 페이지와 디자인 통일성이 부족했습니다.",
-                        "해결방법 : 팀장님 의견에 따라 관리자 페이지의 전체적인 디자인과 레이아웃 통일성을 맞추는 방향으로 수정했습니다.",
+                    "공지사항 상세페이지 이전글, 다음글 표시 불가": [
+                        "문제점 : 공지사항 상세 페이지에서는 현재 글의 ID만 상태로 관리하고 있어, 이전글과 다음글을 불러올 수 없었습니다. 이를 해결하기 위해 전체 ID 목록을 불러오는 방식으로 상태 관리를 개선할 필요성을 느꼈습니다.",
+                        "해결방법 : 기존 공지사항 데이터를 Redux로 전역 상태 관리하도록 변경했습니다. 그 결과, 여러 컴포넌트에서 일관된 상태 유지가 가능해졌고 원하는 내비게이션 기능을 구현할 수 있었습니다.",
                     ],
                 },
             ],
@@ -290,21 +272,12 @@ export const projectlist: plisttype = [
                 "기존 조말론 사이트는 지도 정보 오류, 잦은 서버 다운으로 인한 사이트 안정성 문제, 리뷰 필터링 부재등 다양한 개선이 필요했습니다. 고객 편의성과 신뢰도 향상을 위해 웹사이트 리뉴얼을 진행했으며, 다양한 외부 API를 연동하여 사용자 경험을 개선했습니다.",
         },
         {
-            title: "배포링크",
-            content: [
-                "사이트 : https://www.",
-                "깃허브 : https://www.",
-                "벨로그 : https://www.",
-            ],
-        },
-        {
             title: "주요기능",
             content: [
                 "회원가입 및 카카오 간편로그인",
                 "카테고리 & 검색어를 통해 상품검색",
                 "센트파인더로 나에게 어울리는 향수찾기 및 공유",
                 "옵션별 구매 및 장바구니, 결제, 주문취소, 배송조회",
-                "결제하기 배송지변경 도로명주소 조회",
                 "매장안내지도",
                 "1:1 문의 답변 이메일 전송",
                 "관리자페이지 - 대시보드, 회원관리, 주문관리, 제품관리, 게시판관리, 매출분석",
@@ -313,17 +286,12 @@ export const projectlist: plisttype = [
         },
         {
             title: "기술스택",
-            content: [
-                "javascript",
-                "scss, react, axios, swiper, fontawesome",
-                "node.js, express, mariadb",
-            ],
+            content: ["Javascript, SCSS", "React", "Node.js, MariaDB"],
         },
         {
             title: "작업기여도",
             content: [
-                "장바구니 기능을 구현했습니다.",
-                "토스결제시스템을 연동하여 결제 기능을 완성했습니다.",
+                "토스결제시스템을 연동하여 장바구니에서 결제 기능을 완성했습니다.",
                 "카드결제와 계좌이체 결제방식을 도입했습니다.",
                 "주문 취소 및 환불 프로세스를 구현했습니다.",
                 "관리자 페이지에서 주문/환불 상태를 실시간으로 관리할 수 있도록 구현했습니다.",
@@ -334,7 +302,7 @@ export const projectlist: plisttype = [
             content: [
                 {
                     "API에서 제공하지않는 데이터 전달 처리": [
-                        "문제점 : 주문정보를 전송할 때 정해진 키값이 없어서 데이터 전달에 어려움이 있었습니다.",
+                        "문제점 : 사이트 내 주문정보를 전송할 때 api에 정해진 키값이 없어서 데이터 전달에 어려움이 있었습니다.",
                         "해결방법 : meta-data를 활용하여 필요한 데이터를 전달하도록 구현했습니다.",
                     ],
                 },
@@ -409,13 +377,9 @@ export const projectlist: plisttype = [
                 "팀 프로젝트 경험을 토대로 전반적인 웹 개발 역량을 강화하고자 포트폴리오를 제작했습니다. React와 여러 라이브러리를 활용하고, 반응형 웹 구현으로 다양한 환경에서 접근성을 높였습니다. 피드백을 반영해서 지속적으로 개선하고 발전시켜 나갈 예정입니다.",
         },
         {
-            title: "배포링크",
-            content: ["깃허브 : https://www.", "벨로그 : https://www."],
-        },
-        {
             title: "주요기능",
             content: [
-                "intro, main, about, experience, project, review로 섹션 구성",
+                "Intro, Main, About, Experience, Project, Review로 섹션 구성",
                 "헤더 GNB와 Contact 플로팅 버튼 구현",
                 "스크롤 위치에 따른 페이지 진행도 표시",
                 "프로젝트 상세 정보 모달 팝업",
@@ -425,7 +389,7 @@ export const projectlist: plisttype = [
         },
         {
             title: "기술스택",
-            content: ["typecript", "scss, react"],
+            content: ["Typescript, SCSS", "React"],
         },
         {
             title: "작업기여도",
@@ -457,7 +421,7 @@ export const projectlist: plisttype = [
                 {
                     "스크롤 기반 애니메이션 구현": [
                         "문제점 : 스크롤이 특정 섹션에 왔을 때 애니메이션 처리방법 고민했습니다.",
-                        "해결방법 : Intersection Observer API를 활용하여 섹션 진입 시점을 확인 후 애니메이션을 처리했습니다.",
+                        "해결방법 : Intersection Observer API를 활용하여 섹션 진입 시점을 확인 후 애니메이션을 처리했습니다. 페이지 전환시 매끄럽지 못한 부분 발생하여 AOS라이브러리를 활용하여 재수정하였습니다.",
                     ],
                 },
             ],
@@ -467,51 +431,50 @@ export const projectlist: plisttype = [
             content: [
                 {
                     id: 1,
-                    src: "/sohee-portfolio/img/sub/hotel.49.25.png",
+                    src: "/sohee-portfolio/img/sub/pp1.png",
                     alt: "프로젝트 작업화면",
                     comment: "메인화면",
                 },
                 {
                     id: 2,
-                    src: "/sohee-portfolio/img/sub/hotel.77.png",
+                    src: "/sohee-portfolio/img/sub/pp2.png",
                     alt: "프로젝트 작업화면",
                     comment: "소개페이지",
                 },
                 {
                     id: 3,
-                    src: "/sohee-portfolio/img/sub/hotel.50.19.png",
+                    src: "/sohee-portfolio/img/sub/pp3.png",
                     alt: "프로젝트 작업화면",
                     comment: "학력,경력페이지",
                 },
                 {
                     id: 4,
-                    src: "/sohee-portfolio/img/sub/hotel.54.04.png",
+                    src: "/sohee-portfolio/img/sub/pp4.png",
                     alt: "프로젝트 작업화면",
                     comment: "프로젝트리스트",
                 },
                 {
                     id: 5,
-                    src: "/sohee-portfolio/img/sub/hotel.54.57.png",
+                    src: "/sohee-portfolio/img/sub/pp5.png",
                     alt: "프로젝트 작업화면",
                     comment: "프로젝트상세",
                 },
                 {
                     id: 6,
-                    src: "/sohee-portfolio/img/sub/hotel.57.27.png",
+                    src: "/sohee-portfolio/img/sub/pp6.png",
                     alt: "프로젝트 작업화면",
                     comment: "리뷰페이지",
                 },
             ],
         },
     ],
-    //영화다이어라
+    //영화다이어리
     [
         {
             id: 4,
             title: "개요",
             content:
-                // "영화와 드라마를 사랑하지만 감상 후 기억이 희미해지는 분들을 위해, 소중한 순간들을 체계적으로 기록할 수 있는 서비스를 기획했습니다./컨텐츠의 홍수 속에서 잊혀지는 소중한 감상들을 체계적으로 기록하고 관리할 수 있는 서비스입니다.
-                "API 연동으로 드라마와 영화 정보를 제공하며 인상 깊은 장면, 감상평, 감정 등을 기록하고 개인화된 통계 데이터를 확인할 수 있습니다. 나아가 비슷한 취향을 가진 사람들과 감상을 공유할 수 있는  커뮤니티 기능도 제공할 예정입니다.",
+                "영화와 드라마를 사랑하지만 시간이 지나면 기억이 흐려지는 경험에서 출발해, 기억에 남는 장면과 감상평, 감정을 체계적으로 기록할 수 있도록 아이디어를 구체화하고 기능을 설계했습니다. API 연동을 통해 영화 및 드라마 정보를 제공하며 사용자가 저장한 내용을 바탕으로 개인화된 통계를 생성해 자신의 감상 패턴을 확인할 수 있도록 구성하고있습니다. 또한, 비슷한 취향을 가진 사용자들과 감상을 공유할 수 있는 커뮤니티 기능도 고려하고 있습니다.",
         },
         {
             title: "배포링크",
@@ -550,28 +513,16 @@ export const projectlist: plisttype = [
             title: "트러블슈팅",
             content: [
                 {
-                    "스페셜 오퍼 필터링 기능에서 조건에 맞는 상품 미출력": [
-                        "문제점 : 3가지 필터(기간조회, 유형구분, 키워드)가 변경될 때마다 상품이 올바르게 출력되어야하지만 필터링이 제대로 되지않는 오류가 있었습니다. ",
-                        "해결방법 : 백엔드 쿼리를 반복적으로 수정하면서 해결했습니다.",
-                    ],
+                    내용: ["문제점 : 있었습니다. ", "해결방법 : 해결했습니다."],
                 },
                 {
-                    "스페셜 오퍼 객실 패키지 마감기간 설정": [
-                        "문제점 : 상품 마감일이 24일인 경우, 실제 예약일을 24일 체크아웃으로 제한할지 24일에 예약해서 25일 체크아웃까지 허용할지에 대한 고민이 있었습니다.",
-                        "해결방법 : 팀원들과 회의후에 상품 마감기간까지 출력하고 다음 날 체크아웃을 허용하도록 결정했습니다.",
-                    ],
+                    내용: ["문제점 : 있었습니다. ", "해결방법 : 해결했습니다."],
                 },
                 {
-                    "공지사항 상세페이지 빈 화면 오류": [
-                        "문제점 : 공지사항 상세페이지를 클릭했을 때 데이터 로딩 타이밍 문제로 빈 화면이 표시되는 오류가 발생했습니다.",
-                        "해결방법 : axios 비동기 처리에서 타이밍 문제를 확인하고 수정해서 데이터를 정상적으로 로드되도록 개선했습니다.",
-                    ],
+                    내용: ["문제점 : 있었습니다. ", "해결방법 : 해결했습니다."],
                 },
                 {
-                    "디자인 통일성 문제": [
-                        "문제점 : 역할 분담받은 페이지를 미리 작업했으나 이후 다른 팀원들 페이지와 디자인 일관성이 맞지 않았습니다.",
-                        "해결방법 : 팀장님 의견에 따라 관리자 페이지의 전체적인 디자인과 레이아웃 통일성을 맞추는 방향으로 수정했습니다.",
-                    ],
+                    내용: ["문제점 : 있었습니다. ", "해결방법 : 해결했습니다."],
                 },
             ],
         },

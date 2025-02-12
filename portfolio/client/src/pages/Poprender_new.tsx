@@ -1,6 +1,6 @@
 // import styles from "../styles/common.module.scss";
 import { useState } from "react";
-import { contenttype, imgtype as imgtype } from "./Projectdata_s";
+import { contenttype, imgtype } from "./Projectdata_s";
 import Imgpop from "./Imgpop_new";
 interface rendertype {
     content: contenttype["content"];

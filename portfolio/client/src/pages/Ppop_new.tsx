@@ -3,7 +3,6 @@ import "../styles/common.scss";
 import "../styles/popup.scss";
 import { viewtype, projectlist, contenttype } from "./Projectdata_s";
 import Poprender from "./Poprender_new";
-import Imgpop from "./Imgpop";
 import { Link } from "react-router-dom";
 
 interface datatype {
@@ -37,7 +36,6 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
     }
     console.log("projectviewid", projectview);
 
-    const links = [];
     return (
         <>
             <div className="projectpopwrap gray5">
@@ -60,14 +58,13 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                                         <Link
                                             to={link.url}
                                             target="_blank"
-                                            title="깃허브로이동"
+                                            title={link.title}
                                             className="linkbtn flexC"
                                         >
                                             <div className="iconwrap">
                                                 <img
                                                     src={link.icon}
                                                     alt="storage"
-                                                    title="새창으로열기"
                                                     className="floatingicon"
                                                 />
                                             </div>
@@ -109,21 +106,7 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                                         </p>
                                     </aside>
                                 ))}
-                                {/* <aside>
-                                <p className="subtitle1">
-                                    {projectinfo[0].title}
-                                </p>
-                                <p className="label1 gray4">
-                                    {projectinfo[0].people}
-                                </p>
-                                <p className="label1 gray4">
-                                    {projectinfo[0].date}
-                                </p>
-                                <p className="label1 gray4">
-                                    {" "}
-                                    {projectinfo[0].num}
-                                </p>
-                            </aside> */}
+
                                 <main>
                                     {selectarray &&
                                         selectarray.map((data, index) => (
@@ -141,6 +124,46 @@ const Ppop: React.FC<datatype> = ({ projectview, onClose }) => {
                                                 </div>
                                             </div>
                                         ))}
+                                    <div className="section linkon">
+                                        <div className="ptitle gray5 header3">
+                                            참고링크
+                                        </div>
+                                        <div className="pdes linkwrapper flex">
+                                            {/* <div className="linkwrap"> */}
+                                            {projectview.map(project =>
+                                                project.floatingLinks.map(
+                                                    (link, idx) => (
+                                                        <div
+                                                            className="linkwrap"
+                                                            key={idx}
+                                                        >
+                                                            <Link
+                                                                to={link.url}
+                                                                target="_blank"
+                                                                title="깃허브로이동"
+                                                                className="linkbtnR flex"
+                                                            >
+                                                                <div className="iconwrapR">
+                                                                    <img
+                                                                        src={
+                                                                            link.icon
+                                                                        }
+                                                                        alt="storage"
+                                                                        title="새창으로열기"
+                                                                        className="floatingiconR"
+                                                                    />
+                                                                </div>
+                                                                <p className="body2">
+                                                                    {link.name}
+                                                                </p>
+                                                            </Link>
+                                                        </div>
+                                                    )
+                                                )
+                                            )}
+                                            {/* </div> */}
+                                        </div>
+                                    </div>
                                 </main>
                             </div>
                         </div>

@@ -11,8 +11,6 @@ const Project_s: React.FC = () => {
         <>
             <div id="project" className="projectwrapper white flexC">
                 <div className="projectwrap">
-                    {/* <p className="titlename">SOHEE</p> */}
-                    {/* <p className="titlename"> PROJECT</p> */}
                     <div className="maintitle flexC">
                         <img
                             src="/sohee-portfolio/img/icon/projecticon.svg"
@@ -24,7 +22,6 @@ const Project_s: React.FC = () => {
                         </div>
 
                         <p className="caption2">
-                            {/* 제가 작업한 프로젝트를 소개합니다 */}
                             협업과 도전으로 만든 팀 / 개인 프로젝트들을
                             소개합니다.
                         </p>
@@ -46,20 +43,21 @@ const Project_s: React.FC = () => {
                                 </div>
                                 <div
                                     className="hoverimg"
-                                    onClick={() => setpopup(project)}
+                                    onClick={() => {
+                                        if (project.id === 4) {
+                                            alert(
+                                                "서비스 개발 진행 중입니다. 3월 오픈 예정입니다."
+                                            );
+                                        } else {
+                                            setpopup(project);
+                                        }
+                                    }}
                                 >
                                     <img
                                         src={project.logo}
                                         alt="projectlogo"
                                         className="projectlogo"
                                     />
-                                    {/* <div className="mainbg">
-                                        <img
-                                            src={project.img}
-                                            alt="projectmain"
-                                            className="mainframe"
-                                        />
-                                    </div> */}
                                 </div>
                                 <span className="des">
                                     <p className="white subtitle1">

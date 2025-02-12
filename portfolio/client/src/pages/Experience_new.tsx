@@ -24,35 +24,20 @@ const Experience_s: React.FC = () => {
                         <p className="header3">E</p>
                         <p className="header3">xperinece</p>
                     </div>
-                    <p className="header3 option">사용자를 생각하는</p>
+
                     <p className="header3 option">
-                        포기하지 않고 책임감있게 일하는 개발자 김소희입니다
+                        저는 좋아하는 일을 잘하는 일로 만들고,
                     </p>
+                    <p className="header3 option">성취감을 통해 성장합니다.</p>
                 </div>
-                {/* <div className="titlewrap">
-                    <img
-                        src="/sohee-portfolio/img/icon/Page.svg"
-                        alt="experience"
-                    />
-                    <h1 className="header3">Experinece</h1>
-                </div> */}
+
                 <div className="profile flex">
                     <div className="imgwrap" data-aos="fade-up">
                         <img
                             src="/sohee-portfolio/img/sub/presentation.jpeg"
                             alt="teacher"
                         />
-                        {/* <img
-                            src="/sohee-portfolio/img/sub/sun.jpeg"
-                            alt="teacher"
-                        /> */}
                     </div>
-                    {/* <div className="me">
-                        <p className="subtitle1">프론트엔드 개발자</p>
-                        <p className="body2">
-                            minima odit? Nam asperiores ducimus enim veniam!
-                        </p>
-                    </div> */}
 
                     <div className="deswrap">
                         <div className="past">
@@ -65,7 +50,9 @@ const Experience_s: React.FC = () => {
                                                     ? "change"
                                                     : index === 2
                                                     ? "retire"
-                                                    : "project"
+                                                    : index === 3
+                                                    ? "project"
+                                                    : ""
                                             }`}
                                         >
                                             {data.name}
@@ -81,7 +68,6 @@ const Experience_s: React.FC = () => {
                                         <p className="body2 content">
                                             {data.des1}
                                         </p>
-                                        {/* <p className="caption1">{data.des2}</p> */}
                                     </div>
                                 </div>
                             ))}

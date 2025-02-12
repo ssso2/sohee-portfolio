@@ -16,22 +16,22 @@ const Conpop: React.FC<closeprops> = ({ popclose, onclose }) => {
         {
             conicon: "/sohee-portfolio/img/icon/email.svg",
             method: "Email",
-            name: "1234@gmail.com",
+            name: "kpong358@gmail.com",
             copyicon: "/sohee-portfolio/img/icon/copy.svg",
         },
         {
             conicon: "/sohee-portfolio/img/icon/githubfill.svg",
             method: "GitHub",
-            name: "oooo12345",
+            name: "github.com/ssso2",
             copyicon: "/sohee-portfolio/img/icon/Vectorb.svg",
-            link: "http://www.google.com",
+            link: "https://github.com/ssso2",
         },
         {
             conicon: "/sohee-portfolio/img/icon/simplevelog.svg",
             method: "velog",
-            name: "velog.io/@whatever/posts",
+            name: "velog.io/@ssssso2/posts",
             copyicon: "/sohee-portfolio/img/icon/Vectorb.svg",
-            link: "http://www.google.com",
+            link: "https://velog.io/@ssssso2/posts",
         },
     ];
     const copyemail = (text: string) => {

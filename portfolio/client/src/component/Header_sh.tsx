@@ -14,11 +14,6 @@ const Header_s = (): JSX.Element => {
         { name: "Experience", section: "experience" },
         { name: "Project", section: "project" },
         { name: "Review", section: "review" },
-        // {
-        //     name: "Feedback",
-        //     section: null,
-        //     link: "https://docs.google.com/forms/d/e/1FAIpQLSd9dvY8ZfOx2NNNkXmVFnfYbB6apGYqQKQcDi6WwRlK1u27vQ/viewform?usp=sharing",
-        // },
     ];
     const navigate = (section?: string) => {
         if (!section) return;
@@ -100,16 +95,11 @@ const Header_s = (): JSX.Element => {
                                 >
                                     {item.name}
                                 </button>
-
-                                {/* <Link className={styles.link} to={item.path}>
-                                {item.name}
-                            </Link> */}
                             </li>
                         ))}
                         <li className="navli body1 mflex">
                             <Link
-                                to="#"
-                                // "https://docs.google.com/forms/d/e/1FAIpQLSd9dvY8ZfOx2NNNkXmVFnfYbB6apGYqQKQcDi6WwRlK1u27vQ/viewform?usp=sharing"
+                                to="https://docs.google.com/forms/d/e/1FAIpQLSd9dvY8ZfOx2NNNkXmVFnfYbB6apGYqQKQcDi6WwRlK1u27vQ/viewform?usp=sharing"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="linkto"
