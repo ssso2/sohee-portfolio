@@ -1,62 +1,10 @@
-소개
-<!--
-<h1>개인 프로젝트소개</h1>
-이미지
-<p> 사이트입니다.</p>
-<p> 프로젝트 명: 포트폴리오</p>
-<p> 프로젝트 기간: 25.01.xx ~ 25.xx.xx</p>
-<p> 기술스택 : React, TypeScript, SCSS</p>
-<p> 배포링크</p>
+<h1>프로젝트소개</h1>
 
-<h1>페이지</h1>
-<table>
-    <tr>
-  <td colspan="2">Main</td>
-  
-</tr>
-  <tr>
-  <td colspan="2">이미지</td>
-  
-</tr>
-  <tr>
-  <td colspan="2">설명</td>
+![portpoliomain](https://github.com/user-attachments/assets/f6d19cba-c04b-4eb1-b175-0dbc9352ad48)
+<h3>팀 프로젝트 경험을 토대로 전반적인 웹 개발 역량을 강화하고자 포트폴리오를 제작했습니다.</h3>
 
-</tr>
-<tr>
-   <td>About me</td>
-    <td>Experience</td>
-</tr>
-  <tr>
-  <td>이미지</td>
-    <td>이미지</td>
-</tr>
-  <tr>
-  <td>설명</td>
-    <td>설명</td>
-</tr>
-  <tr>
- <td>Project</td>
-    <td>Project detail</td>
-</tr>
-  <tr>
-  <td>이미지</td>
-    <td>이미지</td>
-</tr>
-  <tr>
-  <td>설명</td>
-    <td>설명</td>
-</tr>
-   <tr>
-  <td>Review</td>
-    <td>Contact</td>
-</tr>
-  <tr>
-  <td>이미지</td>
-    <td>이미지</td>
-</tr>
-  <tr>
-  <td>설명</td>
-    <td>설명</td>
-</tr>
-  </table>
---!>
+<ul>
+<li>프로젝트 명: 개인 포트폴리오</li>
+<li>프로젝트 기간: 25.01.13 ~ 25.02.05</li>
+<li>기술스택 : TypeScript, React, SCSS</li>
+</ul>
