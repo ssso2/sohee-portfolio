@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sohee-portfolio/static/css/main.57fc3ac8.css",
-    "main.js": "/sohee-portfolio/static/js/main.e5f5dd92.js",
+    "main.css": "/sohee-portfolio/static/css/main.d06839e4.css",
+    "main.js": "/sohee-portfolio/static/js/main.fafafc06.js",
     "static/js/453.419a5d54.chunk.js": "/sohee-portfolio/static/js/453.419a5d54.chunk.js",
     "index.html": "/sohee-portfolio/index.html",
     "static/media/contactbg.svg": "/sohee-portfolio/static/media/contactbg.7b96bacf7922ac9def91.svg",
-    "main.57fc3ac8.css.map": "/sohee-portfolio/static/css/main.57fc3ac8.css.map",
-    "main.e5f5dd92.js.map": "/sohee-portfolio/static/js/main.e5f5dd92.js.map",
+    "main.d06839e4.css.map": "/sohee-portfolio/static/css/main.d06839e4.css.map",
+    "main.fafafc06.js.map": "/sohee-portfolio/static/js/main.fafafc06.js.map",
     "453.419a5d54.chunk.js.map": "/sohee-portfolio/static/js/453.419a5d54.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.57fc3ac8.css",
-    "static/js/main.e5f5dd92.js"
+    "static/css/main.d06839e4.css",
+    "static/js/main.fafafc06.js"
   ]
 }
